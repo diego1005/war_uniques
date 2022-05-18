@@ -1,3 +1,46 @@
-h1 {
-    color: red;
+* {
+    box-sizing: border-box;
+}
+
+header {
+    background-color: black;
+    color: white;
+}
+
+.panel-top {
+    display: flex;
+    font-size: 0.7rem;
+    border-bottom: 1px solid white;
+    justify-content: space-between;
+}
+
+.left i {
+    width: 0.7rem;
+    margin: 5px 10px;
+}
+
+.right {
+    display: flex;
+    justify-content: space-around;
+}
+
+.right p {
+    margin: 5px 10px;
+}
+
+.main-bar {
+    display: flex;
+}
+
+.main-bar img {
+    width: 100%;
+}
+
+.search-panel {
+    display: flex;
+    align-items: center;
+}
+
+.search-panel input {
+    width: 60%;
 }
