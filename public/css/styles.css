@@ -30,6 +30,13 @@ header {
 
 .main-bar {
     display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid white;
+}
+
+.logo {
+    width: 30%;
+    margin: 0px 5px;
 }
 
 .main-bar img {
@@ -39,8 +46,26 @@ header {
 .search-panel {
     display: flex;
     align-items: center;
+    margin: 0px 5px;
 }
 
 .search-panel input {
-    width: 60%;
+    width: 70%;
+    border: none;
+    border-radius: 15px;
+}
+
+.search-panel i {
+    color: red;
+    margin: 0px 5px;
+}
+
+.flags-bar {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flags-bar img {
+    width: 15%;
+    margin: 10px;
 }
