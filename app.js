@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: false}));
 
 //routes
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "/views/index.html"));
+    res.sendFile(path.join(__dirname, "/views/home.html"));
 })
 
 //static
