@@ -80,19 +80,22 @@
 }
 .product-name img {
     width: 10%;
+    margin-right: 5px;
 }
 .product-price {
     text-align: right;
 }
 .see-more {
     text-align: center;
-    padding-bottom: 5px;
+    padding-bottom: 15px;
 }
 .see-more a {
-    font-size: 1.1rem;
-    font-weight: bold;
+    font-size: 0.8rem;
+    background-color: red;
     text-decoration: none;
-    color: lightgrey;
+    color: black;
+    padding: 8px;
+    border-radius: 15px;
 }
 
 /* Main-Bottom */

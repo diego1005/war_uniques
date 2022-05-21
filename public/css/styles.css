@@ -16,14 +16,17 @@ header {
     border-bottom: 1px solid white;
     justify-content: space-between;
 }
+
 .left i {
     width: 0.7rem;
     margin: 5px 10px;
 }
+
 .right {
     display: flex;
     justify-content: space-around;
 }
+
 .right p {
     margin: 5px 10px;
 }
@@ -34,56 +37,79 @@ header {
     justify-content: space-around;
     border-bottom: 1px solid white;
 }
+
 .logo {
     width: 30%;
     margin: 0px 5px;
 }
+
 .main-bar img {
     width: 100%;
 }
 
-.footer{
+/* Footer */
+.footer {
     display: flex;
-    background-color: black;
-    color: white;
-    border-top: white solid 1px;
-    font-size: 0.5rem;
     justify-content: space-around;
-    flex-wrap: nowrap;
+    background-color: black;
+    font-size: 0.5rem;
+    color: white;
+    padding: 5px;
+    border-top: white solid 1px;
 }
 
-.fotlogo{
+/* FootLeft */
+.fotleft {
     width: 30%;
     margin: auto;
 }
 
-.fotlogo img{
-    width: 100%;
+.fotleft p {
+    margin: 5px;
+}
+
+.fotleft a {
+    text-decoration: none;
+    color: white;
+
+}
+
+/* FootMiddle */
+.fotmidle {
+    width: 30%;
     margin: auto;
-    padding-bottom: 5%;
 }
 
-.contactos{
-     display: flex;
-     justify-content: center;
+.fotmidle p {
+    margin: 5px;
 }
 
-.contactos img{
+/* FootRight */
+.fotright {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.contactos {
+    display: flex;
+    justify-content: center;
+}
+
+.contactos img {
+    width: 30%;
     margin: 2%;
     padding-top: 5%;
 }
 
-.fotleft{
-    width: 30%;
+.fotlogo {
+    width: 50%;
+    margin: auto;
 }
 
-
-.fotmidle{
-    width: 30%;
-}
-
-.fotright{
-    width: 30%;
-    display: flex;
-    flex-direction: column;
+.fotlogo img {
+    width: 100%;
+    margin: auto;
+    padding-bottom: 5%;
 }
