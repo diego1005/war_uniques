@@ -29,6 +29,8 @@ header {
 
 .right p {
     margin: 5px 10px;
+    color: white;
+    text-decoration: none;
 }
 
 /* Main-Bar */
