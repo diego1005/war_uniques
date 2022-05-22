@@ -4,12 +4,13 @@
     background-size: 100% 100%;
     color: lightgray;
 }
+
 .slider h4 {
     padding: 10px;
 }
 
 /* Main-Section */
-.main-section{
+.main-section {
     background-image: url("/images/background-main2.png");
     background-size: 100% 100%;
 }
@@ -19,6 +20,7 @@
     padding: 20px;
     color: lightgray;
 }
+
 .product {
     width: 90%;
     max-width: 250px;
@@ -28,59 +30,80 @@
     box-shadow: 0px 0px 10px rgb(150, 150, 150);
     text-align: center;
 }
+
 .product-image {
     width: 100%;
     background-color: white;
 }
+
 .product-image img {
     max-width: 100%;
     max-height: 180px;
     width: auto;
     height: auto;
 }
+
 .product-detail {
     background-color: rgba(0, 0, 0, 0.6);
     text-align: left;
 }
+
 .product-detail p {
     margin: 5px;
     color: lightgray;
 }
+
 .product-name {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .product-name img {
     width: 10%;
     margin: 5px;
 }
+
 .product-price {
     text-align: right;
 }
+
 .see-more {
     text-align: center;
     padding-bottom: 15px;
 }
+
 .see-more a {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     background-color: red;
     text-decoration: none;
     color: black;
-    padding: 8px;
+    padding: 5px;
     border-radius: 15px;
 }
 
-/* Main-Bottom */
+@media (min-width: 150px) {
+    .main-title {
+        text-align: center;
+    }
+}
 
-@media (min-width: 600px) {
-    .offers-products, .popular-products{
+@media (min-width: 500px) {
+    .main-title {
+        text-align: start;
+    }
+
+    /* Products */
+    .offers-products,
+    .popular-products {
         display: flex;
         justify-content: space-around;
     }
+
     .product {
         max-width: 200px;
     }
+
     .product-image {
         display: flex;
         justify-content: center;
@@ -88,4 +111,57 @@
         height: 190px;
     }
 
+}
+
+@media (min-width: 900px) {
+
+    /* Slider */
+    .slider h4 {
+        font-size: 1.1rem;
+    }
+
+    /* Main */
+    .main-title {
+        font-size: 2rem;
+    }
+
+    /* Product */
+    .product {
+        max-width: 500px;
+        font-size: 1.5rem;
+    }
+
+    /* See-More */
+    .see-more {
+        width: 90vw;
+        text-align: end;
+    }
+
+    .see-more a {
+        font-size: 1.1rem;
+        background-color: transparent;
+        color: lightgrey;
+        border-radius: none;
+    }
+
+    .see-more a::before {
+        content: "... ";
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .main-title {
+        font-size: 2.3rem;
+        padding: 1% 5%;
+    }
+
+    .offers-products,
+    .popular-products {
+        padding: 0px 3%;
+    }
+
+    .product {
+        margin: 2%;
+    }
 }

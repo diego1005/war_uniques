@@ -45,6 +45,7 @@ header {
 
 .main-bar img {
     width: 100%;
+    margin: 10px 0px;
 }
 
 /* Search-Panel */
@@ -53,11 +54,13 @@ header {
     align-items: center;
     margin: 0px 5px;
 }
+
 .search-panel input {
     width: 70%;
     border: none;
     border-radius: 15px;
 }
+
 .search-panel i {
     color: red;
     margin: 0px 5px;
@@ -70,8 +73,10 @@ header {
     width: 80%;
     margin: auto;
 }
+
 .flags-bar img {
     width: 10%;
+    max-width: 50px;
     margin: 10px;
 }
 
@@ -80,7 +85,7 @@ header {
     display: flex;
     justify-content: space-around;
     background-color: black;
-    font-size: 0.5rem;
+    font-size: 90%;
     color: white;
     padding: 5px;
     border-top: white solid 1px;
@@ -88,7 +93,7 @@ header {
 
 /* FootLeft */
 .fotleft {
-    width: 30%;
+    width: 25%;
     margin: auto;
 }
 
@@ -104,7 +109,7 @@ header {
 
 /* FootMiddle */
 .fotmidle {
-    width: 30%;
+    width: 25%;
     margin: auto;
 }
 
@@ -114,25 +119,24 @@ header {
 
 /* FootRight */
 .fotright {
-    width: 30%;
+    width: 25%;
     display: flex;
-    flex-direction: column;
-    padding: 5px;
+    padding: 3px;
 }
 
 .contactos {
     display: flex;
     justify-content: center;
+    margin: auto;
 }
 
 .contactos img {
     width: 30%;
-    max-width: 40px;
-    margin: 3%;
-    padding-top: 5%;
+    max-width: 20px;
+    margin: 0px 20%;
 }
 
-.fotlogo {
+/* .fotlogo {
     width: 40%;
     margin: auto;
 }
@@ -141,32 +145,103 @@ header {
     width: 100%;
     margin: auto;
     padding-bottom: 5%;
+} */
+
+@media (min-width: 150px) {
+    .contactos img {
+        margin: 0px 6%;
+    }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 500px) {
+
     /* Header */
     .panel-top {
         font-size: 1rem;
     }
+
     .main-bar {
         justify-content: space-around;
     }
+
     .search-panel {
         justify-content: flex-end;
         width: 60%
     }
+
     .logo {
         width: 20%;
     }
+
     .search-panel input {
         width: 100%
     }
 
     /* Footer */
-    .footer {
-        font-size: 0.7rem;
-    }
     .contactos img {
-        width: 15%;
+        width: 30%;
+        margin: 0px 20%;
+    }
+}
+
+@media (min-width: 900px) {
+
+    /* Panel-Top */
+    .panel-top {
+        font-size: 1.5rem;
+    }
+
+    .left {
+        margin-left: 45px;
+    }
+
+    .right {
+        margin-right: 45px;
+    }
+
+    .left i,
+    .right p {
+        margin: 10px 35px;
+    }
+
+    /* Logo */
+    .logo {
+        padding-left: 35px;
+    }
+
+    /* Search-Panel */
+    .search-panel {
+        justify-content: flex-start;
+    }
+
+    .search-panel input {
+        width: 60%;
+        height: 15%;
+    }
+
+    .search-panel i {
+        font-size: 2rem;
+        margin: 0px 15px;
+    }
+
+    /* Flags-Bar*/
+    .flags-bar img {
+        width: 5%;
+    }
+
+    .fotleft {
+        padding-left: 5%;
+    }
+
+    .contactos img {
+        width: auto;
+        max-width: none;
+        margin: 0px 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .footer {
+        font-size: 1.3rem;
     }
 }
