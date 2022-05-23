@@ -17,8 +17,8 @@ app.get("/login", (req, res) => {
     res.sendFile(path.join(__dirname, "/views/login.html"));
 })
 //Sing in
-app.get("/singin", (req, res) => {
-    res.sendFile(path.join(__dirname, "/views/singin.html"));
+app.get("/signin", (req, res) => {
+    res.sendFile(path.join(__dirname, "/views/signin.html"));
 })
 
 //static____________________________________________________
