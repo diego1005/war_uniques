@@ -37,53 +37,22 @@
     width: 90%;
 }
 
-.control, .control-password {
+.control {
+    color: white;
     margin: 3%;
     padding: 3%;
-}
-
-.control label {
-    color: white;
 }
 
 .control input {
     margin-top: 1%;
 }
 
-.control-password {
-    display: flex;
-    justify-content: space-between;
-    color: white;
-}
-
-.control-password input {
-    width: auto;
-    margin: 1%;
-}
-
-.control-password a {
-    text-decoration: none;
-    color: white;
-    margin-left: 2%;
-}
-
-.remember, .forgot {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    font-size: 0.7rem;
-}
-
-.forgot {
-    justify-content: end;
-}
-
-.iniciar-sesion {
+.register {
     font-size: 1rem;
     text-align: end;
 }
 
-.iniciar-sesion a {
+.register a {
     background-color: black;
     padding: 10px;
     border-radius: 8px;

@@ -27,7 +27,7 @@ header {
     justify-content: space-around;
 }
 
-.right p {
+.right a, .right p {
     margin: 5px 10px;
     color: white;
     text-decoration: none;
