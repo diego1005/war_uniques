@@ -20,6 +20,10 @@ app.get("/login", (req, res) => {
 app.get("/signin", (req, res) => {
     res.sendFile(path.join(__dirname, "/views/signin.html"));
 })
+//chart
+app.get("/chart", (req, res) => {
+    res.sendFile(path.join(__dirname, "/views/chart.html"));
+})
 
 //static____________________________________________________
 app.use(express.static(path.join(__dirname, "public")));
