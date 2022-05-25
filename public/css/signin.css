@@ -1,0 +1,62 @@
+.main-section {
+    background-image: url("/images/background-main2.png");
+    text-align: center;
+    padding: 5% 0px;
+}
+
+
+.Bigbox {
+    width: 40vw;
+    margin: auto;
+}
+
+.Smallbox {
+    background-color: rgba(59, 73, 34, 0.7);
+    width: 100%;
+    padding: 5%;
+    box-shadow: 0px 0px 30px black;
+}
+
+.logon img {
+    width: 60%;
+    padding-bottom: 15px;
+}
+
+.formulario {
+    display: block;
+    text-align: start;
+    padding: 5%;
+}
+
+.formulario p {
+    margin-bottom: 2%;
+    color: white;
+}
+
+.formulario input {
+    width: 90%;
+}
+
+.control {
+    color: white;
+    margin: 3%;
+    padding: 3%;
+}
+
+.control input {
+    margin-top: 1%;
+}
+
+.register {
+    font-size: 1rem;
+    text-align: end;
+}
+
+.register a {
+    background-color: black;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    font-size: 0.8rem;
+    text-decoration: none;
+}

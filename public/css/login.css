@@ -1,0 +1,94 @@
+.main-section {
+    background-image: url("/images/background-main2.png");
+    text-align: center;
+    padding: 5% 0px;
+}
+
+
+.Bigbox {
+    width: 40vw;
+    margin: auto;
+}
+
+.Smallbox {
+    background-color: rgba(59, 73, 34, 0.7);
+    width: 100%;
+    padding: 5%;
+    box-shadow: 0px 0px 30px black;
+    border: solid black 1px;
+}
+
+.logon img {
+    width: 60%;
+    padding-bottom: 15px;
+}
+
+.formulario {
+    display: block;
+    text-align: start;
+    padding: 5%;
+}
+
+.formulario p {
+    margin-bottom: 2%;
+    color: white;
+}
+
+.formulario input {
+    width: 90%;
+}
+
+.control, .control-password {
+    margin: 3%;
+    padding: 3%;
+}
+
+.control label {
+    color: white;
+}
+
+.control input {
+    margin-top: 1%;
+}
+
+.control-password {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.control-password input {
+    width: auto;
+    margin: 1%;
+}
+
+.control-password a {
+    text-decoration: none;
+    color: white;
+    margin-left: 2%;
+}
+
+.remember, .forgot {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    font-size: 0.7rem;
+}
+
+.forgot {
+    justify-content: end;
+}
+
+.iniciar-sesion {
+    font-size: 1rem;
+    text-align: end;
+}
+
+.iniciar-sesion a {
+    background-color: black;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    font-size: 0.8rem;
+    text-decoration: none;
+}
