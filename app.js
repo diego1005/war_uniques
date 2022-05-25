@@ -10,6 +10,9 @@ app.use(express.urlencoded({ extended: false}));
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "/views/home.html"));
 })
+app.get("/login", (req, res) => {
+    res.sendFile(path.join(__dirname, "/views/login.html"));
+})
 
 //static
 app.use(express.static(path.join(__dirname, "public")));
