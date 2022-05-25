@@ -5,7 +5,7 @@
 
 /* Image */
 .image-section {
-    width: 70%;
+    width: 90%;
     margin: auto;
     padding: 5% 0px;
 }
@@ -29,13 +29,36 @@
 
 /* Detail */
 .detail-section {
-    width: 70%;
+    width: 90%;
     margin: 5% auto;
 }
 
 .detail {
     color: white;
-    margin: 5% 0px;
+    margin: 10% 0px;
+    padding: 0px 3%;
+}
+
+.buy-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.buy-detail button {
+    padding: 2%;
+    margin: 2% 0px;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn-buy {
+    background-color: red;
+    color: white;
+}
+
+.btn-chart {
+    background-color: rgba(252, 61, 61, 0.877);
+    color: white;
 }
 
 .price {
@@ -76,8 +99,25 @@
     margin-bottom: 10%;
 }
 
-.question-title, .question-content {
+.question, .answer {
     margin-bottom: 5%;
+}
+
+.answer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.answer p {
+    width: 70%;
+}
+
+.answer i {
+    height: 50%;
+    font-size: 2rem;
+    color: darkgrey;
+    margin: auto;
+    transform: rotate(90deg);
 }
 
 .control {
@@ -90,7 +130,7 @@
 }
 
 hr {
-    margin: 15% 0px;
+    margin: 8% 0px;
     color: rgb(100, 97, 97);
 }
 
