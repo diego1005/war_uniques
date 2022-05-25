@@ -27,7 +27,8 @@ header {
     justify-content: space-around;
 }
 
-.right a, .right p {
+.right a,
+.right p {
     margin: 5px 10px;
     color: white;
     text-decoration: none;
@@ -82,6 +83,13 @@ header {
     margin: 10px;
 }
 
+/* Main-Section */
+.main-section {
+    background-image: url("/images/background-main2.png");
+    background-size: 100% 100%;
+    padding: 5% 0px;
+}
+
 /* Footer */
 .footer {
     display: flex;
@@ -89,7 +97,7 @@ header {
     background-color: black;
     font-size: 90%;
     color: white;
-    padding: 5px;
+    padding: 15px;
     border-top: white solid 1px;
 }
 

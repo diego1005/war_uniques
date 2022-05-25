@@ -20,7 +20,11 @@ app.get("/login", (req, res) => {
 app.get("/signin", (req, res) => {
     res.sendFile(path.join(__dirname, "/views/signin.html"));
 })
-//chart
+//Detail
+app.get("/detail", (req, res) => {
+    res.sendFile(path.join(__dirname, "/views/detail.html"));
+})
+//Chart
 app.get("/chart", (req, res) => {
     res.sendFile(path.join(__dirname, "/views/chart.html"));
 })

@@ -34,10 +34,12 @@
 }
 
 .formulario input {
-    width: 90%;
+    width: 100%;
 }
 
 .control {
+    width: 85%;
+    font-size: 1rem;
     color: white;
     margin: 3%;
     padding: 3%;
@@ -48,8 +50,8 @@
 }
 
 .register {
-    font-size: 1rem;
     text-align: end;
+    margin: 10% 0px;
 }
 
 .register a {
