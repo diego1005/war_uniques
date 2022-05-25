@@ -105,18 +105,19 @@
 
 .answer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .answer p {
     width: 70%;
+    font-size: 0.8rem;
+    color: rgb(100,100,100);
 }
 
 .answer i {
     height: 50%;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: darkgrey;
-    margin: auto;
     transform: rotate(90deg);
 }
 
