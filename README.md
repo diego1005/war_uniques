@@ -1,8 +1,6 @@
-# Proyecto-Integrador
-
 # Bienvenidos a War Uniques
 
-### Encuentra esa reliquia de guerra olvidada
+## :bomb: Encuentra esa reliquia de guerra olvidada :bomb:
 
 #### Integrantes:
 - Aguilar Diego Mathias
