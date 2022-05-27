@@ -5,8 +5,8 @@
 ### Encuentra esa reliquia de guerra olvidada
 
 #### Integrantes:
-Aguilar Diego Mathias
-Levy Astor
+- Aguilar Diego Mathias
+- Levy Astor
 
 #### Paginas referentes:
 - [Mercado Libre](https://www.mercadolibre.com.ar/)
