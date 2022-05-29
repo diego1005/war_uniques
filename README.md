@@ -10,3 +10,6 @@
 - [Mercado Libre](https://www.mercadolibre.com.ar/)
 - https://www.olx.com.ar/
 - [Air Soft](https://airsoftyecla.es/)
+
+### Trello:
+https://trello.com/b/oQ2pL6qt/etapas-del-proyecto
