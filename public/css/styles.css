@@ -85,9 +85,11 @@ header {
 
 /* Main-Section */
 .main-section {
-    background-image: url("/images/background-main2.png");
-    background-size: 100% 100%;
-    padding: 5% 0px;
+    width: 100vw;
+    background: linear-gradient(rgba(100,100,100,0.3), rgba(100,100,100,0.3)), url("/images/bk-camouflage2.png");
+    background-repeat: repeat;
+    background-size: 70%;
+    padding: 2%;
 }
 
 /* Footer */

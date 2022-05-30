@@ -1,13 +1,19 @@
-.main-section {
-    background-image: url("/images/background-main2.png");
-    text-align: center;
-    padding: 5% 0px;
+.logon {
+    max-width: 60%;
+    margin: 3% 0 8%;
 }
 
+.logon img {
+    width: 30%;
+    margin-left: 10%;
+    padding-bottom: 15px;
+}
 
 .Bigbox {
-    width: 40vw;
+    width: 70vw;
+    max-width: 50%;
     margin: auto;
+    margin-bottom: 10%;
 }
 
 .Smallbox {
@@ -18,13 +24,7 @@
     border: solid black 1px;
 }
 
-.logon img {
-    width: 60%;
-    padding-bottom: 15px;
-}
-
 .formulario {
-    display: block;
     text-align: start;
     padding: 5%;
 }
@@ -38,7 +38,8 @@
     width: 90%;
 }
 
-.control, .control-password {
+.control,
+.control-password {
     font-size: 1rem;
     margin: 3%;
     padding: 3%;
@@ -53,8 +54,6 @@
 }
 
 .control-password {
-    display: block;
-    justify-content: space-between;
     color: white;
 }
 
@@ -69,11 +68,12 @@
     margin-left: 2%;
 }
 
-.remember, .forgot {
+.remember,
+.forgot {
     display: flex;
     width: 100%;
     align-items: center;
-    font-size: 1rem;
+    font-size: 80%;
     margin-bottom: 15%;
 }
 
@@ -91,12 +91,11 @@
     padding: 10px;
     border-radius: 8px;
     color: white;
-    font-size: 0.8rem;
+    font-size: 70%;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 @media (min-width: 150px) {
-    .control-password {
-        
-    }
+    .control-password {}
 }

@@ -1,29 +1,30 @@
-.main-section {
-    background-image: url("/images/background-main2.png");
-    text-align: center;
-    padding: 5% 0px;
+.logon {
+    max-width: 60%;
+    margin: 3% 0 5%;
 }
 
+.logon img {
+    width: 30%;
+    margin-left: 10%;
+    padding-bottom: 15px;
+}
 
 .Bigbox {
-    width: 40vw;
+    width: 70vw;
+    max-width: 40%;
     margin: auto;
+    margin-bottom: 10%;
 }
 
 .Smallbox {
     background-color: rgba(59, 73, 34, 0.7);
     width: 100%;
-    padding: 5%;
+    padding: 8%;
     box-shadow: 0px 0px 30px black;
-}
-
-.logon img {
-    width: 60%;
-    padding-bottom: 15px;
+    border: solid black 1px;
 }
 
 .formulario {
-    display: block;
     text-align: start;
     padding: 5%;
 }
@@ -34,14 +35,14 @@
 }
 
 .formulario input {
-    width: 100%;
+    width: 90%;
 }
 
 .control {
     width: 85%;
     font-size: 1rem;
     color: white;
-    margin: 3%;
+    margin: 3% auto;
     padding: 3%;
 }
 

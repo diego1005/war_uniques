@@ -1,7 +1,5 @@
 .main-section {
-    background-image: url("/images/background-main2.png");
     text-align: center;
-    padding: 5% 0px;
 }
 
 .Bigbox {
@@ -113,7 +111,6 @@
 @media (max-width: 745px) {
 
     .main-section {
-        background-image: url("/images/background-main2.png");
         display: flex;
         flex-direction: column;
         align-items: center;
