@@ -9,6 +9,7 @@ const userRouter = require("./routes/user.routes.js");
 //settings___________________________________________________
 const port = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: false}));
+app.use(express.json());
 app.set("view engine", "ejs");
 
 //routes____________________________________________________
