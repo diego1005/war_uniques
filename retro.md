@@ -1,3 +1,5 @@
+#SPRINT 2 --> SPRINT 3 --> ...
+
 1. Qué deberíamos empezar a hacer al siguiente sprint?
 	Un detalle que quisieramos implementar y que beneficiaria en gran medida nuestro proyecto es optimizacion de codigo, tanto para estructura (html), diseño (css) como funcionalidades de la web (javascript). Un codigo menos redundante, mejor organizado y mas comentado simplificaria la lectura en posteriores entregas.
 
