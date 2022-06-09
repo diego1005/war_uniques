@@ -11,13 +11,18 @@
 
 .all{
     width: 70%;
-    margin: 15%;
+    margin: 6% 15%;
+}
+
+.all input {
+    color: white;
 }
 
 .vender_producto {
     color: white;
     width: 100%;
     font-size: 3rem;
+    margin-bottom: 5%;
 }
 
 .top {
@@ -32,7 +37,8 @@
     padding: 10px;
 }
 
-.top p {
+.top a {
+    text-decoration: none;
     text-align: center;
     background-color: black;
     border: solid white 1px;
@@ -77,11 +83,31 @@
 
 .bottom {
     display: flex;
+    justify-content: space-between;
     margin-top: 10px;
     width: 100%;
 }
 
-.mas{
+.left-box {
+    width: 5%;
+    text-align: center;
+    padding-top: 0.5%;
+    background-color: black;
+    border: solid white 1px;
+}
+
+.left-box a {
+    color: white;
+    text-decoration: none;
+}
+
+.right-box {
+    display: flex;
+    justify-content: end;
+    width: 50%;
+}
+
+/* .mas{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,18 +117,17 @@
     color: white;
     background-color: black;
     border: solid white 1px;
-} 
+}  */
 
-.precio {
-    justify-content: end;
+.price {
     display: flex;
-    width: 15%;
-    margin-right: 1%;
+    width: 40%;
+    margin-right: 5%;
     background-color: black;
     border: solid white 1px;
 }
 
-.precio p {
+.right-box p {
     color: white;
     display: flex;
     justify-content: center;
@@ -110,15 +135,13 @@
     width: 20%;
 }
 
-.precio input{
-    justify-content: end;
-    width: 80%;
+.right-box input{
+    width: 85%;
     background-color: black;
     border-right: solid white 1px;
 }
 
 .select{
-    justify-content: end;
     color: white;
     background-color: black;
     border: solid white 1px;
