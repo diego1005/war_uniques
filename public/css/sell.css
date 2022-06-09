@@ -147,6 +147,21 @@
     border: solid white 1px;
 }
 
+.see-more {
+    margin-top: 10%;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.see-more a {
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: red;
+    text-decoration: none;
+    color: black;
+    padding: 13px;
+    border-radius: 80px;
+}
 
 
 @media (max-width: 693px) {

@@ -31,11 +31,12 @@
 
 .dump{
     position: relative;
-    width: 5%;
+    width: 10%;
     border-right: white 1px solid;
 }
 
 .dump i{
+    font-size: 1.5rem;
     width: 100%;
     position: absolute;
     top: 50%;
