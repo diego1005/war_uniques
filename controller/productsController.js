@@ -4,6 +4,9 @@ const productsController = {
     },
     cart: (req, res) => {
         res.render("cart");
+    },
+    sell: (req, res) => {
+        res.render("sell");
     }
 }
 
