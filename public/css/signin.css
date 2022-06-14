@@ -1,32 +1,28 @@
 .logon {
-    max-width: 60%;
-    margin: 3% 0 5%;
+    max-width: 50%;
 }
 
 .logon img {
-    width: 30%;
+    width: 55%;
     margin-left: 10%;
-    padding-bottom: 15px;
 }
 
 .Bigbox {
     width: 70vw;
     max-width: 40%;
     margin: auto;
-    margin-bottom: 10%;
 }
 
 .Smallbox {
     background-color: rgba(59, 73, 34, 0.7);
     width: 100%;
-    padding: 8%;
+    padding: 5%;
     box-shadow: 0px 0px 30px black;
     border: solid black 1px;
 }
 
 .formulario {
     text-align: center;
-    padding: 5%;
 }
 
 .formulario p {
@@ -36,7 +32,7 @@
 
 .formulario .linea {
     height: 1px;
-    margin: 10%;
+    margin: 5% auto;
     width: 80%;
     border-bottom: solid white 1px;
 }
@@ -53,17 +49,18 @@
     width: 85%;
     font-size: 1rem;
     color: white;
-    margin: 3% auto;
+    margin: 0% auto;
     padding: 3%;
 }
 
 .control input {
     margin-top: 1%;
+    border-radius: 8px;
 }
 
 .register {
     text-align: end;
-    margin: 10% 0px;
+    margin: 5% 0px;
 }
 
 .register a {
@@ -118,21 +115,31 @@
 
 @media (max-width: 480px) {
 
+    .main-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100vh;
+    }
+
     .Bigbox {
         width: 100%;
+        max-width: 70%;
     }
 
     .Smallbox{
         background-color: rgba(59, 73, 34, 0.7);
-        width: 120%;
         padding: 0%;
-        margin: -10%;
         box-shadow: 0px 0px 30px black;
         border: solid black 1px;
     }
 
+    .control {
+        margin: 10% auto;
+    }
+
     .register {
         text-align: center;
-        margin-bottom: 10%;
+        margin: 10% 0;
     }
 }
