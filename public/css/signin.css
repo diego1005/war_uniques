@@ -25,13 +25,24 @@
 }
 
 .formulario {
-    text-align: start;
+    text-align: center;
     padding: 5%;
 }
 
 .formulario p {
     margin-bottom: 2%;
     color: white;
+}
+
+.formulario .linea {
+    height: 1px;
+    margin: 10%;
+    width: 80%;
+    border-bottom: solid white 1px;
+}
+
+.formulario label {
+    text-align: start;
 }
 
 .formulario input {
@@ -62,4 +73,66 @@
     color: white;
     font-size: 0.8rem;
     text-decoration: none;
+}
+
+@media (min-width: 1200px) {
+
+    .Bigbox {
+        width: 100%;
+    }
+
+    .Smallbox{
+        background-color: rgba(59, 73, 34, 0.7);
+        width: 70%;
+        padding: 0%;
+        margin: 14%;
+        box-shadow: 0px 0px 30px black;
+        border: solid black 1px;
+    }
+
+    .register {
+        text-align: center;
+        margin-bottom: 10%;
+    }
+}
+
+@media (max-width: 720px) {
+
+    .Bigbox {
+        width: 100%;
+    }
+
+    .Smallbox{
+        background-color: rgba(59, 73, 34, 0.7);
+        width: 100%;
+        padding: 0%;
+        box-shadow: 0px 0px 30px black;
+        border: solid black 1px;
+    }
+
+    .register {
+        text-align: center;
+        margin-bottom: 10%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .Bigbox {
+        width: 100%;
+    }
+
+    .Smallbox{
+        background-color: rgba(59, 73, 34, 0.7);
+        width: 120%;
+        padding: 0%;
+        margin: -10%;
+        box-shadow: 0px 0px 30px black;
+        border: solid black 1px;
+    }
+
+    .register {
+        text-align: center;
+        margin-bottom: 10%;
+    }
 }
