@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("./partials/head") %>
+    <link rel="stylesheet" href="/css/add.css">
+    <script type="text/javascript" src="/js/add.js"></script>
+</head>
+
+<body>
+    <main class="main-section">
+        <form class="form-block" action="/products/add" method="post">
+            <div class="flag-block">
+                <div class="line-flag">
+                    <div class="flag-box" onclick="test('germany')">
+                        <img src="/images/germany.gif" alt="germany-flag">
+                    </div>
+                    <div class="flag-box" onclick="test('england')">
+                        <img src="/images/england.png" alt="england-flag">
+                    </div>
+                </div>
+                <div class="line-flag middle" >
+                    <div class="flag-box" onclick="test('japan')">
+                        <img src="/images/japon.png" alt="japan-flag">
+                    </div>
+                </div>
+                <div class="line-flag">
+                    <div class="flag-box" onclick="test('russia')">
+                        <img src="/images/russia.png" alt="russia-flag">
+                    </div>
+                    <div class="flag-box" onclick="test('usa')">
+                        <img src="/images/usa.png" alt="usa-flag">
+                    </div>
+                </div>
+                <input id="flag" type="text" name="flag" value="" hidden>
+                <script>
+                    console.log(document.getElementById("flag"));
+                </script>
+            </div>
+            <div class="name-block">
+                <input type="text" placeholder="NOMBRE...">
+            </div>
+            <div class="desc-block">
+                <input type="text" placeholder="DESCRIPCION...">
+            </div>
+            <div class="price-block">
+                <p>$</p>
+                <input type="text" placeholder="PRECIO...">
+            </div>
+            <div class="image-block">
+                <input type="file">
+                <label>AGREGAR IMAGEN</label>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>

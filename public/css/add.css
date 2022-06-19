@@ -1,0 +1,32 @@
+.form-block {
+    margin: auto;
+}
+
+.line-flag {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5% 0;
+}
+
+.middle {
+    justify-content: center;
+}
+
+.flag-box {
+    width: 15%;
+    cursor: pointer;
+    text-align: center;
+    padding: 3%;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.line-flag img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+}
+
+.name-block, .desc-block, .price-block, .image-block {
+    display: none;
+}

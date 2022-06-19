@@ -86,6 +86,7 @@ header {
 /* Main-Section */
 .main-section {
     width: 100vw;
+    height: 100vh;
     background: linear-gradient(rgba(100,100,100,0.3), rgba(100,100,100,0.3)), url("/images/bk-camouflage2.png");
     background-repeat: repeat;
     background-size: 70%;

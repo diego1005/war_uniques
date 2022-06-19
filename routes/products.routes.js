@@ -7,5 +7,7 @@ router.get("/detail", productsController.detail);
 router.get("/cart", productsController.cart);
 router.get("/sell", productsController.sell);
 router.get("/edit", productsController.edit)
+router.get("/add", productsController.add)
+router.post("/create", productsController.create)
 
 module.exports = router;
