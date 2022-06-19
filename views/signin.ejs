@@ -1,14 +1,18 @@
-<%- include("./partials/head") %>
-    <link rel="stylesheet" href="/css/signin.css">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("./partials/head") %>
+        <link rel="stylesheet" href="/css/signin.css">
 </head>
 
 <body>
     <main class="main-section">
-        <%- include("./partials/float_logo.ejs") %> 
-        <div class="Bigbox">
-            <div class="Smallbox">
-                <div class="formulario">
-                    <form action="">
+        <%- include("./partials/float_logo.ejs") %>
+            <div class="Bigbox">
+                <div class="Smallbox">
+                    <!-- <div class="formulario"> -->
+                    <form class="formulario" action="">
                         <div class="control">
                             <label>Nombre</label>
                             <input type="text" name="name">
@@ -30,14 +34,14 @@
                             <label>Confirmar Contraseña</label>
                             <input type="password" name="password">
                         </div>
-                </div>
-                </form>
-                <div class="register">
-                    <a href="#">REGISTRARME</a>
+                        <div class="register">
+                            <input type="submit" value="REGISTRARME">
+                        </div>
+                        <!-- </div> -->
+                    </form>
                 </div>
             </div>
-        </div>
-        </div>
+            </div>
     </main>
 </body>
 

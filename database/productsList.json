@@ -1,0 +1,14 @@
+[
+    {
+        "id": "1",
+        "name": "casco",
+        "description": "lorem",
+        "image": "lorem",
+        "country": "lorem",
+        "year": "lorem",
+        "price": "lorem",
+        "offer": true,
+        "shipping": false,
+        "credit": "lorem"
+    }
+]

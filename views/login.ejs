@@ -1,14 +1,17 @@
-<%- include("./partials/head") %>
-    <link rel="stylesheet" href="/css/login.css">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("./partials/head") %>
+        <link rel="stylesheet" href="/css/login.css">
 </head>
 
 <body>
     <main class="main-section">
-        <%- include("./partials/float_logo.ejs") %> 
-        <div class="Bigbox">
-            <div class="Smallbox">
-                <div class="formulario">
-                    <form action="">
+        <%- include("./partials/float_logo.ejs") %>
+            <div class="Bigbox">
+                <div class="Smallbox">
+                    <form class="formulario" action="">
                         <div class="control">
                             <label>Usuario o email</label>
                             <input type="text" name="user">
@@ -26,13 +29,12 @@
                                 <a href="#">¿Olvidaste tu contraseña?</a>
                             </div>
                         </div>
+                        <div class="login">
+                            <input type="submit" value="INICIAR SESION">
+                        </div>
                     </form>
                 </div>
-                <div class="login">
-                    <a href="#">INICIAR SESION</a>
-                </div>
             </div>
-        </div>
     </main>
 </body>
 
