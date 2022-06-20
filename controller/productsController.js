@@ -1,3 +1,8 @@
+const fs = require("fs");
+const path = require("path");
+
+const filePath = path.join(__dirname, "../database/productsList.json");
+
 const productsController = {
     detail: (req, res) => {
         res.render("detail");
@@ -15,7 +20,15 @@ const productsController = {
         res.render("add");
     },
     create: (req, res) => {
-        res.send(req.body);
+        let product = req.body;
+        let prodList = fs.readFileSync(filePath, "utf-8");
+        prodList = JSON.parse(prodList);
+        product.image = req.file.filename;
+        prodList.push(product);
+        prodList = JSON.stringify(prodList);
+        fs.writeFileSync(filePath, prodList);
+        prodList = JSON.parse(prodList);
+        res.render("home", {prod: prodList});
     }
 }
 

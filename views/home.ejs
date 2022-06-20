@@ -1,86 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <%- include("./partials/head") %>
+<head>
+    <%- include("./partials/head") %>
         <link rel="stylesheet" href="/css/home.css">
-    </head>
+</head>
 
-    <body>
+<body>
 
-        <%- include("./partials/header") %>
+    <%- include("./partials/header") %>
 
-            <%- include("./partials/slider") %>
+        <%- include("./partials/slider") %>
 
-                <main class="main-section">
-                    <section class="main-top">
-                        <h2 class="main-title">Ofertas</h2>
-                        <div class="offers-products">
-                            <% for (let el of prod) { %>
-                                <% if (el.offer) { %>
-                                    <div class="product">
-                                        <div class="product-image">
-                                            <a href="/products/detail"><img src="<%= el.image %>" alt="product"></a>
-                                        </div>
-                                        <div class="product-detail">
-                                            <div class="product-name">
-                                                <p>
-                                                    <%= el.name %>
-                                                </p>
-                                                <img src="<%= el.country %>" alt="germany-flag">
-                                            </div>
-                                            <p>
-                                                <%= el.description%>
-                                            </p>
-                                            <p class="product-price">
-                                                <%= el.price %>
-                                            </p>
-                                        </div>
+            <main class="main-section">
+                <section class="main-top">
+                    <h2 class="main-title">Ofertas</h2>
+                    <div class="offers-products">
+                        <% for (let el of prod) { %>
+                            <div class="product">
+                                <div class="product-image">
+                                    <a href="/products/detail"><img src="/images/products-image/<%= el.image %>" alt="product"></a>
+                                </div>
+                                <div class="product-detail">
+                                    <div class="product-name">
+                                        <p>
+                                            <%= el.name %>
+                                        </p>
+                                        <img src="/images/flags/<%= el.country %>.png" alt="flag">
                                     </div>
-                        </div>
+                                    <p>
+                                        <%= el.description%>
+                                    </p>
+                                    <p class="product-price">
+                                        $<%= el.price %>
+                                    </p>
+                                </div>
+                            </div>
+                    </div>
+                    <% } %>
                         <div class="see-more">
                             <a href="#">VER TODO</a>
                         </div>
-                        <% } else { %>
-                            <h4 class="fail-msj">No hay productos</h4>
-                            <% } } %>
-                    </section>
-                    <section class="main-bottom">
-                        <h2 class="main-title">Envio Gratis</h2>
-                        <div class="popular-products">
-                            <% for (let el of prod) { %>
-                                <% if (el.shipping) { %>
-                                    <div class="product">
-                                        <div class="product-image">
-                                            <a href="/products/detail"><img src="<%= el.image%>" alt="product"></a>
-                                        </div>
-                                        <div class="product-detail">
-                                            <div class="product-name">
-                                                <p>
-                                                    <%= el.name%>
-                                                </p>
-                                                <img src="<%= el.country%>" alt="usa-flag">
-                                            </div>
-                                            <p>
-                                                <%= el.description%>
-                                            </p>
-                                            <p class="product-price">
-                                                <%= el.price%>
-                                            </p>
-                                        </div>
+                </section>
+                <section class="main-bottom">
+                    <h2 class="main-title">Envio Gratis</h2>
+                    <div class="popular-products">
+                        <% for (let el of prod) { %>
+                            <div class="product">
+                                <div class="product-image">
+                                    <a href="/products/detail"><img src="/images/products-image/<%= el.image %>" alt="product"></a>
+                                </div>
+                                <div class="product-detail">
+                                    <div class="product-name">
+                                        <p>
+                                            <%= el.name%>
+                                        </p>
+                                        <img src="/images/flags/<%= el.country%>.png" alt="flag">
                                     </div>
-                        </div>
+                                    <p>
+                                        <%= el.description%>
+                                    </p>
+                                    <p class="product-price">
+                                        $<%= el.price%>
+                                    </p>
+                                </div>
+                            </div>
+                    </div>
+                    <% } %>
                         <div class="see-more">
                             <a href="#">VER TODO</a>
                         </div>
-                        <% } else { %>
-                            <h4 class="fail-msj">No hay productos</h4>
-                            <% } } %>
-                    </section>
-                </main>
+                </section>
+            </main>
 
-                <%- include("./partials/footer") %>
+            <%- include("./partials/footer") %>
 
-    </body>
+</body>
 
 </html>

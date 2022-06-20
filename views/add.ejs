@@ -3,53 +3,64 @@
 
 <head>
     <%- include("./partials/head") %>
-    <link rel="stylesheet" href="/css/add.css">
-    <script type="text/javascript" src="/js/add.js"></script>
+        <link rel="stylesheet" href="/css/add.css">
+        <script type="text/javascript" src="/js/add.js"></script>
 </head>
 
 <body>
     <main class="main-section">
-        <form class="form-block" action="/products/add" method="post">
-            <div class="flag-block">
+        <form class="form-block" action="/products/create" method="post" enctype="multipart/form-data">
+            <div class="block block-flag">
                 <div class="line-flag">
-                    <div class="flag-box" onclick="test('germany')">
-                        <img src="/images/germany.gif" alt="germany-flag">
+                    <div class="flag-box" onclick="next('germany')">
+                        <img src="/images/flags/germany.png" alt="germany-flag">
                     </div>
-                    <div class="flag-box" onclick="test('england')">
-                        <img src="/images/england.png" alt="england-flag">
+                    <div class="flag-box" onclick="next('england')">
+                        <img src="/images/flags/england.png" alt="england-flag">
                     </div>
                 </div>
-                <div class="line-flag middle" >
-                    <div class="flag-box" onclick="test('japan')">
-                        <img src="/images/japon.png" alt="japan-flag">
+                <div class="line-flag middle">
+                    <div class="flag-box" onclick="next('japan')">
+                        <img src="/images/flags/japan.png" alt="japan-flag">
                     </div>
                 </div>
                 <div class="line-flag">
-                    <div class="flag-box" onclick="test('russia')">
-                        <img src="/images/russia.png" alt="russia-flag">
+                    <div class="flag-box" onclick="next('russia')">
+                        <img src="/images/flags/russia.png" alt="russia-flag">
                     </div>
-                    <div class="flag-box" onclick="test('usa')">
-                        <img src="/images/usa.png" alt="usa-flag">
+                    <div class="flag-box" onclick="next('usa')">
+                        <img src="/images/flags/usa.png" alt="usa-flag">
                     </div>
                 </div>
-                <input id="flag" type="text" name="flag" value="" hidden>
-                <script>
-                    console.log(document.getElementById("flag"));
-                </script>
+                <input id="flag" type="text" name="country" value="" hidden>
             </div>
-            <div class="name-block">
-                <input type="text" placeholder="NOMBRE...">
+            <div class="block">
+                <h3>Describe en una frase tu producto</h3>
+                <input type="text" name="name" placeholder="Nombre del producto...">
+                <button type="button" class="btn-next" onclick="next()">CONTINUAR</button>
             </div>
-            <div class="desc-block">
-                <input type="text" placeholder="DESCRIPCION...">
+            <div class="block">
+                <h3>Coloca las caracteristicas del producto </h3>
+                <textarea name="description" cols="30" rows="10" placeholder="Descripcion..."></textarea>
+                <button type="button" class="btn-next" onclick="next()">CONTINUAR</button>
             </div>
-            <div class="price-block">
-                <p>$</p>
-                <input type="text" placeholder="PRECIO...">
+            <div class="block">
+                <h3>Indica el precio por unidad</h3>
+                <div class="block-price">
+                    <p>$</p>
+                    <input type="text" name="price" placeholder="Precio...">
+                </div>
+                <button type="button" class="btn-next" onclick="next()">CONTINUAR</button>
             </div>
-            <div class="image-block">
-                <input type="file">
-                <label>AGREGAR IMAGEN</label>
+            <div class="block">
+                <h3>Sube una o mas imagenes</h3>
+                <div class="block-img">
+                    <i class="fa fa-regular fa-arrow-up-from-bracket"></i>
+                    <label for="prod">Seleccionar imagen</label>
+                    <input type="file" id="prod" name="prod_img">
+                    <p id="file_name"></p>
+                </div>
+                <button type="submit" class="btn-next" onclick="next()">CONTINUAR</button>
             </div>
         </form>
     </main>

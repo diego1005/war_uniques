@@ -1,3 +1,8 @@
+.main-section {
+    height: 100vh;
+    padding: 0;
+}
+
 .form-block {
     margin: auto;
 }
@@ -13,9 +18,10 @@
 }
 
 .flag-box {
-    width: 15%;
+    width: 25%;
     cursor: pointer;
     text-align: center;
+    /* margin-top: 15%; */
     padding: 3%;
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -27,6 +33,84 @@
     border-radius: 10%;
 }
 
-.name-block, .desc-block, .price-block, .image-block {
+.block {
     display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.block-flag {
+    justify-content: space-evenly;
+}
+
+.block input {
+    width: 92%;
+    font-size: 1.5rem;
+    margin: 5% auto 80%;
+    padding: 1.2%;
+    border-radius: 10px;
+}
+
+.block textarea {
+    width: 90%;
+    font-size: 1.1rem;
+    margin: 5% auto 80%;
+    padding: 1.8%;
+    border-radius: 15px;
+}
+
+.block-price {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80%;
+}
+
+.block-price p {
+    color: rgb(70, 70, 255);
+    font-size: 2rem;
+    margin: auto;
+    margin-right: 1%;
+}
+
+.block-price input {
+    width: 65%;
+    margin: auto;
+}
+
+.block-img {
+    width: 80%;
+    background-color: darkslategray;
+    color: white;
+    text-align: center;
+    margin: 5% auto 80%;
+    padding: 5%;
+    border-radius: 5px;
+}
+
+.block-img input {
+    display: none;
+}
+
+.block-img label {
+    margin-left: 5%;
+}
+
+.block h3 {
+    width: 100%;
+    color: white;
+    background-color: rgba(165, 42, 42, 0.3);
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 10% 0;
+}
+
+.btn-next {
+    font-size: 1.2rem;
+    color: white;
+    background-color: rgb(70, 70, 255);
+    padding: 8%;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
 }
