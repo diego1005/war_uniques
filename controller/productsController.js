@@ -23,6 +23,8 @@ const productsController = {
         let product = req.body;
         let prodList = fs.readFileSync(filePath, "utf-8");
         prodList = JSON.parse(prodList);
+        let len = prodList.length;
+        product.id = len + 1;
         product.image = req.file.filename;
         prodList.push(product);
         prodList = JSON.stringify(prodList);

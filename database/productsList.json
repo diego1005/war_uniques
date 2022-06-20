@@ -1,9 +1,13 @@
 [
     {
+        "id": "1",
         "country": "germany",
         "name": "Helmet",
         "description": "A good war helmet",
+        "offer": false,
         "price": "15.000",
-        "image": "1655688892988_helmet.webp"
+        "shipping": true,
+        "image": "1655686500254_helmet.webp",
+        "credit": "12"
     }
 ]

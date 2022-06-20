@@ -11,6 +11,7 @@
     <main class="main-section">
         <form class="form-block" action="/products/create" method="post" enctype="multipart/form-data">
             <div class="block block-flag">
+                <h3>Selecciona el origen del producto</h3>
                 <div class="line-flag">
                     <div class="flag-box" onclick="next('germany')">
                         <img src="/images/flags/germany.png" alt="germany-flag">
@@ -32,6 +33,7 @@
                         <img src="/images/flags/usa.png" alt="usa-flag">
                     </div>
                 </div>
+                <div class="line-flag"></div>
                 <input id="flag" type="text" name="country" value="" hidden>
             </div>
             <div class="block">
@@ -60,7 +62,7 @@
                     <input type="file" id="prod" name="prod_img">
                     <p id="file_name"></p>
                 </div>
-                <button type="submit" class="btn-next" onclick="next()">CONTINUAR</button>
+                <button type="submit" class="btn-next">CONTINUAR</button>
             </div>
         </form>
     </main>

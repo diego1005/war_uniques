@@ -86,7 +86,7 @@ header {
 /* Main-Section */
 .main-section {
     width: 100vw;
-    background: linear-gradient(rgba(100,100,100,0.3), rgba(100,100,100,0.3)), url("/images/bk-camouflage2.png");
+    background: linear-gradient(rgba(100, 100, 100, 0.3), rgba(100, 100, 100, 0.3)), url("/images/bk-camouflage2.png");
     background-repeat: repeat;
     background-size: 70%;
     padding: 2%;
@@ -138,8 +138,8 @@ header {
 
 .contactos {
     display: flex;
-    justify-content: center;
-    margin: auto;
+    justify-content: space-around;
+    width: 100%;
 }
 
 .contactos img {
@@ -148,20 +148,30 @@ header {
     margin: 0px 20%;
 }
 
-/* .fotlogo {
-    width: 40%;
-    margin: auto;
-}
-
-.fotlogo img {
-    width: 100%;
-    margin: auto;
-    padding-bottom: 5%;
-} */
-
 @media (min-width: 150px) {
     .contactos img {
         margin: 0px 6%;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .fotleft,
+    .fotmidle {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 5%;
+    }
+
+    .fotleft p,
+    .fotmidle p {
+        text-align: center;
+    }
+
+    .fotright {
+        width: 100%;
     }
 }
 

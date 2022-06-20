@@ -15,17 +15,13 @@ window.addEventListener("load", () => {
 
 function next(flag) {
     if (flag != undefined) {
-        console.log("flag", i);
         panels[i].style.display = "none";
         document.getElementById("flag").value = flag;
         panels[i+1].style.display = "flex";
         i++;
-        console.log("flag+1", i);
     } else {
-        console.log("noflag", i);
         panels[i].style.display = "none";
         panels[i+1].style.display = "flex";
         i++
-        console.log("noflag+1", i);
     }
 }
