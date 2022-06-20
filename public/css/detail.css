@@ -1,19 +1,21 @@
 .detail-container {
-    width: 100%;
-    margin-bottom: 10%;
+    width: 95%;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin: 0 auto 10%;
+    border-radius: 5px;
+    padding-bottom: 1%;
 }
 
 /* Image */
 .image-section {
-    width: 70%;
+    width: 85%;
     margin: auto;
     padding: 5% 0px;
 }
 
 .image-top img {
     width: 100%;
-    height: 90%;
-    border: solid black 5px;
+    border: solid black 1px;
     border-radius: 5px;
 }
 
@@ -34,36 +36,45 @@
 
 /* Detail */
 .detail-section {
-    width: 70%;
+    width: 90%;
     margin: 5% auto;
 }
 
 .detail {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: solid white 1px;
     color: white;
-    margin: 10% 0px;
-    padding: 10px 3%;
-    background-color: black;
+    margin: 5% 0 5%;
 }
 
-.detail div{
-    width: 30%;
+.detail-buttom {
+    background-color: rgba(10, 10, 10, 0.5);
+    padding: 5% 3%;
+    border-radius: 10px;
+}
+
+#name-title {
+    padding: 5% 0 0 2%;
 }
 
 .icons {
-    text-align: end;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    margin: 10% auto 0;
+}
+
+.icon {
+    border-radius: 50%;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    padding: 5%;
 }
 
 .icons i{
-    font-size: 1.5rem;
-    margin:0% 10%;
+    font-size: 1rem;
+    color: wheat;
 }
 
-.icons a{
-    color:white;
+.fa-pencil {
+    margin-right: 2%;
 }
 
 .buy-detail {
@@ -71,10 +82,8 @@
     flex-direction: column;
 }
 
-
-
 .buy-detail button {
-    padding: 2%;
+    padding: 3%;
     margin: 2% 0px;
     border-radius: 5px;
     border: none;
@@ -91,11 +100,19 @@
 }
 
 .price {
+    width: 95%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    margin: 0 auto 3%;
+}
+
+#fees{
+    padding-left: 3%;
 }
 
 .price img {
+    width: 15%;
     border: solid grey 1px;
 }
 
@@ -197,7 +214,7 @@ hr {
         font-size: 0.7rem;
     }
     
-    .detail h4{
+    .detail h3{
         margin-right: 5%;
         font-size: 00.7rem;
     }
@@ -226,7 +243,7 @@ hr {
         font-size: 1.2rem;
     }
     
-    .detail h4{
+    .detail h3{
         margin-right: 5%;
         font-size: 0.9rem;
     }

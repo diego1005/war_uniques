@@ -10,8 +10,12 @@
 <body>
     <main class="main-section">
         <form class="form-block" action="/products/create" method="post" enctype="multipart/form-data">
+            <input type="text" name="id" hidden>
             <div class="block block-flag">
-                <h3>Selecciona el origen del producto</h3>
+                <h3>
+                    <a href="/"><i class="fa-solid fa-angle-left"></i></a>
+                    Selecciona el origen del producto
+                </h3>
                 <div class="line-flag">
                     <div class="flag-box" onclick="next('germany')">
                         <img src="/images/flags/germany.png" alt="germany-flag">
@@ -37,29 +41,73 @@
                 <input id="flag" type="text" name="country" value="" hidden>
             </div>
             <div class="block">
-                <h3>Describe en una frase tu producto</h3>
+                <h3>
+                    <a href="/"><i class="fa-solid fa-angle-left"></i></a>
+                    Describe en una frase tu producto
+                </h3>
                 <input type="text" name="name" placeholder="Nombre del producto...">
                 <button type="button" class="btn-next" onclick="next()">CONTINUAR</button>
             </div>
             <div class="block">
-                <h3>Coloca las caracteristicas del producto </h3>
+                <h3>
+                    <a href="/"><i class="fa-solid fa-angle-left"></i></a>
+                    Coloca las caracteristicas del producto
+                </h3>
                 <textarea name="description" cols="30" rows="10" placeholder="Descripcion..."></textarea>
                 <button type="button" class="btn-next" onclick="next()">CONTINUAR</button>
             </div>
             <div class="block">
-                <h3>Indica el precio por unidad</h3>
+                <h3>
+                    <a href="/"><i class="fa-solid fa-angle-left"></i></a>
+                    Indica el precio por unidad
+                </h3>
                 <div class="block-price">
                     <p>$</p>
                     <input type="text" name="price" placeholder="Precio...">
                 </div>
+                <div class="block-contain">
+                    <div class="block-payment">
+                        <div class="title">
+                            <i class="fa-solid fa-tag"></i>
+                            <p>Oferta</p>
+                        </div>
+                        <input type="radio" name="offer" value=true>
+                    </div>
+                    <div class="block-shipping">
+                        <div class="title">
+                            <i class="fa-solid fa-truck-fast"></i>
+                            <p>Envio Gratis</p>
+                        </div>
+                        <input type="radio" name="shipping" value=true>
+                    </div>
+                </div>
+                <div class="block-credit">
+                    <div class="title">
+                        <i class="fa-solid fa-credit-card"></i>
+                        <p>Cuotas</p>
+                    </div>
+                    <div class="credit-offer">
+                        <label for="credit">3</label>
+                        <label for="credit">6</label>
+                        <label for="credit">12</label>
+                    </div>
+                    <div class="credit-offer">
+                        <input type="radio" name="credit" value="3">
+                        <input type="radio" name="credit" value="6">
+                        <input type="radio" name="credit" value="12">
+                    </div>
+                </div>
                 <button type="button" class="btn-next" onclick="next()">CONTINUAR</button>
             </div>
             <div class="block">
-                <h3>Sube una o mas imagenes</h3>
+                <h3>
+                    <a href="/"><i class="fa-solid fa-angle-left"></i></a>
+                    Sube una o mas imagenes
+                </h3>
                 <div class="block-img">
                     <i class="fa fa-regular fa-arrow-up-from-bracket"></i>
                     <label for="prod">Seleccionar imagen</label>
-                    <input type="file" id="prod" name="prod_img">
+                    <input type="file" id="prod" name="prod_img" accept=".jpg, .png, .webp">
                     <p id="file_name"></p>
                 </div>
                 <button type="submit" class="btn-next">CONTINUAR</button>

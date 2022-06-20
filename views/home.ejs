@@ -17,27 +17,29 @@
                     <h2 class="main-title">Ofertas</h2>
                     <div class="offers-products">
                         <% for (let el of prod) { %>
-                            <div class="product">
-                                <div class="product-image">
-                                    <a href="/products/detail"><img src="/images/products-image/<%= el.image %>" alt="product"></a>
-                                </div>
-                                <div class="product-detail">
-                                    <div class="product-name">
-                                        <p>
-                                            <%= el.name %>
-                                        </p>
-                                        <img src="/images/flags/<%= el.country %>.png" alt="flag">
+                            <% if (el.offer) { %>
+                                <div class="product">
+                                    <div class="product-image">
+                                        <a href="/products/detail/<%= el.id %>"><img src="/images/products-image/<%= el.image %>"
+                                                alt="product"></a>
                                     </div>
-                                    <p>
-                                        <%= el.description%>
-                                    </p>
-                                    <p class="product-price">
-                                        $<%= el.price %>
-                                    </p>
+                                    <div class="product-detail">
+                                        <div class="product-name">
+                                            <p>
+                                                <%= el.name %>
+                                            </p>
+                                            <img src="/images/flags/<%= el.country %>.png" alt="flag">
+                                        </div>
+                                        <p>
+                                            <%= el.description%>
+                                        </p>
+                                        <p class="product-price">
+                                            $<%= el.price %>
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
                     </div>
-                    <% } %>
+                    <% } } %>
                         <div class="see-more">
                             <a href="#">VER TODO</a>
                         </div>
@@ -46,27 +48,29 @@
                     <h2 class="main-title">Envio Gratis</h2>
                     <div class="popular-products">
                         <% for (let el of prod) { %>
-                            <div class="product">
-                                <div class="product-image">
-                                    <a href="/products/detail"><img src="/images/products-image/<%= el.image %>" alt="product"></a>
-                                </div>
-                                <div class="product-detail">
-                                    <div class="product-name">
-                                        <p>
-                                            <%= el.name%>
-                                        </p>
-                                        <img src="/images/flags/<%= el.country%>.png" alt="flag">
+                            <% if (el.shipping) { %>
+                                <div class="product">
+                                    <div class="product-image">
+                                        <a href="/products/detail/<%= el.id %>"><img src="/images/products-image/<%= el.image %>"
+                                                alt="product"></a>
                                     </div>
-                                    <p>
-                                        <%= el.description%>
-                                    </p>
-                                    <p class="product-price">
-                                        $<%= el.price%>
-                                    </p>
+                                    <div class="product-detail">
+                                        <div class="product-name">
+                                            <p>
+                                                <%= el.name%>
+                                            </p>
+                                            <img src="/images/flags/<%= el.country%>.png" alt="flag">
+                                        </div>
+                                        <p>
+                                            <%= el.description%>
+                                        </p>
+                                        <p class="product-price">
+                                            $<%= el.price%>
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
                     </div>
-                    <% } %>
+                    <% } } %>
                         <div class="see-more">
                             <a href="#">VER TODO</a>
                         </div>

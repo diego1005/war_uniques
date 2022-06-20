@@ -5,7 +5,10 @@ const filePath = path.join(__dirname, "../database/productsList.json");
 
 const productsController = {
     detail: (req, res) => {
-        res.render("detail");
+        let product = fs.readFileSync(filePath, "utf-8");
+        product = JSON.parse(product).find(el => el.id == req.params.id);
+        let credit = (product.credit != "No") ? product.price / parseFloat(product.credit) : false;
+        res.render("detail", {prod: product, fee: credit});
     },
     cart: (req, res) => {
         res.render("cart");
@@ -25,6 +28,10 @@ const productsController = {
         prodList = JSON.parse(prodList);
         let len = prodList.length;
         product.id = len + 1;
+        product.price = parseFloat(product.price).toLocaleString("en-US");
+        product.offer = (req.body.offer) ? true : false;
+        product.shipping = (req.body.shipping) ? true : false;
+        product.credit = (req.body.credit) ? req.body.credit : "No" ;
         product.image = req.file.filename;
         prodList.push(product);
         prodList = JSON.stringify(prodList);

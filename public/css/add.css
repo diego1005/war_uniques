@@ -63,11 +63,10 @@
 .block-price {
     display: flex;
     justify-content: center;
-    margin-bottom: 80%;
 }
 
 .block-price p {
-    color: rgb(70, 70, 255);
+    color: rgb(70, 150, 255);
     font-size: 2rem;
     margin: auto;
     margin-right: 1%;
@@ -76,6 +75,48 @@
 .block-price input {
     width: 65%;
     margin: auto;
+}
+
+.block-contain {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.block-payment, .block-shipping, .block-credit {
+    width: 45%;
+    text-align: center;
+    background-color: rgba(10, 10, 10, 0.5);
+    box-shadow: 0 0 10px rgba(10, 10, 10, 0.5);
+}
+
+.block-credit {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.block-payment input, .block-shipping input, .block-credit input {
+    height: 1.1rem;
+    margin: 2% auto;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.title p {
+    margin-left: 5%;
+}
+
+.credit-offer {
+    display: flex;
+    justify-content: space-around;
+    color: white;
 }
 
 .block-img {
@@ -103,6 +144,11 @@
     font-size: 1.5rem;
     text-align: center;
     padding: 10% 0;
+}
+
+h3 a {
+    color: white;
+    margin-right: 8%;
 }
 
 .btn-next {

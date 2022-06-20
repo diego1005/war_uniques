@@ -1,13 +1,24 @@
 [
     {
-        "id": "1",
-        "country": "germany",
+        "id": 1,
+        "country": "japan",
         "name": "Helmet",
-        "description": "A good war helmet",
-        "offer": false,
-        "price": "15.000",
+        "description": "A helmet",
+        "price": "15,000",
+        "offer": true,
         "shipping": true,
-        "image": "1655686500254_helmet.webp",
-        "credit": "12"
+        "credit": "12",
+        "image": "1655745071847_helmet.webp"
+    },
+    {
+        "id": 2,
+        "country": "usa",
+        "name": "Gun",
+        "description": "A machine gun",
+        "price": "18,300",
+        "shipping": true,
+        "offer": false,
+        "credit": "No",
+        "image": "1655745107260_gun.webp"
     }
 ]
