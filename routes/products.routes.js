@@ -19,8 +19,9 @@ const productsController = require("../controller/productsController");
 router.get("/detail/:id", productsController.detail);
 router.get("/cart", productsController.cart);
 // router.get("/sell", productsController.sell);
-router.get("/edit", productsController.edit);
 router.get("/add", productsController.add);
 router.post("/create", upload.single("prod_img"), productsController.create);
+router.put("/edit/:id", productsController.edit);
+router.delete("/delete/:id", productsController.delete);
 
 module.exports = router;

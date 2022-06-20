@@ -18,12 +18,12 @@
                             <%= prod.name %>
                         </h3>
                         <div class="icons">
-                            <div class="icon">
-                                <a href="/"><i class="fa-solid fa-trash"></i></a>
-                            </div>
-                            <div class="icon">
-                                <a href="/products/edit"><i class="fa-solid fa-pencil"></i></a>
-                            </div>
+                            <form action="/products/delete/<%= prod.id %>?_method=DELETE" method="POST">
+                                <button class="icon" type="submit"><i class="fa-solid fa-trash"></i></button>
+                            </form>
+                            <form action="/products/edit/<%= prod.id %>?_method=PUT" method="POST"">
+                                <button class="icon" type="submit"><i class="fa-solid fa-pencil"></i></button>
+                            </form>
                         </div>
                     </div>
                     <div class="image-section">
@@ -50,7 +50,9 @@
                     </div>
                     <div class="detail detail-buttom">
                         <h3 class="description-title">Descripcion</h3>
-                        <p><%= prod.description %></p>
+                        <p>
+                            <%= prod.description %>
+                        </p>
                     </div>
                     <div class="buy-detail">
                         <button class="btn-buy">Comprar</button>

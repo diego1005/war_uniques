@@ -2,6 +2,8 @@ const express = require("express");
 const path = require("path");
 const app = express();
 
+const methodOverride = require("method-override");
+
 const indexRouter = require("./routes/index.routes.js");
 const productsRouter = require("./routes/products.routes.js");
 const userRouter = require("./routes/user.routes.js");
@@ -10,6 +12,7 @@ const userRouter = require("./routes/user.routes.js");
 const port = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());                               
+app.use(methodOverride("_method"));
 app.set("view engine", "ejs");
 
 //routes____________________________________________________
