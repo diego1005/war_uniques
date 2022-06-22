@@ -13,7 +13,7 @@ const productsController = {
         prodList = JSON.parse(prodList);
         let len = prodList.length;
         product.id = len + 1;
-        product.price = parseFloat(product.price).toLocaleString("en-US");
+        product.price = parseFloat(product.price).toLocaleString();
         product.offer = (req.body.offer) ? true : false;
         product.shipping = (req.body.shipping) ? true : false;
         product.credit = (req.body.credit) ? req.body.credit : "No";
@@ -27,7 +27,9 @@ const productsController = {
     detail: (req, res) => {
         let product = fs.readFileSync(filePath, "utf-8");
         product = JSON.parse(product).find(el => el.id == req.params.id);
-        let credit = (product.credit != "No") ? product.price / parseFloat(product.credit) : false;
+        let price = product.price.split(",").join("");
+        let result = parseFloat(price) / parseFloat(product.credit);
+        let credit = (product.credit != "No") ? result.toLocaleString("en-US") : false;
         res.render("detail", { prod: product, fee: credit });
     },
     edit: (req, res) => {

@@ -1,1 +1,35 @@
-[]
+[
+    {
+        "id": 1,
+        "country": "germany.png",
+        "name": "Helmet",
+        "description": "sdfasdgasdf",
+        "price": "15,000",
+        "offer": true,
+        "credit": "6",
+        "shipping": false,
+        "image": "1655853486884_helmet.webp"
+    },
+    {
+        "id": 2,
+        "country": "japan.png",
+        "name": "Machine Gun",
+        "description": "fdfsdgsdf",
+        "price": "18.300",
+        "shipping": true,
+        "offer": false,
+        "credit": "No",
+        "image": "1655854442345_gun.webp"
+    },
+    {
+        "id": 3,
+        "country": "england.png",
+        "name": "faja",
+        "description": "sdgsdgdf",
+        "price": "20.000",
+        "offer": true,
+        "credit": "12",
+        "shipping": false,
+        "image": "1655854689479_faja.webp"
+    }
+]

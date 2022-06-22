@@ -25,6 +25,17 @@ Weekly meeting - 4/6/2022
 	3. cambiar color de los iconos en la parte de payment del create
 	4. crear vista minimalista para mobile (crear burguer menu)
 
+- 21-06-2022
+	1. Actualizar id en bd cuando se elimina un producto.
+	2. Borrar archivo de imagen cuando se borra un producto.
+	3. Crear nueva vista para editar productos
+	4. Actualizar el trello.
+	5. Vistas Responsive.
+	6. Colocar restricciones en formularios.
+	7. La vista en mobile, cambiar header | logo buscador con brujula y carrito y a la derecha menu hamburguesa. Menu hamburguesa (vender, login, signin)
+	8. Detalle de productos con identidades reales.
+	
+
 
 
 

@@ -18,7 +18,7 @@ const productsController = require("../controller/productsController");
 
 router.get("/detail/:id", productsController.detail);
 router.get("/cart", productsController.cart);
-// router.get("/sell", productsController.sell);
+router.get("/sell", productsController.sell);
 router.get("/add", productsController.add);
 router.post("/create", upload.single("prod_img"), productsController.create);
 router.put("/edit/:id", productsController.edit);
