@@ -17,7 +17,6 @@ const productsController = {
         product.offer = (req.body.offer) ? true : false;
         product.shipping = (req.body.shipping) ? true : false;
         product.credit = (req.body.credit) ? req.body.credit : "No";
-        product.image = req.file.filename;
         prodList.push(product);
         prodList = JSON.stringify(prodList);
         fs.writeFileSync(filePath, prodList);
