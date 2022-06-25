@@ -3,49 +3,102 @@
 
 <head>
     <%- include("./partials/head") %>
-    <link rel="stylesheet" href="/css/sell.css">
+        <link rel="stylesheet" href="/css/edit.css">
+        <script type="text/javascript" src="/js/viewJS/edit.js"></script>
 </head>
 
 <body>
-
-    <%- include("./partials/header.ejs") %>
-
-        <main class="main-section">
-            <div class="all">
-                <div class="vender_producto">EDITAR PRODUCTO</div>
-                <div class="top">
-                    <a href="#">AGREGAR IMAGEN</a>
-                    <input type="text" placeholder="NOMBRE...">
-                </div>
-                <div class="medium">
-                    <div><img src="https://cdn-icons-png.flaticon.com/512/2/2338.png"></div>
-                    <input type="text" placeholder="DESCRIPCION...">
-                </div>
-                <div class="bottom">
-                    <div class="left-box">
-                        <a href="#">+</a>
-                    </div>
-                    <div class="right-box">
-                        <div class="price">
-                            <input type="number" placeholder="PRECIO...">
-                            <P>$</P>
+    <main class="main-section">
+        <form class="form-block" action="/products/edit/<%= prod.id %>?_method=PUT" method="POST"
+            enctype="multipart/form-data">
+            <input type="text" name="id" hidden>
+            <div class="block block-flag">
+                <h3>
+                    <a href="/"><i class="fa-solid fa-angle-left"></i></a>
+                    Selecciona el origen del producto
+                </h3>
+                <div class="line-flag">
+                    <div class="flag-box">
+                        <div class="flag-box-opt">
+                            <select name="country" onchange="isPick(this.selectedIndex)">
+                                <option value="select">--- Seleccionar ---</option>
+                                <option value="germany.png">Alemania</option>
+                                <option value="england.png">Inglaterra</option>
+                                <option value="japan.png">Japon</option>
+                                <option value="russia.png">Russia</option>
+                                <option value="usa.png">Estados Unidos</option>
+                            </select>
                         </div>
-                        <select name="flag" class="select">
-                            <option value="england">England</option>
-                            <option value="usa">Usa</option>
-                            <option value="russia">Russia</option>
-                            <option value="germany">Germany</option>
-                            <option value="japon">Japon</option>
-                        </select>
+                        <div class="flag-box-img">
+                            <img id="img-flag">
+                        </div>
                     </div>
                 </div>
-                <div class="see-more">
-                    <a href="#">ACTUALIZAR</a>
+            </div>
+            <div class="block">
+                <h3>Describe en una frase tu producto</h3>
+                <div class="block-name">
+                    <input type="text" name="name" value="<%= prod.name %>" placeholder="Nombre del producto...">
                 </div>
-        </main>
-
-        <%- include("./partials/footer.ejs") %>
-
+            </div>
+            <div class="block">
+                <h3>Coloca las caracteristicas del producto</h3>
+                <textarea name="description" cols="30" rows="5"
+                    placeholder="Descripcion..."><%= prod.description %></textarea>
+            </div>
+            <div class="block">
+                <h3>Indica el precio por unidad</h3>
+                <div class="block-price">
+                    <p>$</p>
+                    <input type="text" name="price" value="<%= prod.price %>" placeholder="Precio...">
+                </div>
+                <div class="block-contain">
+                    <div class="block-payment">
+                        <div class="title">
+                            <i class="fa-solid fa-tag"></i>
+                            <p>Oferta</p>
+                        </div>
+                        <input id="off" type="radio" name="offer" value=true>
+                    </div>
+                    <div class="block-shipping">
+                        <div class="title">
+                            <i class="fa-solid fa-truck-fast"></i>
+                            <p>Envio Gratis</p>
+                        </div>
+                        <input id="ship" type="radio" name="shipping" value=true>
+                    </div>
+                    <div class="block-credit">
+                        <div class="title">
+                            <i class="fa-solid fa-credit-card"></i>
+                            <p>Cuotas</p>
+                        </div>
+                        <div class="credit-offer">
+                            <label for="credit">3</label>
+                            <label for="credit">6</label>
+                            <label for="credit">12</label>
+                        </div>
+                        <div class="credit-offer">
+                            <input id="cred3" type="radio" name="credit" value="3">
+                            <input id="cred6" type="radio" name="credit" value="6">
+                            <input id="cred12" type="radio" name="credit" value="12">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block">
+                <h3>Sube una o mas imagenes</h3>
+                <div class="block-img">
+                    <i class="fa fa-regular fa-arrow-up-from-bracket"></i>
+                    <label for="prod">Seleccionar imagen</label>
+                    <div class="file_box">
+                        <input type="file" id="prod" name="image" accept=".jpg, .png, .webp">
+                        <p id="file_name"></p>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" class="btn-next" value="CONTINUAR">
+        </form>
+    </main>
 </body>
 
 </html>

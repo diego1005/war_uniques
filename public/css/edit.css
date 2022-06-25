@@ -1,5 +1,4 @@
 .main-section {
-    height: 100vh;
     padding: 0;
 }
 
@@ -18,26 +17,35 @@
 }
 
 .flag-box {
-    width: 25%;
-    cursor: pointer;
-    text-align: center;
-    /* margin-top: 15%; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     padding: 3%;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.flag-box-opt {
+    width: 100%;
+    min-width: 150px
+}
+
+.flag-box-img {
+    display: flex;
+    width: 4rem;
+}
+
+.flag-box select {
+    padding: 3% 2%;
+    border-radius: 5px;
 }
 
 .line-flag img {
-    width: 100%;
-    height: 100%;
     border-radius: 10%;
 }
 
 .block {
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100vh;
 }
 
 .block-flag {
@@ -45,24 +53,30 @@
 }
 
 .block input {
-    width: 92%;
-    font-size: 1.5rem;
-    margin: 5% auto 80%;
+    width: 90%;
+    font-size: 1.2rem;
+    margin: auto;
     padding: 1.2% 3.5%;
     border-radius: 10px;
 }
 
+.block-name {
+    text-align: center;
+    margin: 5% 0;
+}
+
 .block textarea {
     width: 90%;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin: 5% auto;
     padding: 1.8% 3.5%;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .block-price {
     display: flex;
     justify-content: center;
+    margin: 5% auto;
 }
 
 .block-price p {
@@ -73,38 +87,35 @@
 }
 
 .block-price input {
-    width: 65%;
+    width: 80%;
     margin: auto;
 }
 
 .block-contain {
     display: flex;
     justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.3);
     align-items: center;
+    margin: 3% 1%;
+    border-radius: 5px;
+    padding: 3% 0;
 }
 
-.block-payment, .block-shipping, .block-credit {
-    width: 45%;
+.block-payment, .block-credit {
     text-align: center;
-    background-color: rgba(10, 10, 10, 0.5);
-    box-shadow: 0 0 10px rgba(10, 10, 10, 0.5);
+    width: 20%;
 }
 
-.block-credit {
-    width: 80%;
-    margin: 0 auto;
-}
-
-.block-payment input, .block-shipping input, .block-credit input {
-    height: 1.1rem;
-    margin: 2% auto;
+.block-shipping {
+    text-align: center;
+    width: 35%;
 }
 
 .title {
     display: flex;
     justify-content: center;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     align-items: center;
     margin-bottom: 5%;
 }
@@ -120,17 +131,13 @@
 }
 
 .block-img {
-    width: 80%;
+    width: 65%;
     background-color: darkslategray;
     color: white;
     text-align: center;
-    margin: 5% auto 80%;
-    padding: 5%;
+    margin: 3% auto;
+    padding: 3% 1%;
     border-radius: 5px;
-}
-
-.block-img input {
-    display: none;
 }
 
 .block-img label {
@@ -141,9 +148,9 @@
     width: 100%;
     color: white;
     background-color: rgba(165, 42, 42, 0.3);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: center;
-    padding: 10% 0;
+    padding: 3% 0;
 }
 
 h3 a {
@@ -152,10 +159,15 @@ h3 a {
 }
 
 .btn-next {
+    width: 100vw;
     font-size: 1.2rem;
     color: white;
     background-color: rgb(70, 70, 255);
-    padding: 8%;
+    padding: 3%;
     border: none;
     cursor: pointer;
+}
+
+#prod {
+    font-size: 0.8rem;
 }

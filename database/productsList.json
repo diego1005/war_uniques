@@ -1,35 +1,24 @@
 [
     {
-        "id": 1,
-        "country": "germany.png",
-        "name": "Helmet",
-        "description": "sdfasdgasdf",
-        "price": "15,000",
-        "offer": true,
-        "credit": "6",
-        "shipping": false,
-        "image": "1655853486884_helmet.webp"
-    },
-    {
-        "id": 2,
+        "id": 7,
         "country": "japan.png",
         "name": "Machine Gun",
-        "description": "fdfsdgsdf",
-        "price": "18.300",
+        "description": "machine gun kelly",
+        "price": "20,500",
         "shipping": true,
+        "credit": "6",
         "offer": false,
-        "credit": "No",
-        "image": "1655854442345_gun.webp"
+        "image": "1656199266217_gun.webp"
     },
     {
-        "id": 3,
-        "country": "england.png",
-        "name": "faja",
-        "description": "sdgsdgdf",
-        "price": "20.000",
+        "id": 8,
+        "country": "germany.png",
+        "name": "Helmet",
+        "description": "a good helmet",
+        "price": "14,500",
         "offer": true,
         "credit": "12",
         "shipping": false,
-        "image": "1655854689479_faja.webp"
+        "image": "1656200327163_helmet.webp"
     }
 ]

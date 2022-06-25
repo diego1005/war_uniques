@@ -16,12 +16,27 @@ const upload = multer({storage});
 
 const productsController = require("../controller/productsController");
 
+//READ
+//Carga la vista detalle de producto
 router.get("/detail/:id", productsController.detail);
+
+//Carga la vista carrito de compras
 router.get("/cart", productsController.cart);
-router.get("/sell", productsController.sell);
+
+//CREATE
+//Carga la vista vender producto
 router.get("/add", productsController.add);
-router.post("/create", upload.single("prod_img"), productsController.create);
-router.put("/edit/:id", productsController.edit);
+//Ruta que carga el producto nuevo
+router.post("/create", upload.single("image"), productsController.create);
+
+//EDIT
+//Carga la vista editar producto
+router.get("/edit/:id", productsController.edit);
+//Ruta que edita el producto
+router.put("/edit/:id", upload.single("image"), productsController.upgrade);
+
+//DELETE
+//Ruta que elimina el producto
 router.delete("/delete/:id", productsController.delete);
 
 module.exports = router;

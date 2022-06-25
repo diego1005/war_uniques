@@ -6,6 +6,7 @@
 
 .logon {
     max-width: 50%;
+    margin-bottom: 5%;
 }
 
 .logon img {
@@ -14,19 +15,18 @@
 }
 
 .Bigbox {
-    width: 70vw;
     height: 85vh;
-    max-width: 40%;
+    max-width: 70%;
     margin: auto;
+    margin-top: 2%;
 }
 
 .Smallbox {
-    width: 100%;
     height: 100%;
     background-color: rgba(59, 73, 34, 0.7);
     padding: 5%;
-    box-shadow: 0px 0px 30px black;
-    border: solid black 1px;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 10px;
 }
 
 .formulario {
@@ -54,7 +54,7 @@
 }
 
 .formulario input {
-    width: 90%;
+    width: 100%;
 }
 
 .control {
@@ -62,7 +62,6 @@
     font-size: 1rem;
     color: white;
     margin: 0% auto;
-    padding: 3%;
 }
 
 .control input {
@@ -71,7 +70,6 @@
 }
 
 .register {
-    text-align: end;
     margin: 5% 0px;
 }
 
@@ -86,61 +84,12 @@
 
 @media (min-width: 1200px) {
 
-    .Bigbox {
-        width: 100%;
-    }
-
-    .Smallbox{
-        background-color: rgba(59, 73, 34, 0.7);
-        width: 70%;
-        padding: 0%;
-        margin: 14%;
-        box-shadow: 0px 0px 30px black;
-        border: solid black 1px;
-    }
-
-    .register {
-        text-align: center;
-        margin-bottom: 10%;
-    }
 }
 
 @media (max-width: 720px) {
 
-    .Bigbox {
-        width: 100%;
-    }
-
-    .Smallbox{
-        background-color: rgba(59, 73, 34, 0.7);
-        width: 100%;
-        padding: 0%;
-        box-shadow: 0px 0px 30px black;
-        border: solid black 1px;
-    }
-
-    .register {
-        text-align: center;
-        margin-bottom: 10%;
-    }
 }
 
 @media (max-width: 480px) {
 
-    .Bigbox {
-        width: 100%;
-        max-width: 70%;
-    }
-
-    .Smallbox{
-        background-color: rgba(59, 73, 34, 0.7);
-        padding: 0%;
-        box-shadow: 0px 0px 30px black;
-        border: solid black 1px;
-    }
-
-    .register {
-        text-align: center;
-        margin: 10% 0;
-    }
 }
