@@ -15,57 +15,9 @@
         <%- include("./partials/flags") %>
             <%- include("./partials/slider") %>
 
-<<<<<<< HEAD
-        <%- include("./partials/slider") %>
-
-            <main class="main-section">
-                <section class="main-top">
-                    <h2 class="main-title">OFERTAS</h2>
-                    <div class="offers-products">
-                        <% for (let el of prod) { %>
-                            <% if (el.offer) { %>
-                                <div class="product">
-                                    <div class="product-image">
-                                        <a href="/products/detail/<%= el.id %>"><img src="/images/products-image/<%= el.image %>"
-                                                alt="product"></a>
-                                    </div>
-                                    <div class="product-detail">
-                                        <div class="product-name">
-                                            <p>
-                                                <%= el.name %>
-                                            </p>
-                                            <img src="/images/flags/<%= el.country %>" alt="flag">
-                                        </div>
-                                        <p>
-                                            <%= el.description%>
-                                        </p>
-                                        <p class="product-price">
-                                            $<%= el.price %>
-                                        </p>
-                                    </div>
-                                </div>
-                    </div>
-                    <% } } %>
-                        <div class="see-more">
-                            <a href="#">VER TODO</a>
-                        </div>
-                </section>
-                <section class="main-bottom">
-                    <h2 class="main-title">ENVIO GRATIS</h2>
-                    <div class="popular-products">
-                        <% for (let el of prod) { %>
-                            <% if (el.shipping) { %>
-                                <div class="product">
-                                    <div class="product-image">
-                                        <a href="/products/detail/<%= el.id %>"><img src="/images/products-image/<%= el.image %>"
-                                                alt="product"></a>
-                                    </div>
-                                    <div class="product-detail">
-                                        <div class="product-name">
-=======
                 <main class="main-section">
                     <section class="main-top">
-                        <h2 class="main-title">Ofertas</h2>
+                        <h2 class="main-title">OFERTAS</h2>
                         <div class="offers-products">
                             <% for (let el of prod) { %>
                                 <% if (el.offer) { %>
@@ -81,7 +33,6 @@
                                                 </p>
                                                 <img src="/images/flags/<%= el.country %>" alt="flag">
                                             </div>
->>>>>>> 470c0885ba2dc53e76fd9a404351207717522bd5
                                             <p>
                                                 <%= el.description%>
                                             </p>
@@ -97,7 +48,7 @@
                             </div>
                     </section>
                     <section class="main-bottom">
-                        <h2 class="main-title">Envio Gratis</h2>
+                        <h2 class="main-title">ENVIO GRATIS</h2>
                         <div class="popular-products">
                             <% for (let el of prod) { %>
                                 <% if (el.shipping) { %>

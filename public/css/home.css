@@ -1,12 +1,14 @@
 /* Slider */
 .slider {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/background-war2.png");
+    border-top: solid white 1px;
+    background-color: black;
     background-size: 100% 100%;
     color: lightgray;
 }
 
 .slider h4 {
     padding: 10px;
+    text-align: center;
 }
 
 /* Main-Top */
