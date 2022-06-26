@@ -35,6 +35,23 @@ Weekly meeting - 4/6/2022
 	7. La vista en mobile, cambiar header | logo buscador con brujula y carrito y a la derecha menu hamburguesa. Menu hamburguesa (vender, login, signin)
 	8. Detalle de productos con identidades reales.
 	
+- 25-06-2022
+	1. ¡IMPORTANTE | URGENTE! Pendiente responsive de todas las vistas (hacer mobile first las que todavia no estan asi)
+	2. Verificar los campos en el formulario crear antes de habilitar el boton continuar
+	3. Verificar los campos en el formulario editar antes de habilitar el boton continuar
+	4. Agregar productos reales
+	5. Empezar a implementar express-validator para verificar la informacion de los campos de los formularios:
+		a. login,
+		b. signin,
+		c. add,
+		d. edit.
+	6. Renovar vista de carrito y agregar funcionalidades:
+		a. listar productos cargados al carrito mediante el boton comprar de la vista detalle de producto,
+		b. funcionalidad del boton eliminar item DE LA LISTA DEL CARRITO DE COMPRAS no de la bd,
+		c. poder ingresar a la vista del detalle del producto haciendo click en la imagen del mismo
+	7. Hacer funcional el campo de preguntas al vendedor (vista detalle del producto)
+	8. Agregar boton a las banderas en el home (evaluar colocar banderas unicamente en el home) para que filtre los productos de la bd por pais.
+	9. Actualizar tablero trello.
 
 
 

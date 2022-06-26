@@ -10,10 +10,12 @@ const userRouter = require("./routes/user.routes.js");
 
 //settings___________________________________________________
 const port = process.env.PORT || 3000;
+app.set("view engine", "ejs");
+
+//middlewares________________________________________________
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());                               
 app.use(methodOverride("_method"));
-app.set("view engine", "ejs");
 
 //routes____________________________________________________
 app.use("/", indexRouter);

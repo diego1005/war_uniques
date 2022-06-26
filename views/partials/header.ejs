@@ -1,30 +1,20 @@
 <header>
-    <div class="panel-top">
-        <div class="left">
-            <i class="fa-regular fa-user"></i>
-            <i class="fa-regular fa-envelope"></i>
-        </div>
-        <div class="right">
-            <p><a href="/products/add">Vender</a></p>
-            <p><a href="/user/signin">Sign in</a></p>
-            <p><a href="/user/login">Log in</a></p>
-        </div>
-    </div>
     <section class="main-bar">
         <div class="logo">
             <a href="/"><img src="/images/waruniques-logo1.png" alt="logo"></a>
         </div>
         <div class="search-panel">
             <input type="text">
-            <i class="fa-regular fa-compass"></i>
+            <!-- <i class="fa-regular fa-compass"></i> -->
             <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
+        <div class="nav-panel">
+            <button class="hamb-menu" onclick="displayMenu()"><i class="fa-solid fa-bars"></i></button>
+            <nav class="hamb-nav">
+                <p><a href="/user/login">Log in</a></p>
+                <p><a href="/user/signin">Sign in</a></p>
+                <p><a href="/products/add">Vender</a></p>
+            </nav>
+        </div>
     </section>
-    <div class="flags-bar">
-        <img src="/images/flags/england.png" alt="england-flag">
-        <img src="/images/flags/usa.png" alt="usa-flag">
-        <img src="/images/flags/russia.png" alt="russia-flag">
-        <img src="/images/flags/germany.png" alt="germany-flag">
-        <img src="/images/flags/japan.png" alt="japon-flag">
-    </div>
 </header>
