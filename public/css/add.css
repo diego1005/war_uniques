@@ -159,3 +159,80 @@ h3 a {
     border: none;
     cursor: pointer;
 }
+
+@media (min-width: 720px) {
+
+    .block {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .main-section {
+        width: 100vw;
+        height: 1200px;
+        background: linear-gradient(rgba(100, 100, 100, 0.3), rgba(100, 100, 100, 0.3)), url("/images/bk-camouflage2.png");
+        background-repeat: repeat;
+    }
+
+    .block input {
+        width: 92%;
+        font-size: 1.5rem;
+        margin: 5% auto 80%;
+        padding: 1.2% 3.5%;
+        border-radius: 10px;
+    }
+
+    .btn-next {
+        font-size: 1.2rem;
+        color: white;
+        background-color: rgb(70, 70, 255);
+        padding: 3%;
+        border: none;
+        cursor: pointer;
+    }
+
+    .block h3 {
+        width: 100%;
+        color: white;
+        background-color: rgba(165, 42, 42, 0.3);
+        font-size: 1.5rem;
+        text-align: center; 
+        padding: 3% 0;
+    } 
+
+    h3 a {
+        color: white;
+        margin-right: 3%;
+    }
+    
+    
+    .line-flag {
+        width: 80%;
+        padding-left: 20%;
+        padding-top: 10%;
+    }
+}
+
+@media (min-width: 1200px) {
+    
+    .main-section {
+        width: 100vw;
+        height: 2000px;
+        background: linear-gradient(rgba(100, 100, 100, 0.3), rgba(100, 100, 100, 0.3)), url("/images/bk-camouflage2.png");
+        background-repeat: repeat;
+    }
+    
+    .line-flag {
+        width: 80%;
+        padding-left: 20%;
+        padding-top: 10%;
+    }
+
+    .line-flag img {
+        width: 70%;
+        height: 100%;
+        border-radius: 10%;
+    }
+
+}
