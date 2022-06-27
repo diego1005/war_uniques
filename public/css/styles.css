@@ -41,22 +41,25 @@ header {
 .main-bar {
     display: flex;
     justify-content: space-between;
+    height: 100px;
     border-bottom: 1px solid white;
 }
 
 .logo {
-    width: 25%;
+    color: black;
+    width: 1%;
+    height: 1%;
     margin-left: 1%;
 }
 
 .main-bar img {
     width: 100%;
-    margin: 10px 0px;
+    margin: 23px 0px;
 }
 
 /* Search-Panel */
 .search-panel {
-    width: 60%;
+    width: 90%;
     text-align: center;
     margin: auto 0;
     margin-right: 5px;
@@ -74,7 +77,7 @@ header {
 }
 
 .nav-panel {
-    width: 10%;
+    width: 20%;
     text-align: center;
     margin: auto 0;
     margin-right: 2%;
@@ -107,7 +110,6 @@ header {
 /* Footer */
 .footer {
     display: flex;
-    justify-content: space-around;
     background-color: black;
     font-size: 90%;
     color: white;
@@ -143,21 +145,21 @@ header {
 
 /* FootRight */
 .fotright {
-    width: 25%;
     display: flex;
-    padding: 3px;
+    justify-content: center;
 }
 
 .contactos {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
 }
 
-.contactos img {
-    width: 30%;
-    max-width: 20px;
-    margin: 0px 20%;
+.contactos div {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    height: 100%;
 }
 
 @media (min-width: 150px) {
@@ -199,6 +201,7 @@ header {
     }
 
     .search-panel {
+        display: flex;
         justify-content: flex-end;
         width: 60%
     }
@@ -216,11 +219,23 @@ header {
         width: 30%;
         margin: 0px 20%;
     }
+    .nav-panel{
+        width: 10%;
+    }
 }
 
 @media (min-width: 900px) {
 
     /* Panel-Top */
+    .main-bar {
+        height: 170px;
+    }
+
+    .main-bar img {
+        width: 100%;
+        margin: 10px 0px;
+    }
+
     .panel-top {
         font-size: 1.5rem;
     }
@@ -241,6 +256,7 @@ header {
     /* Logo */
     .logo {
         padding-left: 35px;
+        padding-top: 10px;
     }
 
     /* Search-Panel */
@@ -249,7 +265,7 @@ header {
     }
 
     .search-panel input {
-        width: 60%;
+        width: 90%;
         height: 15%;
     }
 
