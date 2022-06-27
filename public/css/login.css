@@ -15,10 +15,10 @@
 }
 
 .Bigbox {
-    height: 85vh;
-    max-width: 70%;
+    height: 55vh;
+    max-width: 60%;
     margin: auto;
-    margin-top: 2%;
+    margin-top: 20%;
 }
 
 .Smallbox {
@@ -103,14 +103,25 @@
     white-space: nowrap;
 }
 
+@media (min-width: 720px) {
+
+    .Bigbox {
+        height: 55vh;
+        max-width: 60%;
+        margin: auto;
+        margin-top: 5%;
+    }
+
+}
+
 @media (min-width: 1200px) {
 
-}
-
-@media (max-width: 720px) {
-
-}
-
-@media (max-width: 480px) {
+    .Bigbox {
+        height: 55vh;
+        max-width: 60%;
+        margin: auto;
+    }
 
 }
+
+

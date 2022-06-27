@@ -1,7 +1,7 @@
 .main-section {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 150vh;
 }
 
 .logon {
@@ -15,10 +15,10 @@
 }
 
 .Bigbox {
-    height: 85vh;
-    max-width: 70%;
+    height: 65vh;
+    max-width: 50%;
     margin: auto;
-    margin-top: 2%;
+    margin-top: 20%;
 }
 
 .Smallbox {
@@ -82,14 +82,31 @@
     text-decoration: none;
 }
 
+
+@media (min-width: 720px) {
+
+    .Bigbox {
+        height: 65vh;
+        max-width: 50%;
+        margin: auto;
+        margin-top: 10%;
+    }
+
+}
+
+
 @media (min-width: 1200px) {
 
+    
+
+    .Bigbox {
+        height: 65vh;
+        max-width: 60%;
+        margin: auto;
+        margin-top: 15%;
+    }
+
+
 }
 
-@media (max-width: 720px) {
 
-}
-
-@media (max-width: 480px) {
-
-}
