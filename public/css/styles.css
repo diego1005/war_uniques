@@ -46,10 +46,9 @@ header {
 }
 
 .logo {
-    color: black;
-    width: 1%;
-    height: 1%;
-    margin-left: 1%;
+    width: 20%;
+    margin: auto;
+    margin-left: 2%;
 }
 
 .main-bar img {
@@ -77,10 +76,8 @@ header {
 }
 
 .nav-panel {
-    width: 20%;
-    text-align: center;
-    margin: auto 0;
-    margin-right: 2%;
+    margin: auto;
+    margin-right: 3%;
 }
 
 /* Flags-Bar*/
@@ -110,6 +107,7 @@ header {
 /* Footer */
 .footer {
     display: flex;
+    flex-direction: column;
     background-color: black;
     font-size: 90%;
     color: white;
@@ -167,10 +165,6 @@ header {
         margin: 0px 6%;
     }
 
-    .footer {
-        flex-direction: column;
-    }
-
     .fotleft,
     .fotmidle {
         display: flex;
@@ -204,10 +198,6 @@ header {
         display: flex;
         justify-content: flex-end;
         width: 60%
-    }
-
-    .logo {
-        width: 20%;
     }
 
     .search-panel input {
