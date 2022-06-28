@@ -58,6 +58,8 @@ header {
 
 /* Search-Panel */
 .search-panel {
+    display: flex;
+    align-items: center;
     width: 90%;
     text-align: center;
     margin: auto 0;
@@ -150,7 +152,7 @@ header {
 .contactos {
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 70%;
 }
 
 .contactos div {
@@ -204,6 +206,14 @@ header {
         width: 100%
     }
 
+    .logo {
+        position: relative;
+        width: 20%;
+        margin: auto;
+        margin-left: 2%;
+        bottom: 10%;
+    }
+
     /* Footer */
     .contactos img {
         width: 30%;
@@ -212,11 +222,33 @@ header {
     .nav-panel{
         width: 10%;
     }
+
+    
 }
 
 @media (min-width: 900px) {
 
     /* Panel-Top */
+    .hamb-menu {
+        display: none;
+    }
+
+    .hamb-nav {
+        width: 20%;
+        display: flex;
+        background-color: rgba(0, 0, 0, 0);
+        left: 81.5%;
+        bottom: 87.5%;
+        padding: 0%;
+    }
+
+    .hamb-nav p {
+        font-family: 'Stick No Bills', sans-serif;
+        font-size: 1rem;
+        text-decoration: underline;
+        margin: 0% 9% 0% 0%;
+    }
+
     .main-bar {
         height: 170px;
     }
@@ -245,13 +277,15 @@ header {
 
     /* Logo */
     .logo {
-        padding-left: 35px;
+        width: 20%;
         padding-top: 10px;
+        margin-right: 2%;
     }
 
     /* Search-Panel */
     .search-panel {
         justify-content: flex-start;
+        width: 55%;
     }
 
     .search-panel input {
@@ -274,10 +308,153 @@ header {
         max-width: none;
         margin: 0px 50%;
     }
+
+    .footer {
+        display: flex;
+        flex-direction: row;
+        background-color: black;
+        font-size: 90%;
+        color: white;
+        padding: 15px;
+        border-top: white solid 1px;
+    }
+    
+    /* FootLeft */
+    .fotleft {
+        width: 25%;
+        margin: auto;
+    }
+    
+    .fotleft p {
+        margin: 5px;
+    }
+    
+    .fotleft a {
+        text-decoration: none;
+        color: white;
+    
+    }
+    
+    /* FootMiddle */
+    .fotmidle {
+        width: 25%;
+        margin: auto;
+    }
+    
+    .fotmidle p {
+        margin: 5px;
+    }
+    
+    /* FootRight */
+    .fotright {
+        width: 25%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contactos {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .contactos div {
+        display: flex;
+        width: 20%;
+    }
+
+    .contactos img {
+        width: auto;
+        max-width: none;
+        margin: 20px 50%;
+    }
 }
 
 @media (min-width: 1200px) {
+    .hamb-menu {
+        display: none;
+        background-color: black;
+    }
+
+    .hamb-nav {
+        width: 20%;
+        display: flex;
+        background-color: rgba(0, 0, 0, 0);
+        left: 80.5%;
+        bottom: 88.3%;
+        padding: 0%;
+    }
+
+    .hamb-nav p {
+        font-family: 'Stick No Bills', sans-serif;
+        font-size: 1.5rem;
+        text-decoration: underline;
+        margin: 0% 9% 0% 0%;
+    }
+
+    .logo {
+        width: 15%;
+        padding-top: 1px;
+        margin-right: 5%;
+    }
+
     .footer {
-        font-size: 1.3rem;
+        display: flex;
+        flex-direction: row;
+        background-color: black;
+        font-size: 90%;
+        color: white;
+        padding: 15px;
+        border-top: white solid 1px;
+    }
+    
+    /* FootLeft */
+    .fotleft {
+        width: 25%;
+        margin: auto;
+    }
+    
+    .fotleft p {
+        margin: 5px;
+    }
+    
+    .fotleft a {
+        text-decoration: none;
+        color: white;
+    
+    }
+    
+    /* FootMiddle */
+    .fotmidle {
+        width: 25%;
+        margin: auto;
+    }
+    
+    .fotmidle p {
+        margin: 5px;
+    }
+    
+    /* FootRight */
+    .fotright {
+        width: 25%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contactos {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .contactos div {
+        display: flex;
+        width: 20%;
+    }
+
+    .contactos img {
+        width: auto;
+        max-width: none;
+        margin: 20px 50%;
     }
 }
