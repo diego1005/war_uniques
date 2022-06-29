@@ -15,7 +15,7 @@ let f_modules = {
     },
     add: (product, file, productList) => {
         let len = productList.length;
-        product.id = productList[len-1].id + 1;
+        product.id = (len == 0) ? 0 : productList[len-1].id + 1;
         product.price = f_modules.currencyType(product.price);
         product.offer = (product.offer != undefined);
         product.shipping = (product.shipping != undefined);

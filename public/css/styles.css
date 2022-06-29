@@ -61,15 +61,15 @@ header {
     display: flex;
     align-items: center;
     width: 90%;
-    text-align: center;
     margin: auto 0;
     margin-right: 5px;
 }
 
 .search-panel input {
-    width: 80%;
+    width: 85%;
     border: none;
     border-radius: 10px;
+    margin-left: 2%;
 }
 
 .search-panel i {
