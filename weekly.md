@@ -52,6 +52,13 @@ Weekly meeting - 4/6/2022
 	7. Hacer funcional el campo de preguntas al vendedor (vista detalle del producto)
 	8. Agregar boton a las banderas en el home (evaluar colocar banderas unicamente en el home) para que filtre los productos de la bd por pais.
 	9. Actualizar tablero trello.
+- 30-06-2022
+	1. CRUD de usuario
+	2. Implementar bcrypt
+	3. Session y Cookies
+	4. Base de datos json para usuarios
+
+
 
 
 
