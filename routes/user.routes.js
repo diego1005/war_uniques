@@ -18,7 +18,8 @@ let validateRegister = [
 
 router.get("/login", userController.login);
 router.post("/login", validateRegister, userController.loginB);
+
 router.get("/signin", userController.signin);
-router.post("/signin", validateRegister, userController.signinB);
+router.post("/crearuser", validateRegister, userController.crearuser);
 
 module.exports = router;
