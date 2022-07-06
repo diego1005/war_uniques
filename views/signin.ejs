@@ -12,13 +12,7 @@
             <div class="Bigbox">
                 <div class="Smallbox">
                     <div class="formulario">
-                        <% if(locals.errors) { 
-                            errors.forEach(error => { %>
-                            <p class="feedback"><%= error.msg %></p>
-                        <% })
-                         } 
-                        %>
-                        <form action="/crearuser" method="POST">
+                        <form action="/user/signin" method="POST" enctype="multipart/form-data">
                             <div class="control">
                                 <label>Nombre</label>
                                 <input type="text" name="name">
@@ -39,6 +33,10 @@
                             <div class="control">
                                 <label>Confirmar Contraseña</label>
                                 <input type="password" name="password">
+                            </div>
+                            <div class="control">
+                                <label>Foto de Perfil</label>
+                                <input type="file" name="avatar">
                             </div>
                             <div class="register">
                                 <input type="submit" value="REGISTRARME">

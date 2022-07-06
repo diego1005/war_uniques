@@ -1,9 +1,21 @@
 [
     {
-    "id": 0,
-    "name": "Pepe",
-    "lastname": "Lopez",
-    "email": "pepelopez@gmail.com",
-    "password": 12345
+        "id": 1,
+        "name": "Michael",
+        "lastname": "Lopez",
+        "email": "algo@gmail.com",
+        "password": "tanks",
+        "avatar": "1656465961390_faja.webp"
+    },
+    {
+        "id": 2,
+        "name": "Astor",
+        "lastname": "Levy",
+        "email": "astorlevy14@gmail.com",
+        "password": [
+            "1234",
+            "1234"
+        ],
+        "avatar": "img/1657134002631-img.png"
     }
 ]
