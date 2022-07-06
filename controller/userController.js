@@ -1,4 +1,4 @@
-const { validatioResult } = require("express-validator");
+const { validationResult } = require("express-validator");
 let fs = require("fs");
 let path = require("path");
 let userlist = require("../database/users.json");
@@ -24,27 +24,37 @@ const userController = {
     },
 
     signinB: (req, res) => {
+        let errors = validationResult(req);
+
+        if(errors.isEmpty()){
+
             let newId = userlist[(userlist.length - 1)].id + 1
             let file = req.file;
             let newuser = {
-            id: newId,
-            name: req.body.name,
-            lastname: req.body.lastname,
-            email: req.body.email,
-            password: req.body.password,
-            avatar: `img/${file.filename}`
-        };
+                id: newId,
+                name: req.body.name,
+                lastname: req.body.lastname,
+                email: req.body.email,
+                password: req.body.password,
+                avatar: `img/${file.filename}`
+            };
+    
+            userlist.push(newuser);
+    
+            fs.writeFileSync(
+                path.join(__dirname, "../database/users.json"),
+                JSON.stringify(userlist, null, 4),
+                {
+                    encoding: "utf-8"
+                }
+            );
+            res.redirect("/")
 
-        userlist.push(newuser);
+        }else{
 
-        fs.writeFileSync(
-            path.join(__dirname, "../database/users.json"),
-            JSON.stringify(userlist, null, 4),
-            {
-                encoding: "utf-8"
-            }
-        );
-        res.redirect("/")
+            res.render("signin", {errors: errors.array(), old:req.body})
+
+        }
     }
 }
 

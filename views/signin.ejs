@@ -12,19 +12,25 @@
             <div class="Bigbox">
                 <div class="Smallbox">
                     <div class="formulario">
+                        <% if (locals.errors) { 
+                            errors.forEach(error => { %>
+                            <p class="feedback"><%= error.msg %></p>
+                        <%  })
+                        }
+                        %>
                         <form action="/user/signin" method="POST" enctype="multipart/form-data">
                             <div class="control">
                                 <label>Nombre</label>
-                                <input type="text" name="name">
+                                <input type="text" name="name" value="<%= locals.old && old.name ? old.name : ' ' %>">
                             </div>
                             <div class="control">
                                 <label>Apellido</label>
-                                <input type="text" name="lastname">
+                                <input type="text" name="lastname" value="<%= locals.old && old.lastname ? old.lastname : ' ' %>">
                             </div>
                             <div class="linea"></div>
                             <div class="control">
                                 <label>Email</label>
-                                <input type="email" name="email">
+                                <input type="email" name="email" value="<%= locals.old && old.email ? old.email : ' ' %>">
                             </div>
                             <div class="control">
                                 <label>Contraseña</label>
