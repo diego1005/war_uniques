@@ -53,12 +53,12 @@ header {
 
 .main-bar img {
     width: 100%;
-    margin: 23px 0px;
 }
 
 /* Search-Panel */
 .search-panel {
     display: flex;
+    justify-content: center;
     align-items: center;
     width: 90%;
     margin: auto 0;
@@ -66,7 +66,7 @@ header {
 }
 
 .search-panel input {
-    width: 85%;
+    width: 80%;
     border: none;
     border-radius: 10px;
     margin-left: 2%;
@@ -92,7 +92,7 @@ header {
 }
 
 .flags-bar img {
-    width: 10%;
+    width: 8%;
     max-width: 50px;
     margin: 10px;
 }
@@ -118,13 +118,17 @@ header {
 }
 
 /* FootLeft */
-.fotleft {
-    width: 17%;
-    margin: auto;
+.fotleft,
+.fotmidle {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 5%;
 }
 
-.fotleft p {
-    margin: 5px;
+.fotleft p,
+.fotmidle p {
+    text-align: center;
 }
 
 .fotleft a {
@@ -133,26 +137,13 @@ header {
 
 }
 
-/* FootMiddle */
-.fotmidle {
-    width: 20%;
-    margin: auto;
-}
-
-.fotmidle p {
-    margin: 5px;
-}
-
-/* FootRight */
-.fotright {
-    display: flex;
-    justify-content: center;
-}
-
 .contactos {
     display: flex;
-    justify-content: center;
-    width: 70%;
+    justify-content: space-around;
+}
+
+.contactos img {
+    margin: 0px 6%;
 }
 
 .contactos div {
@@ -162,299 +153,91 @@ header {
     height: 100%;
 }
 
-@media (min-width: 150px) {
-    .contactos img {
-        margin: 0px 6%;
-    }
-
-    .fotleft,
-    .fotmidle {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        margin-bottom: 5%;
-    }
-
-    .fotleft p,
-    .fotmidle p {
-        text-align: center;
-    }
-
-    .fotright {
-        width: 100%;
-    }
-}
-
 @media (min-width: 500px) {
-
-    /* Header */
-    .panel-top {
-        font-size: 1rem;
-    }
-
-    .main-bar {
-        justify-content: space-around;
-    }
-
     .search-panel {
-        display: flex;
-        justify-content: flex-end;
-        width: 60%
+        width: 60%;
+        margin-right: 0;
+        justify-content: center;
     }
 
-    .search-panel input {
-        width: 100%
-    }
-
-    .logo {
-        position: relative;
-        width: 20%;
-        margin: auto;
-        margin-left: 2%;
-        bottom: 10%;
-    }
-
-    /* Footer */
-    .contactos img {
-        width: 30%;
-        margin: 0px 20%;
-    }
-    .nav-panel{
+    .nav-panel {
         width: 10%;
     }
 
-    
-}
-
-@media (min-width: 900px) {
-
-    /* Panel-Top */
     .hamb-menu {
         display: none;
     }
 
     .hamb-nav {
-        width: 20%;
         display: flex;
-        background-color: rgba(0, 0, 0, 0);
-        left: 81.5%;
-        bottom: 87.5%;
-        padding: 0%;
+        flex-direction: column;
+        position: inherit;
+        right: 0;
+        background-color: inherit;
+        border-radius: 0;
     }
 
-    .hamb-nav p {
-        font-family: 'Stick No Bills', sans-serif;
-        font-size: 1rem;
-        text-decoration: underline;
-        margin: 0% 9% 0% 0%;
+    .footer {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px;
     }
 
-    .main-bar {
-        height: 170px;
+    .fotleft, .fotmidle {
+        flex-direction: column;
+        width: 33%;
+        margin-bottom: 0;
     }
 
-    .main-bar img {
+    .fotleft p, .fotmidle p {
+        margin: 1% 0;
+    }
+
+    .fotright {
+        width: 10%;
+    }
+
+    .contactos {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .contactos div {
+        display: block;
         width: 100%;
-        margin: 10px 0px;
+        height: auto;
+        text-align: center;
+    }
+}
+
+@media (min-width: 720px) {
+    .search-panel input {
+        width: 80%;
     }
 
-    .panel-top {
-        font-size: 1.5rem;
-    }
-
-    .left {
-        margin-left: 45px;
-    }
-
-    .right {
-        margin-right: 45px;
-    }
-
-    .left i,
-    .right p {
-        margin: 10px 35px;
-    }
-
-    /* Logo */
-    .logo {
-        width: 20%;
-        padding-top: 10px;
+    .nav-panel {
+        width: 25%;
         margin-right: 2%;
     }
 
-    /* Search-Panel */
-    .search-panel {
-        justify-content: flex-start;
-        width: 55%;
-    }
-
-    .search-panel input {
-        width: 90%;
-        height: 15%;
-    }
-
-    .search-panel i {
-        font-size: 2rem;
-        margin: 0px 15px;
-    }
-
-    /* Flags-Bar*/
-    .flags-bar img {
-        width: 5%;
-    }
-
-    .contactos img {
-        width: auto;
-        max-width: none;
-        margin: 0px 50%;
-    }
-
-    .footer {
-        display: flex;
-        flex-direction: row;
-        background-color: black;
-        font-size: 90%;
-        color: white;
-        padding: 15px;
-        border-top: white solid 1px;
-    }
-    
-    /* FootLeft */
-    .fotleft {
-        width: 25%;
-        margin: auto;
-    }
-    
-    .fotleft p {
-        margin: 5px;
-    }
-    
-    .fotleft a {
-        text-decoration: none;
-        color: white;
-    
-    }
-    
-    /* FootMiddle */
-    .fotmidle {
-        width: 25%;
-        margin: auto;
-    }
-    
-    .fotmidle p {
-        margin: 5px;
-    }
-    
-    /* FootRight */
-    .fotright {
-        width: 25%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .contactos {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-    
-    .contactos div {
-        display: flex;
-        width: 20%;
-    }
-
-    .contactos img {
-        width: auto;
-        max-width: none;
-        margin: 20px 50%;
-    }
-}
-
-@media (min-width: 1200px) {
-    .hamb-menu {
-        display: none;
-        background-color: black;
-    }
-
     .hamb-nav {
-        width: 20%;
-        display: flex;
-        background-color: rgba(0, 0, 0, 0);
-        left: 80.5%;
-        bottom: 88.3%;
-        padding: 0%;
-    }
-
-    .hamb-nav p {
-        font-family: 'Stick No Bills', sans-serif;
-        font-size: 1.5rem;
-        text-decoration: underline;
-        margin: 0% 9% 0% 0%;
-    }
-
-    .logo {
-        width: 15%;
-        padding-top: 1px;
-        margin-right: 5%;
-    }
-
-    .footer {
-        display: flex;
         flex-direction: row;
-        background-color: black;
-        font-size: 90%;
-        color: white;
-        padding: 15px;
-        border-top: white solid 1px;
+        justify-content: space-between;
     }
-    
-    /* FootLeft */
-    .fotleft {
-        width: 25%;
-        margin: auto;
-    }
-    
-    .fotleft p {
-        margin: 5px;
-    }
-    
-    .fotleft a {
-        text-decoration: none;
-        color: white;
-    
-    }
-    
-    /* FootMiddle */
-    .fotmidle {
-        width: 25%;
-        margin: auto;
-    }
-    
-    .fotmidle p {
-        margin: 5px;
-    }
-    
-    /* FootRight */
+
     .fotright {
-        width: 25%;
-        display: flex;
-        justify-content: center;
+        width: 20%;
     }
 
     .contactos {
-        display: flex;
-        justify-content: center;
-        width: 100%;
+        flex-direction: row;
     }
-    
+
     .contactos div {
         display: flex;
-        width: 20%;
     }
 
     .contactos img {
-        width: auto;
-        max-width: none;
-        margin: 20px 50%;
+        margin: auto;
     }
 }

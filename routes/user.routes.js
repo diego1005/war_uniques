@@ -4,7 +4,7 @@ const router = express.Router();
 const multer  = require('multer')
 const path = require("path");
 const {check} = require("express-validator")
-//lista de usuarios
+//controlador
 const userController = require("../controller/userController");
 
 //configuarción de express-validator-------------------------------------------
