@@ -7,18 +7,17 @@
 </head>
 
 <body>
-    <main class="main-section">
+    <main class="main-area">
         <%- include("./partials/float_logo.ejs") %>
-            <div class="Bigbox">
-                <div class="Smallbox">
-                    <div class="formulario">
+            <div class="big-box">
+                <div class="small-box">
                         <% if (locals.errors) { 
                             errors.forEach(error => { %>
                             <p class="feedback"><%= error.msg %></p>
                         <%  })
                         }
                         %>
-                        <form action="/user/signin" method="POST" enctype="multipart/form-data">
+                        <form class="formulario" action="/user/signin" method="POST" enctype="multipart/form-data">
                             <div class="control">
                                 <label>Nombre</label>
                                 <input type="text" name="name" value="<%= locals.old && old.name ? old.name : ' ' %>">
@@ -48,7 +47,6 @@
                                 <input type="submit" value="REGISTRARME">
                             </div>
                         </form>
-                    </div>
                 </div>
             </div>
     </main>
