@@ -1,5 +1,5 @@
 .detail-container {
-    width: 95%;
+    width: 90%;
     background-color: rgba(0, 0, 0, 0.4);
     margin: 0 auto 10%;
     border-radius: 5px;
@@ -56,7 +56,7 @@
 }
 
 .icons {
-    width: 95%;
+    width: 85%;
     display: flex;
     justify-content: space-between;
     margin: 10% auto 0;
@@ -69,7 +69,7 @@
     padding: 3px 6px;
 }
 
-.icons i{
+.icons i {
     font-size: 1rem;
     color: white;
 }
@@ -108,7 +108,7 @@
     margin: 0 auto 3%;
 }
 
-#fees{
+#fees {
     padding-left: 3%;
 }
 
@@ -128,20 +128,20 @@
 /* Comment */
 .comment-section {
     width: 90%;
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     margin: auto;
     margin-top: 10%;
     padding: 5%;
     border-radius: 10px;
 }
 
-.comment-section .comment-title {
-    font-size: 1.3rem;
+.comment-section, .comment-title {
+    font-size: 1rem;
     border-bottom: solid grey 1px;
 }
 
-.comment-section .title {
-    font-size: 1.5rem;
+.title {
+    font-size: 1rem;
     padding-bottom: 5px;
 }
 
@@ -153,10 +153,11 @@
 }
 
 .comment-title {
-    margin-bottom: 10%;
+    margin-bottom: 3%;
 }
 
-.question, .answer {
+.question,
+.answer {
     margin-bottom: 5%;
 }
 
@@ -168,7 +169,7 @@
 .answer p {
     width: 70%;
     font-size: 0.8rem;
-    color: rgb(100,100,100);
+    color: rgb(100, 100, 100);
 }
 
 .answer i {
@@ -182,7 +183,8 @@
     margin-bottom: 10%;
 }
 
-.control input, .control textarea {
+.control input,
+.control textarea {
     width: 100%;
     margin-top: 3%;
 }
@@ -193,7 +195,8 @@ hr {
 }
 
 #send-btn {
-    background-color: red;;
+    background-color: red;
+    ;
     color: white;
     float: right;
     border-radius: 5px;
@@ -201,55 +204,164 @@ hr {
     border: none;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 500px) {
+    #name-title {
+        font-size: 1.5rem;
+    }
+
+    .price, .description-title {
+        font-size: 1.3rem;
+    }
+
+    #fees {
+        font-size: 1.2rem;
+    }
+
+    .detail p {
+        font-size: 1.1rem;
+    }
+
+    .icons i {
+        font-size: 1.3rem;
+    }
 
     .image-section {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        margin: 0;
+    }
+
+    .image-top {
+        width: 55%;
+    }
+
+    .image-bottom {
+        width: 30%;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-top: 0;
+    }
+
+    .image-bottom div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
         width: 100%;
     }
 
-    .price img { 
-        margin-left: 20%;
-    }
-
-    .price h3 {
-        font-size: 0.7rem;
-    }
-    
-    .detail h3{
-        margin-right: 5%;
-        font-size: 00.7rem;
-    }
-
-    .detail p{
-        font-size: 00.7rem;
-    }
-}
-
-@media (min-width: 720px) {
-
-    .image-section {
-        width: 100%;
-    }
-
-    .detail div {
+    .image-bottom img {
         width: 40%;
     }
 
-    .price img {
-        width: 30%;
-        margin-left: 20%;
+    .image-bottom i {
+        width: 23%;
     }
 
-    .price h3 {
+    .buy-detail {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .buy-detail button {
+        width: 40%;
+    }
+}
+
+@media (min-width: 700px) {
+    .detail-container, .comment-section {
+        width: 85%;
+    }
+
+    .price img {
+        width: 12%;
+    }
+
+    .buy-detail button {
         font-size: 1.2rem;
     }
-    
-    .detail h3{
-        margin-right: 5%;
-        font-size: 0.9rem;
+
+    .control textarea {
+        height: 10rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    .questionm, .answer p { 
+        font-size: 1.3rem;
     }
 
-    .detail p{
-        font-size: 0.9rem;
+    .control {
+        margin-bottom: 5%;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .detail-container, .comment-section {
+        width: 70%;
+    }
+
+    #name-title {
+        font-size: 2rem;
+    }
+
+    .price, .description-title {
+        font-size: 1.8rem;
+    }
+
+    #fees {
+        font-size: 1.7rem;
+    }
+
+    .detail p {
+        font-size: 1.6rem;
+    }
+
+    .icons i {
+        font-size: 1.8rem;
+    }
+
+    .image-bottom i {
+        font-size: 1.8rem;
+    }
+
+    .comment-section, .comment-title, .title {
+        font-size: 1.6rem;
+    }
+
+    .question, .answer p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1800px) {
+    #name-title {
+        font-size: 2.5rem;
+    }
+
+    .icons i {
+        font-size: 2rem;
+    }
+
+    .price img {
+        width: 9%;
+    }
+
+    .buy-detail button {
+        font-size: 1.7rem;
+    }
+
+    .control textarea {
+        height: 15rem;
+    }
+
+    .comment-section, .comment-title, .title {
+        font-size: 1.8rem;
+    }
+
+    .question, .answer p {
+        font-size: 1.7rem;
     }
 }
