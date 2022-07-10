@@ -11,56 +11,70 @@
     <main class="main-section">
         <form class="form-block" action="/products/create" method="post" enctype="multipart/form-data">
             <input type="text" name="id" hidden>
+            <!-- Flags Section -->
             <div class="block block-flag">
-                <h3>
+                <div class="back-title">
                     <a href="/"><i class="fa-solid fa-angle-left"></i></a>
-                    Selecciona el origen del producto
-                </h3>
-                <div class="line-flag">
-                    <div class="flag-box" onclick="next('germany.png')">
-                        <img src="/images/flags/germany.png" alt="germany-flag">
-                    </div>
-                    <div class="flag-box" onclick="next('england.png')">
-                        <img src="/images/flags/england.png" alt="england-flag">
-                    </div>
+                    <h3>Selecciona el origen del producto</h3>
+                    <div></div>
                 </div>
-                <div class="line-flag middle">
-                    <div class="flag-box" onclick="next('japan.png')">
-                        <img src="/images/flags/japan.png" alt="japan-flag">
+                <div class="block-container">
+                    <div class="line-flag">
+                        <div class="flag-box" onclick="next('germany.png')">
+                            <img src="/images/flags/germany.png" alt="germany-flag">
+                        </div>
+                        <div class="flag-box" onclick="next('england.png')">
+                            <img src="/images/flags/england.png" alt="england-flag">
+                        </div>
                     </div>
+                    <div class="line-flag middle">
+                        <div class="flag-box" onclick="next('japan.png')">
+                            <img src="/images/flags/japan.png" alt="japan-flag">
+                        </div>
+                    </div>
+                    <div class="line-flag">
+                        <div class="flag-box" onclick="next('russia.png')">
+                            <img src="/images/flags/russia.png" alt="russia-flag">
+                        </div>
+                        <div class="flag-box" onclick="next('usa.png')">
+                            <img src="/images/flags/usa.png" alt="usa-flag">
+                        </div>
+                    </div>
+                    <input id="flag" type="text" name="country" value="" hidden>
                 </div>
-                <div class="line-flag">
-                    <div class="flag-box" onclick="next('russia.png')">
-                        <img src="/images/flags/russia.png" alt="russia-flag">
-                    </div>
-                    <div class="flag-box" onclick="next('usa.png')">
-                        <img src="/images/flags/usa.png" alt="usa-flag">
-                    </div>
-                </div>
-                <div class="line-flag"></div>
-                <input id="flag" type="text" name="country" value="" hidden>
             </div>
+            <!-- Name Section -->
             <div class="block">
-                <h3>
-                    <a href="/"><i class="fa-solid fa-angle-left"></i></a>
-                    Describe en una frase tu producto
-                </h3>
-                <input type="text" name="name" placeholder="Nombre del producto...">
+                <div>
+                    <div class="back-title">
+                        <button class="btn-back" type="button" onclick="back()"><i
+                                class="fa-solid fa-angle-left"></i></button>
+                        <h3>Describe en una frase tu producto</h3>
+                        <div></div>
+                    </div>
+                    <input type="text" name="name" placeholder="Nombre del producto...">
+                </div>
                 <button type="button" class="btn-next" onclick="next()">CONTINUAR</button>
             </div>
+            <!-- Description Section -->
             <div class="block">
-                <h3>
-                    <a href="/"><i class="fa-solid fa-angle-left"></i></a>
-                    Coloca las caracteristicas del producto
-                </h3>
+                <div class="back-title">
+                    <button class="btn-back" type="button" onclick="back()"><i
+                            class="fa-solid fa-angle-left"></i></button>
+                    <h3>Coloca las caracteristicas del producto</h3>
+                    <div></div>
+                </div>
                 <textarea name="description" cols="30" rows="10" placeholder="Descripcion..."></textarea>
                 <button type="button" class="btn-next" onclick="next()">CONTINUAR</button>
             </div>
-            <div class="block">
-                <h3>
-                    <a href="/"><i class="fa-solid fa-angle-left"></i></a>
-                    Indica el precio por unidad
-                </h3>
+            <!-- Price Section -->
+            <div class="block pay-content">
+                <div class="back-title">
+                    <button class="btn-back" type="button" onclick="back()"><i
+                            class="fa-solid fa-angle-left"></i></button>
+                    <h3>Indica el precio por unidad</h3>
+                    <div></div>
+                </div>
                 <div class="block-price">
                     <p>$</p>
                     <input type="text" name="price" placeholder="Precio...">
@@ -98,17 +112,23 @@
                     </div>
                 </div>
                 <button type="button" class="btn-next" onclick="next()">CONTINUAR</button>
+                <div></div>
             </div>
+            <!-- Image Section -->
             <div class="block">
-                <h3>
-                    <a href="/"><i class="fa-solid fa-angle-left"></i></a>
-                    Sube una o mas imagenes
-                </h3>
-                <div class="block-img">
-                    <i class="fa fa-regular fa-arrow-up-from-bracket"></i>
-                    <label for="prod">Seleccionar imagen</label>
-                    <input type="file" id="prod" name="image" accept=".jpg, .png, .webp">
-                    <p id="file_name"></p>
+                <div>
+                    <div class="back-title">
+                        <button class="btn-back" type="button" onclick="back()"><i
+                                class="fa-solid fa-angle-left"></i></button>
+                        <h3>Sube una o mas imagenes</h3>
+                        <div></div>
+                    </div>
+                    <div class="block-img">
+                        <i class="fa fa-regular fa-arrow-up-from-bracket"></i>
+                        <label for="prod">Seleccionar imagen</label>
+                        <input type="file" id="prod" name="image" accept=".jpg, .png, .webp">
+                        <p id="file_name"></p>
+                    </div>
                 </div>
                 <button type="submit" class="btn-next">CONTINUAR</button>
             </div>

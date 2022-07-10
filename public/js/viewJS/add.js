@@ -13,7 +13,7 @@ window.addEventListener("load", () => {
 
 });
 
-function next(flag) {
+function next() {
     if (flag != undefined) {
         panels[i].style.display = "none";
         document.getElementById("flag").value = flag;
@@ -24,4 +24,10 @@ function next(flag) {
         panels[i+1].style.display = "flex";
         i++
     }
+}
+
+function back() {
+    panels[i].style.display = "none";
+    panels[i-1].style.display = "flex";
+    i--
 }
