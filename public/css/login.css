@@ -71,6 +71,7 @@
 
 .control input {
     max-width: 70%;
+    height: 2rem;
     margin-top: 1%;
     border-radius: 8px;
 }

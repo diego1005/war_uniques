@@ -70,7 +70,7 @@
     align-items: center;
     max-height: 25%;
     color: white;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .control input {
@@ -147,12 +147,46 @@
         max-width: 30%;
     }
 
+    .control {
+        max-height: 13%;
+    }
+
     .control-password {
         flex-direction: row;
     }
 
-    .small-box,
+    .small-box, .control input {
+        font-size: 1rem;
+    }
+
     .register input {
-        font-size: 1.5rem;
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .small-box, .control input {
+        font-size: 1.2rem;
+    }
+
+    .register input {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .small-box, .control input {
+        font-size: 1.4rem;
+    }
+
+    .register input {
+        font-size: 1.4rem;
+        margin-top: 1rem;
+    }
+
+    .control input {
+        height: 2rem;
     }
 }
