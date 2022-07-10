@@ -114,7 +114,7 @@ header {
     display: flex;
     flex-direction: column;
     background-color: black;
-    font-size: 90%;
+    font-size: 1rem;
     color: white;
     padding: 15px;
     border-top: white solid 1px;
@@ -153,10 +153,109 @@ header {
     display: flex;
     justify-content: center;
     width: 20%;
-    height: 100%;
 }
 
-@media (min-width: 500px) {
+@media (max-width: 260px) {
+    .main-bar {
+        flex-direction: column;
+    }
+
+    .logo {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 0.5rem;
+    }
+
+    .search-panel {
+        display: none;
+    }
+
+    .nav-panel {
+        margin: auto;
+        margin-bottom: 0.5rem;
+    }
+
+    .footer {
+        padding: 0.5rem;
+    }
+
+    .fotleft,
+    .fotmidle,
+    .contactos {
+        font-size: 0.6rem;
+        flex-direction: column;
+        align-items: center;
+        margin: 0.5rem 0;
+    }
+}
+
+@media (min-width: 90px) {
+    .main-bar {
+        flex-direction: row;
+    }
+
+    .logo {
+        width: 50%;
+        margin-bottom: auto;
+    }
+
+    .footer {
+        height: 100%;
+    }
+
+    .fotleft,
+    .fotmidle,
+    .contactos {
+        font-size: 0.8rem;
+    }
+
+    .contactos {
+        flex-direction: row;
+    }
+
+    .contactos div {
+        width: 20%;
+    }
+
+    .contactos img {
+        width: 100%;
+    }
+}
+
+@media (min-width: 165px) {
+    .logo {
+        width: 40%;
+        margin-bottom: auto;
+    }
+
+    .nav-panel {
+        margin-bottom: auto;
+    }
+
+    .search-panel i {
+        font-size: 1rem;
+    }
+
+    .contactos div {
+        width: 15%;
+    }
+
+    .contactos img {
+        width: 100%;
+    }
+}
+
+@media (min-width: 300px) {
+    .logo {
+        width: 30%;
+    }
+
+    .contactos div {
+        width: 10%;
+    }
+}
+
+@media (min-width: 400px) {
     .search-panel {
         width: 60%;
         margin-right: 0;
@@ -190,7 +289,8 @@ header {
     .fotleft,
     .fotmidle {
         flex-direction: column;
-        width: 25%;
+        width: 30%;
+        font-size: 1rem;
         margin-bottom: 0;
     }
 
@@ -210,13 +310,47 @@ header {
 
     .contactos div {
         display: block;
-        width: 100%;
+        width: 70%;
         height: auto;
         text-align: center;
     }
 }
 
+@media (min-width: 600px) {
+    .logo {
+        width: 25%;
+    }
+
+    .footer {
+        justify-content: space-between;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .fotleft,
+    .fotmidle,
+    .fotright {
+        width: 25%;
+    }
+
+    .contactos {
+        flex-direction: row;
+    }
+
+    .contactos div {
+        display: flex;
+    }
+
+    .contactos img {
+        width: 60%;
+        margin: auto;
+    }
+}
+
 @media (min-width: 720px) {
+    .logo {
+        width: 20%;
+    }
+
     .search-panel input {
         width: 80%;
     }
@@ -230,22 +364,6 @@ header {
         font-size: 1.1rem;
         flex-direction: row;
         justify-content: space-between;
-    }
-
-    .fotright {
-        width: 20%;
-    }
-
-    .contactos {
-        flex-direction: row;
-    }
-
-    .contactos div {
-        display: flex;
-    }
-
-    .contactos img {
-        margin: auto;
     }
 }
 
@@ -289,7 +407,7 @@ header {
         font-size: 1.5rem;
     }
 
-    .footer {
+    .fotleft, .fotmidle {
         font-size: 1.3rem;
     }
 }
@@ -299,7 +417,7 @@ header {
         font-size: 2rem;
     }
 
-    .footer {
+    .fotleft, .fotmidle {
         font-size: 1.5rem;
     }
 }
