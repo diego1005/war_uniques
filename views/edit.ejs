@@ -12,11 +12,13 @@
         <form class="form-block" action="/products/edit/<%= prod.id %>?_method=PUT" method="POST"
             enctype="multipart/form-data">
             <input type="text" name="id" hidden>
+            <!-- Flag Section -->
             <div class="block block-flag">
-                <h3>
+                <div class="main-title">
                     <a href="/"><i class="fa-solid fa-angle-left"></i></a>
-                    Selecciona el origen del producto
-                </h3>
+                    <h3>Selecciona el origen del producto</h3>
+                    <div></div>
+                </div>
                 <div class="line-flag">
                     <div class="flag-box">
                         <div class="flag-box-opt">
@@ -35,19 +37,22 @@
                     </div>
                 </div>
             </div>
+            <!-- Name Section -->
             <div class="block">
-                <h3>Describe en una frase tu producto</h3>
+                <h3 class="edit-title">Describe en una frase tu producto</h3>
                 <div class="block-name">
                     <input type="text" name="name" value="<%= prod.name %>" placeholder="Nombre del producto...">
                 </div>
             </div>
+            <!-- Description Section -->
             <div class="block">
-                <h3>Coloca las caracteristicas del producto</h3>
+                <h3 class="edit-title">Coloca las caracteristicas del producto</h3>
                 <textarea name="description" cols="30" rows="5"
                     placeholder="Descripcion..."><%= prod.description %></textarea>
             </div>
+            <!-- Price Section -->
             <div class="block">
-                <h3>Indica el precio por unidad</h3>
+                <h3 class="edit-title">Indica el precio por unidad</h3>
                 <div class="block-price">
                     <p>$</p>
                     <input type="text" name="price" value="<%= prod.price %>" placeholder="Precio...">
@@ -85,8 +90,9 @@
                     </div>
                 </div>
             </div>
+            <!-- Image Section -->
             <div class="block">
-                <h3>Sube una o mas imagenes</h3>
+                <h3 class="edit-title">Sube una o mas imagenes</h3>
                 <div class="block-img">
                     <i class="fa fa-regular fa-arrow-up-from-bracket"></i>
                     <label for="prod">Seleccionar imagen</label>

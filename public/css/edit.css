@@ -3,13 +3,15 @@
 }
 
 .form-block {
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
 }
 
 .line-flag {
     display: flex;
     justify-content: space-evenly;
-    margin: 5% 0;
 }
 
 .middle {
@@ -20,7 +22,8 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 3%;
+    width: 65%;
+    padding: 0.5%;
 }
 
 .flag-box-opt {
@@ -34,7 +37,9 @@
 }
 
 .flag-box select {
-    padding: 3% 2%;
+    width: 80%;
+    height: 2rem;
+    font-size: 0.7rem;
     border-radius: 5px;
 }
 
@@ -45,50 +50,63 @@
 .block {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    margin-bottom: 0.5rem;
 }
 
 .block-flag {
     justify-content: space-between;
 }
 
-.block input {
-    width: 90%;
-    font-size: 1.2rem;
-    margin: auto;
-    padding: 1.2% 3.5%;
+.main-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.main-title i {
+    font-size: 1.1rem;
+    color: white;
+    margin-left: 0.2rem;
+}
+
+.block input,
+.block textarea {
+    width: 80%;
+    font-size: 0.7rem;
+    margin: 0 auto;
     border-radius: 10px;
 }
 
 .block-name {
     text-align: center;
-    margin: 5% 0;
+}
+
+.block input {
+    padding: 1.2% 3.5%;
 }
 
 .block textarea {
-    width: 90%;
-    font-size: 1.2rem;
-    margin: 5% auto;
+    height: 4rem;
     padding: 1.8% 3.5%;
-    border-radius: 10px;
 }
 
 .block-price {
     display: flex;
     justify-content: center;
-    margin: 5% auto;
+    margin: 0 auto;
 }
 
 .block-price p {
     color: rgb(70, 150, 255);
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin: auto;
     margin-right: 1%;
 }
 
 .block-price input {
-    width: 80%;
+    width: 100%;
     margin: auto;
+    text-align: center;
 }
 
 .block-contain {
@@ -96,12 +114,12 @@
     justify-content: space-around;
     background-color: rgba(0, 0, 0, 0.3);
     align-items: center;
-    margin: 3% 1%;
     border-radius: 5px;
     padding: 3% 0;
 }
 
-.block-payment, .block-credit {
+.block-payment,
+.block-credit {
     text-align: center;
     width: 20%;
 }
@@ -115,7 +133,7 @@
     display: flex;
     justify-content: center;
     color: white;
-    font-size: 1.1rem;
+    font-size: 0.7rem;
     align-items: center;
     margin-bottom: 5%;
 }
@@ -127,30 +145,39 @@
 .credit-offer {
     display: flex;
     justify-content: space-around;
+    font-size: 0.7rem;
     color: white;
 }
 
+.credit-offer label {
+    margin-left: 5px;
+}
+
 .block-img {
-    width: 65%;
-    background-color: darkslategray;
+    width: 100%;
+    background-color: rgba(47, 79, 79, 0.7);
     color: white;
     text-align: center;
-    margin: 3% auto;
-    padding: 3% 1%;
+    margin: 0 auto;
+    padding: 1% 0;
     border-radius: 5px;
 }
 
 .block-img label {
+    font-size: 0.7rem;
     margin-left: 5%;
 }
 
-.block h3 {
+.main-title,
+.edit-title {
+    align-items: center;
     width: 100%;
     color: white;
     background-color: rgba(165, 42, 42, 0.3);
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     text-align: center;
-    padding: 3% 0;
+    padding: 1.5% 0;
+    margin-bottom: 0.3rem;
 }
 
 h3 a {
@@ -160,7 +187,7 @@ h3 a {
 
 .btn-next {
     width: 100vw;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     color: white;
     background-color: rgb(70, 70, 255);
     padding: 3%;
@@ -169,5 +196,283 @@ h3 a {
 }
 
 #prod {
-    font-size: 0.8rem;
+    width: 33%;
+    font-size: 0.5rem;
+}
+
+@media (max-width: 250px) {
+
+    .form-block {
+        height: 100vh;
+        margin: 0;
+    }
+
+    .flag-box-img {
+        display: none;
+    }
+
+    .main-title h3,
+    .edit-title {
+        font-size: 0.5rem;
+    }
+
+    .main-title {
+        justify-content: space-between;
+    }
+
+    .flag-box,
+    .flag-box select {
+        width: 100%;
+    }
+
+    .flag-box-opt {
+        min-width: 0;
+        text-align: center;
+    }
+
+    .line-flag {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .line-flag,
+    .block input,
+    .block textarea,
+    .block-img label,
+    .block-img i {
+        font-size: 0.4rem;
+    }
+
+    .block-price {
+        margin-bottom: 0.5rem;
+    }
+
+    .block-price p {
+        font-size: 1rem;
+    }
+
+    .block-payment,
+    .block-credit {
+        width: 35%;
+    }
+
+    .block-shipping {
+        width: 50%;
+    }
+
+    .credit-offer,
+    .title {
+        font-size: 0.5rem;
+    }
+
+    .block-contain {
+        flex-direction: column;
+        width: 65%;
+        margin: 0 auto;
+    }
+
+    #prod {
+        font-size: 0.4rem;
+    }
+
+    .btn-next {
+        width: 100%;
+        font-size: 0.4rem;
+    }
+}
+
+@media (min-width: 300px) {
+
+    .block input,
+    .block textarea {
+        width: 65%;
+    }
+
+    .block textarea {
+        height: 6rem;
+    }
+}
+
+@media (min-width: 400px) {
+    .block-contain {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .block-img i {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 500px) {
+    .form-block {
+        height: auto;
+    }
+}
+
+@media (min-width: 600px) {
+
+    .main-title,
+    .edit-title {
+        font-size: 1.2rem;
+    }
+
+    .flag-box select,
+    .block input,
+    .block textarea,
+    .title,
+    .credit-offer,
+    .block-img label {
+        font-size: 1rem;
+    }
+
+    .block-price input {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    #prod {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 720px) {
+    .flag-box select {
+        width: 60%;
+    }
+
+    .block textarea {
+        height: 8rem;
+    }
+
+    .btn-next {
+        width: 40%;
+        font-size: 1rem;
+        margin: 0 auto;
+        padding: 2%;
+        border-radius: 10px;
+    }
+}
+
+@media (min-width: 900px) {
+    .main-title i {
+        font-size: 1.8rem;
+        margin-left: 1.2rem;
+    }
+
+    .flag-box select {
+        width: 50%;
+    }
+
+    .title,
+    .credit-offer,
+    .block-img label {
+        font-size: 1.2rem;
+    }
+
+    .block-contain input {
+        height: 1.1rem;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .main-title,
+    .edit-title {
+        font-size: 1.5rem;
+    }
+
+    .main-title i {
+        font-size: 2rem;
+    }
+
+    .flag-box select,
+    .block input,
+    .block textarea,
+    .title,
+    .credit-offer,
+    .block-img label {
+        font-size: 1.2rem;
+    }
+
+    .block-contain input {
+        height: 1.2rem;
+    }
+
+    .block-img i {
+        font-size: 1rem;
+    }
+
+    #prod {
+        font-size: 1rem;
+    }
+
+    .btn-next {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .flag-box select {
+        height: 2.5rem;
+    }
+
+    .block textarea {
+        height: 10rem;
+    }
+}
+
+@media (min-width: 1600px) {
+
+    .main-title,
+    .edit-title {
+        font-size: 1.8rem;
+    }
+
+    .main-title i {
+        font-size: 2.5rem;
+    }
+
+    .flag-box select,
+    .block input,
+    .block textarea,
+    .title,
+    .credit-offer,
+    .block-img label {
+        font-size: 1.5rem;
+    }
+
+    .block-price p {
+        font-size: 2.5rem;
+    }
+
+    .block-contain input {
+        height: 1.4rem;
+    }
+
+    .block-img label {
+        font-size: 1.7rem;
+    }
+
+    .block-img i {
+        font-size: 1.3rem;
+    }
+
+    #prod {
+        font-size: 1.3rem;
+    }
+
+    .btn-next {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1800px) {
+    .flag-box select {
+        height: 3rem;
+    }
+
+    .block textarea {
+        height: 12rem;
+    }
 }
