@@ -57,7 +57,11 @@ Weekly meeting - 4/6/2022
 	2. Implementar bcrypt
 	3. Session y Cookies
 	4. Base de datos json para usuarios
-
+- 7/10/2022
+	1. Implementar bcrypt
+	2. Corregir session(hacer funcionar)
+	3. Cookies
+	4. Hashing 
 
 
 
