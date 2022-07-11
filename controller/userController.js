@@ -1,8 +1,8 @@
-let { check, validationResult, body } = require("express-validator");
 let fs = require("fs");
 let path = require("path");
-let userlist = require("../database/users.json");
+let { validationResult } = require("express-validator");
 
+let userlist = require("../database/users.json");
 
 const userController = {
 
@@ -11,17 +11,15 @@ const userController = {
     },
 
     loginB: (req, res) => {
+        //validacion de los campos del formulario
         let errors = validatioResult(req);
         if(errors.isEmpty()){
+            //identificacion del usuario a loguear
+            let user = userlist.filter(el => el.email == req.body.user);
 
-            let usersJSON = fs.readFileSync("../database/users.json", {encoding: "utf8"}) 
-            let users;
-            if(usersJSON == "") {
-                users = [];
-            }else{
-                users = JSON.parse(usersJSON);
+            if (user != undefined) {
+                
             }
-            let usuarioALoguearse
 
             for(let i = 0; i < users.length; i++){
                 if(users[i].email == req.body.email){
@@ -39,7 +37,7 @@ const userController = {
             }
 
             req.session.usuarioLogueado = usuarioALoguearse;
-            res.render("succes");
+            res.render("success");
 
         }else{
 

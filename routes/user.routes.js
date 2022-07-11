@@ -3,11 +3,11 @@ const express = require("express");
 const router = express.Router();
 const multer  = require('multer')
 const path = require("path");
-const {check} = require("express-validator")
+const { check } = require("express-validator")
 //controlador
 const userController = require("../controller/userController");
 
-//configuarción de express-validator-------------------------------------------
+//configuarción de validaciones-----------------------------------------------
 let validateRegister = [
     check("name").notEmpty().withMessage("Debes completar el campo"),
     check("lastname").notEmpty().withMessage("Debes completar el campo"),
