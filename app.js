@@ -17,7 +17,11 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());                               
 app.use(methodOverride("_method"));
-app.use(session({secret:"mensaje secreto"}))
+app.use(session({
+    secret:"mensaje secreto",
+    resave: false,
+    saveUninitialized: true
+}));
 
 //routes____________________________________________________
 app.use("/", indexRouter);

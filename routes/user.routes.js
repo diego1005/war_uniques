@@ -1,19 +1,14 @@
 //modulos requeridos
 const express = require("express");
 const router = express.Router();
-const multer  = require('multer')
 const path = require("path");
-const { check } = require("express-validator")
+const multer  = require('multer')
+
 //controlador
 const userController = require("../controller/userController");
 
-//configuarción de validaciones-----------------------------------------------
-let validateRegister = [
-    check("name").notEmpty().withMessage("Debes completar el campo"),
-    check("lastname").notEmpty().withMessage("Debes completar el campo"),
-    check("email").isEmail().notEmpty().withMessage("El email no es valido"),
-    check("password").isLength({min: 12}).notEmpty().withMessage("Contraseña invalida"),]
-//-----------------------------------------------------------------------------
+//validaciones
+const validates = require("../public/js/validations/validations");
 
 //configuración de multer------------------------------------------------------
 const storage = multer.diskStorage({
@@ -32,10 +27,10 @@ const upload = multer({storage})
 //carga la vista del login
 router.get("/login", userController.login);
 //procesa los datos del login
-router.post("/login", userController.loginB);
+router.post("/login", validates.validateLogin, userController.processLogin);
 //carga la vista del signin
 router.get("/signin", userController.signin);
 //procesa los datos del signin
-router.post("/signin", upload.single("avatar"), validateRegister, userController.signinB);
+router.post("/signin", upload.single("avatar"), validates.validateRegister, userController.processRegister);
 
 module.exports = router;

@@ -1,6 +1,6 @@
-let fs = require("fs");
-let path = require("path");
-let { validationResult } = require("express-validator");
+const fs = require("fs");
+const path = require("path");
+const { validationResult } = require("express-validator");
 
 let userlist = require("../database/users.json");
 
@@ -10,39 +10,29 @@ const userController = {
         res.render("login");
     },
 
-    loginB: (req, res) => {
+    processLogin: (req, res) => {
         //validacion de los campos del formulario
-        let errors = validatioResult(req);
-        if(errors.isEmpty()){
+        const errors = validationResult(req);
+        //validacion sin errores
+        if (errors.isEmpty()) {
             //identificacion del usuario a loguear
             let user = userlist.filter(el => el.email == req.body.user);
-
+            //usuario existe
             if (user != undefined) {
-                
-            }
-
-            for(let i = 0; i < users.length; i++){
-                if(users[i].email == req.body.email){
-                    if (bcrypt.compareSync(req.body.password, users[i].password)){
-                        usuarioALoguearse = users[i];
-                        break;
-                    }
+                let authPass = bcrypt.compareSync(req.body.password, user.password);
+                if (authPass) {     //contraseña correcta
+                    req.session.userLogged = user;
+                    res.render("/");
+                } else {        //contraseña incorrecta
+                    let msg = "Contraseña incorrecta";
+                    res.render("login", { message : msg });
                 }
+            } else {    //usuario no existe
+                let msg = "El usuario no existe";
+                res.render("login", { message : msg });
             }
-
-            if (usuarioALoguearse == undefined){
-                return res.render("login", {errors: [
-                    {msg: "Credenciales invalidas"}
-                ]});
-            }
-
-            req.session.usuarioLogueado = usuarioALoguearse;
-            res.render("success");
-
-        }else{
-
-            res.render("login", {errors:errors.errors})
-
+        }else {     //validacion con errores
+            res.render("login", { errors : errors.errors });
         }
     },
 
@@ -50,10 +40,10 @@ const userController = {
         res.render("signin");
     },
 
-    signinB: (req, res) => {
+    processRegister: (req, res) => {
         let errors = validationResult(req);
 
-        if(errors.isEmpty()){
+        if (errors.isEmpty()) {
 
             let newId = userlist[(userlist.length - 1)].id + 1
             let file = req.file;
@@ -65,9 +55,9 @@ const userController = {
                 password: req.body.password,
                 avatar: `img/${file.filename}`
             };
-    
+
             userlist.push(newuser);
-    
+
             fs.writeFileSync(
                 path.join(__dirname, "../database/users.json"),
                 JSON.stringify(userlist, null, 4),
@@ -77,9 +67,9 @@ const userController = {
             );
             res.redirect("/")
 
-        }else{
+        } else {
 
-            res.render("signin", {errors: errors.array(), old:req.body})
+            res.render("signin", { errors: errors.array(), old: req.body })
 
         }
     }
