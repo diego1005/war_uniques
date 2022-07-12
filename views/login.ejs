@@ -14,16 +14,16 @@
                     <form class="formulario" action="/user/login" method="POST">
                         <div class="control">
                             <label>Usuario o email</label>
-                            <input type="text" name="user">
+                            <input type="text" name="user" value="<%= (locals?.old) ? old.user : '' %>">
                             <p class="text-danger">
-                                <%= (locals?.errors && errors[0] != undefined) ? errors[0].msg : (locals?.message) ? message : '' %>
+                                <%= (locals?.errors && errors.user != undefined) ? errors.user.msg : (locals?.result && result.user != undefined) ? result.user.msg: '' %>
                             </p> 
                         </div>
                         <div class="control">
                             <label>Contraseña</label>
                             <input type="password" name="password">
                             <p class="text-danger">
-                                <%= (locals?.errors && errors[1] != undefined) ? errors[1].msg : (locals?.message) ? message : '' %>
+                                <%= (locals?.errors && errors.password!= undefined) ? errors.password.msg : (locals?.result && result.password != undefined) ? result.password.msg : '' %>
                             </p> 
                         </div>
                         <div class="control-password">

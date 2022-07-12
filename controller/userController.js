@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const bcrypt = require("bcrypt");
 const { validationResult } = require("express-validator");
 
 let userlist = require("../database/users.json");
@@ -19,20 +20,23 @@ const userController = {
             let user = userlist.filter(el => el.email == req.body.user);
             //usuario existe
             if (user != undefined) {
-                let authPass = bcrypt.compareSync(req.body.password, user.password);
+                //una vez realizado el registro con el hash en password --------------
+                // let authPass = bcrypt.compareSync(req.body.password, user.password);
+                //---------------------------------------------------------------------
+                let authPass = (req.body.password === user.password);
                 if (authPass) {     //contraseña correcta
                     req.session.userLogged = user;
                     res.render("/");
                 } else {        //contraseña incorrecta
-                    let msg = "Contraseña incorrecta";
-                    res.render("login", { message : msg });
+                    let result = {password : { msg : "Contraseña incorrecta" }};
+                    res.render("login", { result : result, old : req.body });
                 }
             } else {    //usuario no existe
-                let msg = "El usuario no existe";
-                res.render("login", { message : msg });
+                let result = {user : { msg : "El usuario no existe" }};
+                res.render("login", { result : result, old : req.body });
             }
         }else {     //validacion con errores
-            res.render("login", { errors : errors.errors });
+            res.render("login", { errors : errors.mapped(), old : req.body });
         }
     },
 
