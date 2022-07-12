@@ -3,7 +3,7 @@ const path = require("path");
 const bcrypt = require("bcrypt");
 const { validationResult } = require("express-validator");
 
-let userlist = require("../database/users.json");
+let userList = require("../database/users.json");
 
 const userController = {
 
@@ -12,12 +12,12 @@ const userController = {
     },
 
     processLogin: (req, res) => {
-        //validacion de los campos del formulario
+        //validacion de los campos del formulariod de login
         const errors = validationResult(req);
         //validacion sin errores
         if (errors.isEmpty()) {
             //identificacion del usuario a loguear
-            let user = userlist.filter(el => el.email == req.body.user);
+            let user = userList.filter(el => el.email == req.body.user);
             //usuario existe
             if (user != undefined) {
                 //una vez realizado el registro con el hash en password --------------
@@ -45,22 +45,26 @@ const userController = {
     },
 
     processRegister: (req, res) => {
-        let errors = validationResult(req);
-
+        //validacion de los campos del formulario de registro
+        const errors = validationResult(req);
+        //validacion sin errores
         if (errors.isEmpty()) {
+            //Comprobacion de usuario ya existente
+            let existUser = userList.filter(el => el.email == req.body.email);
+            if (!existUser.isEmpty()) {
+                let result = {email : { msg : "Email ya registrado" }};
+                res.render("signin", { result : result, old : req.body} );
+            }else {
+                let len = userList.length;
+                let file = req.file;
+                let newUser = req.body;
+                newUser.id = userList[(len - 1)].id + 1;
+                newUser.avatar = file.filename;
+            }
 
-            let newId = userlist[(userlist.length - 1)].id + 1
-            let file = req.file;
-            let newuser = {
-                id: newId,
-                name: req.body.name,
-                lastname: req.body.lastname,
-                email: req.body.email,
-                password: req.body.password,
-                avatar: `img/${file.filename}`
-            };
+            /*
 
-            userlist.push(newuser);
+            userList.push(newuser);
 
             fs.writeFileSync(
                 path.join(__dirname, "../database/users.json"),
@@ -71,10 +75,9 @@ const userController = {
             );
             res.redirect("/")
 
+            */
         } else {
-
-            res.render("signin", { errors: errors.array(), old: req.body })
-
+            res.render("signin", { errors : errors.mapped(), old : req.body });
         }
     }
 }

@@ -23,7 +23,7 @@
                             <label>Contraseña</label>
                             <input type="password" name="password">
                             <p class="text-danger">
-                                <%= (locals?.errors && errors.password!= undefined) ? errors.password.msg : (locals?.result && result.password != undefined) ? result.password.msg : '' %>
+                                <%= (locals?.errors && errors.password != undefined) ? errors.password.msg : (locals?.result && result.password != undefined) ? result.password.msg : '' %>
                             </p> 
                         </div>
                         <div class="control-password">

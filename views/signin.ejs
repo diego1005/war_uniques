@@ -11,42 +11,54 @@
         <%- include("./partials/float_logo.ejs") %>
             <div class="big-box">
                 <div class="small-box">
-                        <% if (locals.errors) { 
-                            errors.forEach(error => { %>
-                            <p class="feedback"><%= error.msg %></p>
-                        <%  })
-                        }
-                        %>
-                        <form class="formulario" action="/user/signin" method="POST" enctype="multipart/form-data">
-                            <div class="control">
-                                <label>Nombre</label>
-                                <input type="text" name="name" value="<%= locals.old && old.name ? old.name : ' ' %>">
-                            </div>
-                            <div class="control">
-                                <label>Apellido</label>
-                                <input type="text" name="lastname" value="<%= locals.old && old.lastname ? old.lastname : ' ' %>">
-                            </div>
-                            <div class="linea"></div>
-                            <div class="control">
-                                <label>Email</label>
-                                <input type="email" name="email" value="<%= locals.old && old.email ? old.email : ' ' %>">
-                            </div>
-                            <div class="control">
-                                <label>Contraseña</label>
-                                <input type="password" name="password">
-                            </div>
-                            <div class="control">
-                                <label>Confirmar Contraseña</label>
-                                <input type="password" name="password">
-                            </div>
-                            <div class="control">
-                                <label>Foto de Perfil</label>
-                                <input type="file" name="avatar">
-                            </div>
-                            <div class="register">
-                                <input type="submit" value="REGISTRARME">
-                            </div>
-                        </form>
+                    <form class="formulario" action="/user/signin" method="POST" enctype="multipart/form-data">
+                        <div class="control">
+                            <label>Nombre</label>
+                            <input type="text" name="name" value="<%= (locals?.old) ? old.name : '' %>">
+                            <p class="text-danger">
+                                <%= (locals?.errors && errors.name !=undefined) ? errors.name.msg : '' %>
+                            </p>
+                        </div>
+                        <div class="control">
+                            <label>Apellido</label>
+                            <input type="text" name="lastname" value="<%= (locals?.old) ? old.lastname : '' %>">
+                            <p class="text-danger">
+                                <%= (locals?.errors && errors.lastname !=undefined) ? errors.lastname.msg : '' %>
+                            </p>
+                        </div>
+                        <div class="linea"></div>
+                        <div class="control">
+                            <label>Email</label>
+                            <input type="email" name="email" value="<%= (locals?.old) ? old.email : '' %>">
+                            <p class="text-danger">
+                                <%= (locals?.errors && errors.email !=undefined) ? errors.email.msg : '' %>
+                            </p>
+                        </div>
+                        <div class="control">
+                            <label>Contraseña</label>
+                            <input type="password" name="password">
+                            <p class="text-danger">
+                                <%= (locals?.errors && errors.password !=undefined) ? errors.password.msg : '' %>
+                            </p>
+                        </div>
+                        <div class="control">
+                            <label>Confirmar Contraseña</label>
+                            <input type="password" name="confirmPassword">
+                            <p class="text-danger">
+                                <%= (locals?.errors && errors.confirmPassword !=undefined) ? errors.confirmPassword.msg : '' %>
+                            </p>
+                        </div>
+                        <div class="control">
+                            <label>Foto de Perfil</label>
+                            <input type="file" name="avatar">
+                            <p class="text-danger">
+                                <%= (locals?.errors && errors.avatar !=undefined) ? errors.avatar.msg : '' %>
+                            </p>
+                        </div>
+                        <div class="register">
+                            <input type="submit" value="REGISTRARME">
+                        </div>
+                    </form>
                 </div>
             </div>
     </main>
