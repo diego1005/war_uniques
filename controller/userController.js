@@ -5,6 +5,8 @@ const { validationResult } = require("express-validator");
 
 let userList = require("../database/users.json");
 
+const f_modules = require("../public/js/controllerJS/userFunctions");
+
 const userController = {
 
     login: (req, res) => {
@@ -51,32 +53,27 @@ const userController = {
         if (errors.isEmpty()) {
             //Comprobacion de usuario ya existente
             let existUser = userList.filter(el => el.email == req.body.email);
-            if (!existUser.isEmpty()) {
+            let userLen = existUser.length;
+            if (userLen > 0) {  //email ya cargado en bd
                 let result = {email : { msg : "Email ya registrado" }};
+                f_modules.eraseImg(req.file.filename);
                 res.render("signin", { result : result, old : req.body} );
-            }else {
-                let len = userList.length;
+            }else {     //nuevo usuario
+                let len = (userList.length == 0) ? 1 : userList.length;
                 let file = req.file;
-                let newUser = req.body;
-                newUser.id = userList[(len - 1)].id + 1;
-                newUser.avatar = file.filename;
-            }
-
-            /*
-
-            userList.push(newuser);
-
-            fs.writeFileSync(
-                path.join(__dirname, "../database/users.json"),
-                JSON.stringify(userlist, null, 4),
-                {
-                    encoding: "utf-8"
+                let newId = (userList[(len - 1)] == undefined) ? 1 : userList[(len - 1)].id + 1;
+                let newUser = {
+                    id: newId,
+                    ...req.body
                 }
-            );
-            res.redirect("/")
-
-            */
+                delete newUser.confirmPassword;
+                newUser.avatar = file.filename;
+                userList.push(newUser);
+                f_modules.write(userList);
+                res.redirect("/");
+            }
         } else {
+            (req.file) ? f_modules.eraseImg(req.file.filename) : '';
             res.render("signin", { errors : errors.mapped(), old : req.body });
         }
     }

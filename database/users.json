@@ -1,24 +1,10 @@
 [
     {
         "id": 1,
-        "name": "Astor",
-        "lastname": "Levy",
-        "email": "astorlevy14@gmail.com",
-        "password": [
-            "1234",
-            "1234"
-        ],
-        "avatar": "img/1657134002631-img.png"
-    },
-    {
-        "id": 2,
-        "name": "Maia",
-        "lastname": "¿asfja",
-        "email": "aaaaa14@gmail.com",
-        "password": [
-            "1234",
-            "1234"
-        ],
-        "avatar": "img/1657390918979-img.webp"
+        "name": "Diego",
+        "lastname": "Aguilar",
+        "email": "user@user.com",
+        "password": "123",
+        "avatar": "1657651499597-img.png"
     }
 ]

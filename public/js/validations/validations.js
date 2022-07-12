@@ -1,4 +1,5 @@
 const { check } = require("express-validator")
+const path = require("path");
 
 const validates = {
 
@@ -9,9 +10,17 @@ const validates = {
         check("email").notEmpty().withMessage("Campo obligatorio").bail().isEmail().withMessage("Email no válido"),
         check("password").notEmpty().withMessage("Campo oblgatorio"),
         check("confirmPassword").notEmpty().withMessage("Campo oblgatorio").bail().custom((confirmPassword, { req }) => {
-            if (confirmPassword != req.body.password) throw new Error("Las contraseñas no coinciden");
+            if (confirmPassword != req.body.password) {
+                throw new Error("Las contraseñas no coinciden");
+            }else  {
+                return true;
+            }
         }),
-        check("avatar").notEmpty().withMessage("Debes subir una imagen de perfil")
+        check("avatar").custom((el, { req }) => {
+            const ext = [".jpg", ".png", ".jpeg", ".webp"];
+            const extFile = path.extname(req.file.originalname);
+            return (ext.includes(extFile));
+        }).withMessage("Debes subir una imagen de perfil")
     ],
     //---------------------------------------------------------------------------------------
 

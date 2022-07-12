@@ -13,7 +13,7 @@ const validates = require("../public/js/validations/validations");
 //configuración de multer------------------------------------------------------
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, path.join(__dirname, "../public/images/avatares"))
+        cb(null, path.join(__dirname, "../public/images/user-image"));
     },
     filename: function (req, file, cb) {
         const filename = `${Date.now()}-img${path.extname(file.originalname)}`

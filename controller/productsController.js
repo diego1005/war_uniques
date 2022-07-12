@@ -3,7 +3,7 @@ const path = require("path");
 
 let productList = require("../database/productsList.json");
 
-const f_modules = require("../public/js/controllerJS/function");
+const f_modules = require("../public/js/controllerJS/productFunctions");
 
 const productsController = {
     detail: (req, res) => {
