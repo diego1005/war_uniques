@@ -52,9 +52,9 @@
                         <h3>Describe en una frase tu producto</h3>
                         <div></div>
                     </div>
-                    <input type="text" name="name" placeholder="Nombre del producto...">
+                    <input class="entries" type="text" name="name" placeholder="Nombre del producto...">
                 </div>
-                <button type="button" class="btn-next" onclick="next()">CONTINUAR</button>
+                <button type="button" class="btn-next entries" onclick="next()">CONTINUAR</button>
             </div>
             <!-- Description Section -->
             <div class="block">
@@ -64,8 +64,8 @@
                     <h3>Coloca las caracteristicas del producto</h3>
                     <div></div>
                 </div>
-                <textarea name="description" cols="30" rows="10" placeholder="Descripcion..."></textarea>
-                <button type="button" class="btn-next" onclick="next()">CONTINUAR</button>
+                <textarea class="entries" name="description" cols="30" rows="10" placeholder="Descripcion..."></textarea>
+                <button type="button" class="btn-next entries" onclick="next()">CONTINUAR</button>
             </div>
             <!-- Price Section -->
             <div class="block pay-content">
@@ -77,7 +77,7 @@
                 </div>
                 <div class="block-price">
                     <p>$</p>
-                    <input type="text" name="price" placeholder="Precio...">
+                    <input class="entries" type="text" name="price" placeholder="Precio...">
                 </div>
                 <div class="block-contain">
                     <div class="block-payment">
@@ -111,7 +111,7 @@
                         <input type="radio" name="credit" value="12">
                     </div>
                 </div>
-                <button type="button" class="btn-next" onclick="next()">CONTINUAR</button>
+                <button type="button" class="btn-next entries" onclick="next()">CONTINUAR</button>
                 <div></div>
             </div>
             <!-- Image Section -->
@@ -126,11 +126,11 @@
                     <div class="block-img">
                         <i class="fa fa-regular fa-arrow-up-from-bracket"></i>
                         <label for="prod">Seleccionar imagen</label>
-                        <input type="file" id="prod" name="image" accept=".jpg, .png, .webp">
+                        <input class="entries" type="file" id="prod" name="image">
                         <p id="file_name"></p>
                     </div>
                 </div>
-                <button type="submit" class="btn-next">CONTINUAR</button>
+                <button type="submit" class="btn-next entries">CONTINUAR</button>
             </div>
         </form>
     </main>
