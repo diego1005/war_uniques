@@ -179,6 +179,11 @@
     padding: 5%;
     border: none;
     cursor: pointer;
+    transition: 450ms;
+}
+
+.btn-next:disabled {
+    background-color: darkgrey;
 }
 
 .btn-back {
