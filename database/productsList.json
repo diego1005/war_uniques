@@ -1,1 +1,35 @@
-[{"id":0,"country":"germany.png","name":"Helmet","description":"A good Helmet","price":"18,300","offer":true,"credit":"6","shipping":false,"image":"1656465918731_helmet.webp"},{"id":1,"country":"england.png","name":"Belt","description":"The mother f*ker belt","price":"12,100","offer":true,"shipping":true,"credit":"12","image":"1656465961390_faja.webp"},{"id":2,"country":"japan.png","name":"Machine Gun","description":"Machine Gun Kelly","price":"20,900","offer":true,"shipping":true,"credit":"6","image":"1656467563250_gun.webp"}]
+[
+    {
+        "id": 0,
+        "country": "germany.png",
+        "name": "Helmet",
+        "description": "A good Helmet",
+        "price": "18,300",
+        "offer": true,
+        "credit": "6",
+        "shipping": false,
+        "image": "1656465918731_helmet.webp"
+    },
+    {
+        "id": 1,
+        "country": "england.png",
+        "name": "Belt",
+        "description": "The mother f*ker belt",
+        "price": "12,100",
+        "offer": true,
+        "shipping": true,
+        "credit": "12",
+        "image": "1656465961390_faja.webp"
+    },
+    {
+        "id": 2,
+        "country": "japan.png",
+        "name": "Machine Gun",
+        "description": "Machine Gun Kelly",
+        "price": "20,900",
+        "offer": true,
+        "shipping": true,
+        "credit": "6",
+        "image": "1656467563250_gun.webp"
+    }
+]

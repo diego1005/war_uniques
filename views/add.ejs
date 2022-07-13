@@ -51,9 +51,14 @@
                             <button class="btn-back" type="button" onclick="back()"><i
                                     class="fa-solid fa-angle-left"></i></button>
                             <h3>Describe en una frase tu producto</h3>
+
                             <div></div>
                         </div>
-                        <input class="entries" type="text" name="name" placeholder="Nombre del producto...">
+                        <input class="entries" type="text" name="name" placeholder="Nombre del producto..."
+                        value="<%= (locals?.old) ? old.name : '' %>">
+                        <p class="text-danger">
+                            <%= (locals?.errors && errors.name != undefined) ? errors.name.msg : '' %>
+                        </p> 
                     </div>
                 </div>
                 <!-- Description Section -->
@@ -64,7 +69,10 @@
                         <h3>Coloca las caracteristicas del producto</h3>
                         <div></div>
                     </div>
-                    <textarea class="entries" name="description" cols="30" rows="10" placeholder="Descripcion..."></textarea>
+                    <textarea class="entries" name="description" cols="30" rows="10" placeholder="Descripcion..."><%= (locals?.old) ? old.description : '' %></textarea>
+                    <p class="text-danger">
+                        <%= (locals?.errors && errors.description != undefined) ? errors.description.msg : '' %>
+                    </p> 
                 </div>
                 <!-- Price Section -->
                 <div class="block pay-content">
@@ -76,7 +84,11 @@
                     </div>
                     <div class="block-price">
                         <p>$</p>
-                        <input class="entries" type="text" name="price" placeholder="Precio...">
+                        <input class="entries" type="text" name="price" placeholder="Precio..."
+                        value="<%= (locals?.old) ? old.price : '' %>">
+                        <p class="text-danger">
+                            <%= (locals?.errors && errors.price != undefined) ? errors.price.msg : '' %>
+                        </p> 
                     </div>
                     <div class="block-contain">
                         <div class="block-payment">
@@ -125,11 +137,15 @@
                             <i class="fa fa-regular fa-arrow-up-from-bracket"></i>
                             <label for="prod">Seleccionar imagen</label>
                             <input class="entries" type="file" id="prod" name="image">
+                            <p class="text-danger">
+                                <%= (locals?.errors && errors.image != undefined) ? errors.image.msg : '' %>
+                            </p> 
                             <p id="file_name"></p>
                         </div>
                     </div>
                 </div>
                 <button type="button" class="btn-next" onclick="next()" id="btnNext">CONTINUAR</button>
+                <button type="submit" class="btn-next" onclick="next()" id="btnSubmit" hidden>CONTINUAR</button>
             </div>
         </form>
     </main>

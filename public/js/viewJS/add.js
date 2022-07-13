@@ -6,6 +6,8 @@ window.addEventListener("load", () => {
     panels = document.getElementsByClassName("block");
     entries = document.getElementsByClassName("entries");
 
+    console.log(entries);
+
     panels[0].style.display = "flex";
 
     let file = document.querySelector("#prod");
@@ -35,7 +37,7 @@ function next(flag) {
         i++;
         document.getElementById("btnNext").style.display = "block";
         document.querySelector(".block-container").style.display = "flex";
-    } else {
+    } else if (i < 3){ // EN PROCESO
         panels[i].style.display = "none";
         panels[i+1].style.display = "flex";
         i++;

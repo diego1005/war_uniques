@@ -69,6 +69,14 @@
     border-radius: 10px;
 }
 
+.text-danger {
+    width: 65%;
+    font-size: 0.8rem;
+    text-align: left;
+    margin-top: 0.4rem;
+    color: red !important;
+}
+
 .block textarea {
     width: 85%;
     font-size: 1.1rem;

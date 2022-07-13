@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const { validationResult } = require("express-validator");
 
 let productList = require("../database/productsList.json");
 
@@ -16,10 +17,16 @@ const productsController = {
         res.render("add");
     },
     create: (req, res) => {
-        let product = req.body;
-        //Crear nuevo producto y actualizar lista de productos
-        productList = f_modules.add(product, req.file, productList);
-        res.render("home", { prod: productList });
+        //Validacion de errores en el formulario de agregar producto
+        const errors = validationResult(req);
+        if (errors.isEmpty()) {
+            let product = req.body;
+            //Crear nuevo producto y actualizar lista de productos
+            productList = f_modules.add(product, req.file, productList);
+            res.render("home", { prod: productList });
+        }else {
+            res.render("add", {errors : errors.mapped(), old : req.body});
+        }
     },
     edit: (req, res) => {
         let product = productList.find(el => el.id == req.params.id);
