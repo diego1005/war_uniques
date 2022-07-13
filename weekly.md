@@ -71,6 +71,7 @@ Weekly meeting - 4/6/2022
 - 13/07/2022
 	1. El carrusel de imagenes en el detalle del producto debe iterar sobre un arreglo con los nombres de los archvios de imagenes guardados.
 	2. Para implementar 1. es necesario cambiar la modalidad de carga de imagenes a multi.
+	3. [detalles] agregar cruz para borrar el contenido del input en la vista de agregar producto.
 
 
 

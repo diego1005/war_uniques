@@ -37,11 +37,16 @@ function next(flag) {
         i++;
         document.getElementById("btnNext").style.display = "block";
         document.querySelector(".block-container").style.display = "flex";
-    } else if (i < 3){ // EN PROCESO
+    } else {
         panels[i].style.display = "none";
         panels[i+1].style.display = "flex";
         i++;
-        document.getElementById("btnNext").disabled = true
+        if (i < 4) {
+            document.getElementById("btnNext").disabled = true
+        }else {
+            document.getElementById("btnNext").style.display = "none";
+            document.getElementById("btnSubmit").style.display = "block";
+        }
     }
 }
 
@@ -57,5 +62,9 @@ function back() {
         panels[i-1].style.display = "flex";
         entries[i-2].value = '';
         i--
+        if (i == 3) {
+            document.getElementById("btnNext").style.display = "block";
+            document.getElementById("btnSubmit").style.display = "none";
+        }
     }
 }
