@@ -1,8 +1,6 @@
 let panels = [];
 let entries = [];
 let i = 0;
-let j = 0;
-let k = 1;
 
 window.addEventListener("load", () => {
     panels = document.getElementsByClassName("block");
@@ -15,9 +13,17 @@ window.addEventListener("load", () => {
         document.querySelector("#file_name").innerText = file.files[0].name;
     });
 
-    document.getElementById(`${k}_btnNext`).disabled = true
-    
-    btnAct();
+    document.getElementById("btnNext").disabled = true
+
+    for (let entry of entries) {
+        entry.addEventListener("input", () => {
+            if (entry.value.length > 0) {
+                document.getElementById("btnNext").disabled = false;
+            }else {
+                document.getElementById("btnNext").disabled = true
+            }
+        })
+    }
 
 });
 
@@ -27,30 +33,26 @@ function next(flag) {
         document.getElementById("flag").value = flag;
         panels[i+1].style.display = "flex";
         i++;
+        document.getElementById("btnNext").style.display = "block";
+        document.querySelector(".block-container").style.display = "flex";
     } else {
         panels[i].style.display = "none";
         panels[i+1].style.display = "flex";
         i++;
-        j++;
-        k++;
-        document.getElementById(`${k}_btnNext`).disabled = true
-        btnAct();
+        document.getElementById("btnNext").disabled = true
     }
 }
 
 function back() {
-    panels[i].style.display = "none";
-    panels[i-1].style.display = "flex";
-    i--
-}
-
-function btnAct() {
-    entries[j].addEventListener("input", () => {
-        if (entries[j].value.length > 0) {
-            document.getElementById(`${k}_btnNext`).disabled = false;
-        }else {
-            document.getElementById(`${k}_btnNext`).disabled = true
-        }
-    })
-    console.log(j, k);
+    if (i == 1) {
+        document.getElementById("btnNext").style.display = "none";
+        document.querySelector(".block-container").style.display = "none";
+        panels[i].style.display = "none";
+        panels[i-1].style.display = "flex";
+        i--
+    }else {
+        panels[i].style.display = "none";
+        panels[i-1].style.display = "flex";
+        i--
+    }
 }

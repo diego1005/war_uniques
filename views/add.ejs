@@ -18,7 +18,7 @@
                     <h3>Selecciona el origen del producto</h3>
                     <div></div>
                 </div>
-                <div class="block-container">
+                <div class="flag-container">
                     <div class="line-flag">
                         <div class="flag-box" onclick="next('germany.png')">
                             <img src="/images/flags/germany.png" alt="germany-flag">
@@ -43,94 +43,93 @@
                     <input id="flag" type="text" name="country" value="" hidden>
                 </div>
             </div>
-            <!-- Name Section -->
-            <div class="block">
-                <div>
+            <div class="block-container">
+                <!-- Name Section -->
+                <div class="block">
+                    <div>
+                        <div class="back-title">
+                            <button class="btn-back" type="button" onclick="back()"><i
+                                    class="fa-solid fa-angle-left"></i></button>
+                            <h3>Describe en una frase tu producto</h3>
+                            <div></div>
+                        </div>
+                        <input class="entries" type="text" name="name" placeholder="Nombre del producto...">
+                    </div>
+                </div>
+                <!-- Description Section -->
+                <div class="block">
                     <div class="back-title">
                         <button class="btn-back" type="button" onclick="back()"><i
                                 class="fa-solid fa-angle-left"></i></button>
-                        <h3>Describe en una frase tu producto</h3>
+                        <h3>Coloca las caracteristicas del producto</h3>
                         <div></div>
                     </div>
-                    <input class="entries" type="text" name="name" placeholder="Nombre del producto...">
+                    <textarea class="entries" name="description" cols="30" rows="10" placeholder="Descripcion..."></textarea>
                 </div>
-                <button type="button" class="btn-next" onclick="next()" id="1_btnNext">CONTINUAR</button>
-            </div>
-            <!-- Description Section -->
-            <div class="block">
-                <div class="back-title">
-                    <button class="btn-back" type="button" onclick="back()"><i
-                            class="fa-solid fa-angle-left"></i></button>
-                    <h3>Coloca las caracteristicas del producto</h3>
-                    <div></div>
-                </div>
-                <textarea name="description" cols="30" rows="10" placeholder="Descripcion..."></textarea>
-                <button type="button" class="btn-next" onclick="next()" id="2_btnNext">CONTINUAR</button>
-            </div>
-            <!-- Price Section -->
-            <div class="block pay-content">
-                <div class="back-title">
-                    <button class="btn-back" type="button" onclick="back()"><i
-                            class="fa-solid fa-angle-left"></i></button>
-                    <h3>Indica el precio por unidad</h3>
-                    <div></div>
-                </div>
-                <div class="block-price">
-                    <p>$</p>
-                    <input type="text" name="price" placeholder="Precio...">
-                </div>
-                <div class="block-contain">
-                    <div class="block-payment">
-                        <div class="title">
-                            <i class="fa-solid fa-tag"></i>
-                            <p>Oferta</p>
-                        </div>
-                        <input type="radio" name="offer" value=true>
-                    </div>
-                    <div class="block-shipping">
-                        <div class="title">
-                            <i class="fa-solid fa-truck-fast"></i>
-                            <p>Envio Gratis</p>
-                        </div>
-                        <input type="radio" name="shipping" value=true>
-                    </div>
-                </div>
-                <div class="block-credit">
-                    <div class="title">
-                        <i class="fa-solid fa-credit-card"></i>
-                        <p>Cuotas</p>
-                    </div>
-                    <div class="credit-offer">
-                        <label for="credit">3</label>
-                        <label for="credit">6</label>
-                        <label for="credit">12</label>
-                    </div>
-                    <div class="credit-offer">
-                        <input type="radio" name="credit" value="3">
-                        <input type="radio" name="credit" value="6">
-                        <input type="radio" name="credit" value="12">
-                    </div>
-                </div>
-                <button type="button" class="btn-next" onclick="next()" id="3_btnNext">CONTINUAR</button>
-                <div></div>
-            </div>
-            <!-- Image Section -->
-            <div class="block">
-                <div>
+                <!-- Price Section -->
+                <div class="block pay-content">
                     <div class="back-title">
                         <button class="btn-back" type="button" onclick="back()"><i
                                 class="fa-solid fa-angle-left"></i></button>
-                        <h3>Sube una o mas imagenes</h3>
+                        <h3>Indica el precio por unidad</h3>
                         <div></div>
                     </div>
-                    <div class="block-img">
-                        <i class="fa fa-regular fa-arrow-up-from-bracket"></i>
-                        <label for="prod">Seleccionar imagen</label>
-                        <input type="file" id="prod" name="image">
-                        <p id="file_name"></p>
+                    <div class="block-price">
+                        <p>$</p>
+                        <input class="entries" type="text" name="price" placeholder="Precio...">
+                    </div>
+                    <div class="block-contain">
+                        <div class="block-payment">
+                            <div class="title">
+                                <i class="fa-solid fa-tag"></i>
+                                <p>Oferta</p>
+                            </div>
+                            <input type="radio" name="offer" value=true>
+                        </div>
+                        <div class="block-shipping">
+                            <div class="title">
+                                <i class="fa-solid fa-truck-fast"></i>
+                                <p>Envio Gratis</p>
+                            </div>
+                            <input type="radio" name="shipping" value=true>
+                        </div>
+                    </div>
+                    <div class="block-credit">
+                        <div class="title">
+                            <i class="fa-solid fa-credit-card"></i>
+                            <p>Cuotas</p>
+                        </div>
+                        <div class="credit-offer">
+                            <label for="credit">3</label>
+                            <label for="credit">6</label>
+                            <label for="credit">12</label>
+                        </div>
+                        <div class="credit-offer">
+                            <input type="radio" name="credit" value="3">
+                            <input type="radio" name="credit" value="6">
+                            <input type="radio" name="credit" value="12">
+                        </div>
+                    </div>
+                    <div></div>
+                </div>
+                <!-- Image Section -->
+                <div class="block">
+                    <div>
+                        <div class="back-title">
+                            <button class="btn-back" type="button" onclick="back()"><i
+                                    class="fa-solid fa-angle-left"></i></button>
+                            <h3>Sube una o mas imagenes</h3>
+                            <div></div>
+                        </div>
+                        <div class="block-img">
+                            <i class="fa fa-regular fa-arrow-up-from-bracket"></i>
+                            <label for="prod">Seleccionar imagen</label>
+                            <input class="entries" type="file" id="prod" name="image">
+                            <p id="file_name"></p>
+                        </div>
                     </div>
                 </div>
-                <button type="submit" class="btn-next" id="4_btnNext">CONTINUAR</button>
+                <button type="button" class="btn-next" onclick="next()" id="btnNext">CONTINUAR</button>
             </div>
         </form>
     </main>
