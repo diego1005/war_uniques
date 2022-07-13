@@ -53,6 +53,7 @@ function back() {
     }else {
         panels[i].style.display = "none";
         panels[i-1].style.display = "flex";
+        entries[i-2].value = '';
         i--
     }
 }
