@@ -9,10 +9,10 @@
 
 <body>
     <main class="main-section">
-        
-        <form class="form-block" action="/products/edit/<%= old.id %>?_method=PUT" method="POST"
-            enctype="multipart/form-data">
-            <input type="text" name="id" hidden value="<%= (locals?.old)?old.id:'' %>">
+
+        <form class="form-block" action="/products/edit/<%= (locals?.prod) ? prod.id : old.id %>?_method=PUT"
+            method="POST" enctype="multipart/form-data">
+            <input type="text" name="id" value="<%= (locals?.prod) ? prod.id : old.id %>" hidden>
             <!-- Flag Section -->
             <div class="block block-flag">
                 <div class="main-title">
@@ -31,48 +31,49 @@
                                 <option value="russia.png">Russia</option>
                                 <option value="usa.png">Estados Unidos</option>
 
-                        
+
                             </select>
-                            <p class="text-danger">
-                                <%= (locals?.errors && errors.name != undefined) ? errors.name.msg : '' %>
-                            </p> 
                         </div>
                         <div class="flag-box-img">
                             <img id="img-flag">
                         </div>
                     </div>
                 </div>
+                <p class="text-danger">
+                    <%= (locals?.errors && errors.name !=undefined) ? errors.name.msg : '' %>
+                </p>
             </div>
             <!-- Name Section -->
             <div class="block">
                 <h3 class="edit-title">Describe en una frase tu producto</h3>
                 <div class="block-name">
-                    <input type="text" name="name" value="<%= (locals?.old)?old.name:'' %>" placeholder="Nombre del producto...">
-                    <p class="text-danger">
-                        <%= (locals?.errors && errors.name != undefined) ? errors.name.msg : '' %>
-                    </p> 
+                    <input type="text" name="name" value="<%= (locals?.old) ? old.name : '' %>"
+                        placeholder="Nombre del producto...">
                 </div>
+                <p class="text-danger">
+                    <%= (locals?.errors && errors.name !=undefined) ? errors.name.msg : '' %>
+                </p>
             </div>
             <!-- Description Section -->
             <div class="block">
                 <h3 class="edit-title">Coloca las caracteristicas del producto</h3>
                 <textarea name="description" cols="30" rows="5"
-                    placeholder="Descripcion..."><%=(locals?.old)?old.description:'' %> </textarea>
-                    <p class="text-danger">
-                        <%= (locals?.errors && errors.description != undefined) ? errors.description.msg : '' %>
-                    </p> 
+                    placeholder="Descripcion..."><%= (locals?.old) ? old.description : '' %></textarea>
             </div>
+            <p class="text-danger">
+                <%= (locals?.errors && errors.description !=undefined) ? errors.description.msg : '' %>
+            </p>
             <!-- Price Section -->
             <div class="block">
                 <h3 class="edit-title">Indica el precio por unidad</h3>
                 <div class="block-price">
                     <p>$</p>
-                    <input type="text" name="price" value="<%=(locals?.old)?old.price:'' %>" placeholder="Precio...">
-                 
-                </div>
-                <p class="text-danger">
-                    <%= (locals?.errors && errors.price != undefined) ? errors.price.msg : '' %>
-                </p>
+                    <input type="text" name="price" value="<%= (locals?.old) ? old.price : '' %>"
+                        placeholder="Precio...">
+                    </div>
+                    <p class="text-danger">
+                        <%= (locals?.errors && errors.price !=undefined) ? errors.price.msg : '' %>
+                    </p>
                 <div class="block-contain">
                     <div class="block-payment">
                         <div class="title">
@@ -117,7 +118,7 @@
                         <p id="file_name"></p>
                     </div>
                     <p class="text-danger">
-                        <%= (locals?.errors && errors.image != undefined) ? errors.image.msg : '' %>
+                        <%= (locals?.errors && errors.image !=undefined) ? errors.image.msg : '' %>
                     </p>
                 </div>
             </div>

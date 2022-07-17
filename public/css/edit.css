@@ -77,6 +77,14 @@
     border-radius: 10px;
 }
 
+.text-danger {
+    width: 65%;
+    font-size: 1.2rem;
+    margin: auto;
+    margin-top: 0.4rem;
+    color: red !important;
+}
+
 .block-name {
     text-align: center;
 }
