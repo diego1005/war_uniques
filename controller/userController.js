@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
 
 let userList = require("../database/users.json");
@@ -19,16 +19,14 @@ const userController = {
         //validacion sin errores
         if (errors.isEmpty()) {
             //identificacion del usuario a loguear
-            let user = userList.filter(el => el.email == req.body.user);
+            let user = userList.find(el => el.email == req.body.user);
             //usuario existe
             if (user != undefined) {
-                //una vez realizado el registro con el hash en password --------------
-                // let authPass = bcrypt.compareSync(req.body.password, user.password);
-                //---------------------------------------------------------------------
-                let authPass = (req.body.password === user.password);
+                //comparar password hasheado
+                let authPass = bcrypt.compareSync(req.body.password, user.password);
                 if (authPass) {     //contraseña correcta
-                    req.session.userLogged = user;
-                    res.render("/");
+                    req.session.userLogged = user.email;
+                    res.redirect("/");
                 } else {        //contraseña incorrecta
                     let result = {password : { msg : "Contraseña incorrecta" }};
                     res.render("login", { result : result, old : req.body });
@@ -64,7 +62,8 @@ const userController = {
                 let newId = (userList[(len - 1)] == undefined) ? 1 : userList[(len - 1)].id + 1;
                 let newUser = {
                     id: newId,
-                    ...req.body
+                    ...req.body,
+                    password: bcrypt.hashSync(req.body.password, 10)
                 }
                 delete newUser.confirmPassword;
                 newUser.avatar = file.filename;
