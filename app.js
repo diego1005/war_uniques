@@ -5,13 +5,14 @@ const session = require("express-session")
 
 const methodOverride = require("method-override");
 
-const indexRouter = require("./routes/index.routes.js");
-const productsRouter = require("./routes/products.routes.js");
-const userRouter = require("./routes/user.routes.js");
+const indexRouter = require("./src/routes/index.routes");
+const productsRouter = require("./src/routes/products.routes.js");
+const userRouter = require("./src/routes/user.routes.js");
 
 //settings___________________________________________________
 const port = process.env.PORT || 3000;
 app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "src/views"));
 
 //middlewares________________________________________________
 app.use(express.urlencoded({ extended: false}));

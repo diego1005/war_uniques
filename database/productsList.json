@@ -31,16 +31,5 @@
         "shipping": true,
         "credit": "6",
         "image": "1656467563250_gun.webp"
-    },
-    {
-        "id": 3,
-        "country": "usa.png",
-        "name": "Kit",
-        "description": "Accesories world war 2",
-        "price": "24,500",
-        "shipping": true,
-        "credit": "12",
-        "offer": false,
-        "image": "1657743828659_accesories.webp"
     }
 ]
