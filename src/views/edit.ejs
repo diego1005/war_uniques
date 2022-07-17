@@ -9,9 +9,10 @@
 
 <body>
     <main class="main-section">
-        <form class="form-block" action="/products/edit/<%= prod.id %>?_method=PUT" method="POST"
+        
+        <form class="form-block" action="/products/edit/<%= old.id %>?_method=PUT" method="POST"
             enctype="multipart/form-data">
-            <input type="text" name="id" hidden>
+            <input type="text" name="id" hidden value="<%= (locals?.old)?old.id:'' %>">
             <!-- Flag Section -->
             <div class="block block-flag">
                 <div class="main-title">
@@ -29,7 +30,12 @@
                                 <option value="japan.png">Japon</option>
                                 <option value="russia.png">Russia</option>
                                 <option value="usa.png">Estados Unidos</option>
+
+                        
                             </select>
+                            <p class="text-danger">
+                                <%= (locals?.errors && errors.name != undefined) ? errors.name.msg : '' %>
+                            </p> 
                         </div>
                         <div class="flag-box-img">
                             <img id="img-flag">
@@ -41,22 +47,32 @@
             <div class="block">
                 <h3 class="edit-title">Describe en una frase tu producto</h3>
                 <div class="block-name">
-                    <input type="text" name="name" value="<%= prod.name %>" placeholder="Nombre del producto...">
+                    <input type="text" name="name" value="<%= (locals?.old)?old.name:'' %>" placeholder="Nombre del producto...">
+                    <p class="text-danger">
+                        <%= (locals?.errors && errors.name != undefined) ? errors.name.msg : '' %>
+                    </p> 
                 </div>
             </div>
             <!-- Description Section -->
             <div class="block">
                 <h3 class="edit-title">Coloca las caracteristicas del producto</h3>
                 <textarea name="description" cols="30" rows="5"
-                    placeholder="Descripcion..."><%= prod.description %></textarea>
+                    placeholder="Descripcion..."><%=(locals?.old)?old.description:'' %> </textarea>
+                    <p class="text-danger">
+                        <%= (locals?.errors && errors.description != undefined) ? errors.description.msg : '' %>
+                    </p> 
             </div>
             <!-- Price Section -->
             <div class="block">
                 <h3 class="edit-title">Indica el precio por unidad</h3>
                 <div class="block-price">
                     <p>$</p>
-                    <input type="text" name="price" value="<%= prod.price %>" placeholder="Precio...">
+                    <input type="text" name="price" value="<%=(locals?.old)?old.price:'' %>" placeholder="Precio...">
+                 
                 </div>
+                <p class="text-danger">
+                    <%= (locals?.errors && errors.price != undefined) ? errors.price.msg : '' %>
+                </p>
                 <div class="block-contain">
                     <div class="block-payment">
                         <div class="title">
@@ -100,6 +116,9 @@
                         <input type="file" id="prod" name="image" accept=".jpg, .png, .webp">
                         <p id="file_name"></p>
                     </div>
+                    <p class="text-danger">
+                        <%= (locals?.errors && errors.image != undefined) ? errors.image.msg : '' %>
+                    </p>
                 </div>
             </div>
             <input type="submit" class="btn-next" value="CONTINUAR">
