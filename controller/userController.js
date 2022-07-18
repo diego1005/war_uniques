@@ -24,19 +24,19 @@ const userController = {
             if (user != undefined) {
                 //comparar password hasheado
                 let authPass = bcrypt.compareSync(req.body.password, user.password);
-                if (authPass) {     //contraseña correcta
+                if (authPass) { //contraseña correcta
                     req.session.userLogged = user.email;
                     res.redirect("/");
-                } else {        //contraseña incorrecta
-                    let result = {password : { msg : "Contraseña incorrecta" }};
-                    res.render("login", { result : result, old : req.body });
+                } else { //contraseña incorrecta
+                    let result = { password: { msg: "Contraseña incorrecta" } };
+                    res.render("login", { result: result, old: req.body });
                 }
-            } else {    //usuario no existe
-                let result = {user : { msg : "El usuario no existe" }};
-                res.render("login", { result : result, old : req.body });
+            } else { //usuario no existe
+                let result = { user: { msg: "El usuario no existe" } };
+                res.render("login", { result: result, old: req.body });
             }
-        }else {     //validacion con errores
-            res.render("login", { errors : errors.mapped(), old : req.body });
+        } else { //validacion con errores
+            res.render("login", { errors: errors.mapped(), old: req.body });
         }
     },
 
@@ -52,11 +52,11 @@ const userController = {
             //Comprobacion de usuario ya existente
             let existUser = userList.filter(el => el.email == req.body.email);
             let userLen = existUser.length;
-            if (userLen > 0) {  //email ya cargado en bd
-                let result = {email : { msg : "Email ya registrado" }};
+            if (userLen > 0) { //email ya cargado en bd
+                let result = { email: { msg: "Email ya registrado" } };
                 f_modules.eraseImg(req.file.filename);
-                res.render("signin", { result : result, old : req.body} );
-            }else {     //nuevo usuario
+                res.render("signin", { result: result, old: req.body });
+            } else { //nuevo usuario
                 let len = (userList.length == 0) ? 1 : userList.length;
                 let file = req.file;
                 let newId = (userList[(len - 1)] == undefined) ? 1 : userList[(len - 1)].id + 1;
@@ -72,10 +72,17 @@ const userController = {
                 res.redirect("/");
             }
         } else {
-            (req.file) ? f_modules.eraseImg(req.file.filename) : '';
-            res.render("signin", { errors : errors.mapped(), old : req.body });
+            (req.file) ? f_modules.eraseImg(req.file.filename): '';
+            res.render("signin", { errors: errors.mapped(), old: req.body });
         }
-    }
+    },
+
+    //perfil
+    perfil: (req, res) => {
+        res.render("perfil");
+    },
+
 }
 
-module.exports = userController;
+
+module.exports = userController
