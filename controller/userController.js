@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
-
+const user= require('../src/models/user');
 let userList = require("../database/users.json");
 
 const f_modules = require("../public/js/controllerJS/userFunctions");
@@ -25,8 +25,7 @@ const userController = {
                 //comparar password hasheado
                 let authPass = bcrypt.compareSync(req.body.password, user.password);
                 if (authPass) { //contraseña correcta
-                    req.session.userLogged = user.email;
-                    res.redirect("/");
+                    res.redirect("/user/perfil");
                 } else { //contraseña incorrecta
                     let result = { password: { msg: "Contraseña incorrecta" } };
                     res.render("login", { result: result, old: req.body });

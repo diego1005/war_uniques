@@ -1,45 +1,67 @@
-@import url("https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@400;700&display=swap");
-body {
-    background: linear-gradient(236.85deg, #ffffff 27.26%, #3468a7 96.03%);
-    font-family: "Koh Santepheap", cursive;
-}
 
-.container {
-    background: #ecf4ff;
-    margin: 44px;
-    border-radius: 20px;
-    box-shadow: 6px 6px 6px #0e1d2f;
-    color: #ffffff;
-    padding: 64px;
-}
-
-.perfil {
+.info_items {
     display: flex;
-    alin-items: center;
+    flex-direction: row;
 }
 
-.perfil-foto {
-    border-radius: 460px;
-    max-height: 180px;
-    box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25)!important;
+.usu {
+    width: 30%;
+    height: 35%;
+    border-radius: 100%;
+    margin: 0px 25px;
+    display: flex;
+    flex-direction: row;
+    margin: 105px 0px 0px 5px;
+
 }
 
-.titulo {
-    margin-left: 20px;
-}
-
-.titulo h1 {
-    font-weight: 700;
-    font-size: 36px;
-}
-
-.titulo h3 {
-    font-weight: 400;
-    font-size: 24px;
-}
-
-.projetos {
+.info {
+    margin-left: 25px;
+    margin-right: 25px;
+    font-family: 'Lato', sans-serif;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    background-color: #ffffff00;
+    
 }
+
+.info h2 {
+    font-family: 'Lato', sans-serif;
+    color: rgb(68, 70, 71);
+    text-align: center;
+    border-bottom-color: rgb(68, 70, 71);
+}
+
+h2 {
+   font-family: 'Alfa Slab One', cursive;
+   font-weight: normal;
+   color: #0C9;
+   font-size: 50px;
+   margin: 2% 5%;
+   border-bottom: 1px solid #0C9;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: 1px solid #DFE0E0;
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 6px;
+}
+
+.info_items {
+    display: flex;
+    justify-content: center;
+    background-color: #ebe9e959;
+    border-radius: 25px
+}
+.card{
+    width: 50%;
+    margin: auto;
+}
+
