@@ -63,6 +63,7 @@
 .product-detail p {
     margin: 5px;
     color: lightgray;
+    font-size: 0.6rem;
 }
 
 .product-name {
@@ -90,6 +91,7 @@
 .see-more {
     text-align: center;
     padding-bottom: 15px;
+    padding-top: 35px;
 }
 
 .see-more a {
