@@ -27,7 +27,6 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }));
-app.use(cookieParser());
 
 //routes____________________________________________________
 app.use("/", indexRouter);
