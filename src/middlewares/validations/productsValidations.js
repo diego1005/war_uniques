@@ -9,7 +9,7 @@ const validates = {
         check("name").notEmpty().withMessage("Campo obligatorio"),
         check("description").notEmpty().withMessage("Campo obligatorio"),
         check("price").notEmpty().withMessage("Campo obligatorio"),
-        check("image").notEmpty().withMessage("Debe cargar al menos una imagen de producto").bail().custom((el, { req }) => {
+        check("image").custom((el, { req }) => {
             const ext = [".jpg", ".png", ".jpeg", ".webp"];
             const extFile = path.extname(req.file.originalname);
             return (ext.includes(extFile));

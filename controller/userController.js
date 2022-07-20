@@ -26,6 +26,9 @@ const userController = {
                 let authPass = bcrypt.compareSync(req.body.password, user.password);
                 if (authPass) {     //contraseña correcta
                     req.session.userLogged = user.email;
+                    if(req.body.remember){
+                        res.cookie('remember', req.body.user, { maxAge:(1000*60)*2 })
+                    }
                     res.redirect("/");
                 } else {        //contraseña incorrecta
                     let result = {password : { msg : "Contraseña incorrecta" }};
