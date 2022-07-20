@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const session = require("express-session");
-const cookieParser = require("cookie-parser");
+const cookies = require("cookie-parser");
 const methodOverride = require("method-override");
 
 const rememberMid = require("./src/middlewares/session/rememberMid");
@@ -19,13 +19,13 @@ app.set("views", path.join(__dirname, "src/views"));
 //middlewares________________________________________________
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());  
-app.use(cookieParser());              
 app.use(session({
     secret:"mensaje secreto",
     resave: false,
     saveUninitialized: true
 }));
-// app.use(rememberMid());
+app.use(cookies());
+app.use(rememberMid);
 app.use(methodOverride("_method"));
 
 //routes____________________________________________________
