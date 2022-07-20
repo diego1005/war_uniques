@@ -3,8 +3,14 @@ const path = require("path");
 
 let filePath = path.join(__dirname, "../../../database/users.json");
 let imgPath = path.join(__dirname, "../../../public/images/user-image/");
+let userList = require("../../../database/users.json");
 
 let f_modules = {
+    findOne: (email) => {
+        let user = userList.find(el => el.email == email);
+        return user;
+    },
+
     write: (array) => {
         array = JSON.stringify(array);
         fs.writeFileSync(filePath, array);
