@@ -27,7 +27,7 @@ const userController = {
                 if (authPass) {     //contraseña correcta
                     req.session.userLogged = user.email;
                     if(req.body.remember){
-                        res.cookie('userEmail',req.body.email,{maxAge:(1000*60)*2})
+                        res.cookie('remember', req.body.user, { maxAge:(1000*60)*2 })
                     }
                     res.redirect("/");
                 } else {        //contraseña incorrecta
