@@ -25,6 +25,8 @@ const userController = {
                 //comparar password hasheado
                 let authPass = bcrypt.compareSync(req.body.password, user.password);
                 if (authPass) { //contraseña correcta
+                    //requiere la sesion del usuario que ingresa
+                    req.session.userLogged=user;
                     res.redirect("/user/perfil");
                 } else { //contraseña incorrecta
                     let result = { password: { msg: "Contraseña incorrecta" } };
@@ -68,7 +70,7 @@ const userController = {
                 newUser.avatar = file.filename;
                 userList.push(newUser);
                 f_modules.write(userList);
-                res.redirect("/");
+                res.redirect("/user/login");
             }
         } else {
             (req.file) ? f_modules.eraseImg(req.file.filename): '';
@@ -78,7 +80,10 @@ const userController = {
 
     //perfil
     perfil: (req, res) => {
-        res.render("perfil");
+        
+        return res.render('perfil',{
+            user: req.session.userLogged
+        });
     },
 
 }

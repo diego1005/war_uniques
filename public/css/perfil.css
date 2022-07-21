@@ -2,6 +2,7 @@
 .info_items {
     display: flex;
     flex-direction: row;
+    
 }
 
 .usu {
@@ -27,7 +28,7 @@
 
 .info h2 {
     font-family: 'Lato', sans-serif;
-    color: rgb(68, 70, 71);
+    color: rgb(38, 46, 46);
     text-align: center;
     border-bottom-color: rgb(68, 70, 71);
 }
@@ -35,7 +36,7 @@
 h2 {
    font-family: 'Alfa Slab One', cursive;
    font-weight: normal;
-   color: #0C9;
+   color: rgb(5, 5, 5);
    font-size: 50px;
    margin: 2% 5%;
    border-bottom: 1px solid #0C9;
@@ -49,7 +50,9 @@ textarea {
     border: 1px solid #DFE0E0;
     margin-bottom: 15px;
 }
-
+input{
+   color: rgb(38, 46, 46)
+}
 label {
     margin-bottom: 6px;
 }
@@ -57,7 +60,7 @@ label {
 .info_items {
     display: flex;
     justify-content: center;
-    background-color: #ebe9e959;
+    background-color: #6262624a;
     border-radius: 25px
 }
 .card{
