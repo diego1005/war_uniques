@@ -14,12 +14,14 @@ const { userUpload } = require("../middlewares/multer/multer");
 const validates = require("../middlewares/validations/userValidations");
 
 //login view
-router.get("/login", userLoggedMid ,userController.login);
+router.get("/login", userLoggedMid, userController.login);
 //login process
 router.post("/login", validates.validateLogin, userController.processLogin);
 //signin view
-router.get("/signin", userLoggedMid ,userController.signin);
+router.get("/signin", userLoggedMid, userController.signin);
 //signin process
 router.post("/signin", userUpload.single("avatar"), validates.validateRegister, userController.processRegister);
+//perfil view
+router.get("/perfil", userLoggedMid, userController.perfil);
 
 module.exports = router;

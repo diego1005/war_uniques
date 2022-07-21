@@ -15,6 +15,8 @@ const validates = {
             return (ext.includes(extFile));
         }).withMessage(`Las extensiones validas son ${this.ext}`)
     ]
+
+
     //-----------------------------------------------------------------------------------------
 }
 

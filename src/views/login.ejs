@@ -17,14 +17,14 @@
                             <input type="text" name="user" value="<%= (locals?.old) ? old.user : '' %>">
                             <p class="text-danger">
                                 <%= (locals?.errors && errors.user != undefined) ? errors.user.msg : (locals?.result && result.user != undefined) ? result.user.msg: '' %>
-                            </p> 
+                            </p>
                         </div>
                         <div class="control">
                             <label>Contraseña</label>
                             <input type="password" name="password">
                             <p class="text-danger">
                                 <%= (locals?.errors && errors.password != undefined) ? errors.password.msg : (locals?.result && result.password != undefined) ? result.password.msg : '' %>
-                            </p> 
+                            </p>
                         </div>
                         <div class="control-password">
                             <div class="remember">
