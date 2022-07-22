@@ -23,5 +23,7 @@ router.get("/signin", userLoggedMid, userController.signin);
 router.post("/signin", userUpload.single("avatar"), validates.validateRegister, userController.processRegister);
 //perfil view
 router.get("/perfil", userLoggedMid, userController.perfil);
+//logout
+ router.get("/logout/",userController.logout);
 
 module.exports = router;

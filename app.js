@@ -11,6 +11,10 @@ const indexRouter = require("./src/routes/index.routes");
 const productsRouter = require("./src/routes/products.routes.js");
 const userRouter = require("./src/routes/user.routes.js");
 
+//del logueo
+//const userLoggedMid= require("./src/middlewares/session/userLoggedMid")
+//app.use(userLoggedMid);
+
 //settings___________________________________________________
 const port = process.env.PORT || 3000;
 app.set("view engine", "ejs");
