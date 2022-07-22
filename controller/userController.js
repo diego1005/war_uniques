@@ -78,13 +78,14 @@ const userController = {
         }
     },
 
-    //perfil
+    //vista perfil
     perfil: (req, res) => {
         
         res.render('perfil',{
             user: req.session.userLogged
         });
     },
+
     logout:(req,res)=>{
         req.session.destroy();
         return res.redirect('/');
