@@ -6,8 +6,10 @@ const path = require("path");
 const userController = require("../../controller/userController");
 
 //middlewares
-//-userLoged
+//-userLogged
 const userLoggedMid = require("../middlewares/session/userLoggedMid");
+//-userUnlogged
+const userUnloggedMid = require("../middlewares/session/userUnloggedMid");
 //-multer
 const { userUpload } = require("../middlewares/multer/multer");
 //-validations
@@ -22,7 +24,7 @@ router.get("/signin", userLoggedMid, userController.signin);
 //signin process
 router.post("/signin", userUpload.single("avatar"), validates.validateRegister, userController.processRegister);
 //perfil view
-router.get("/profile", userLoggedMid, userController.profile);
+router.get("/profile", userUnloggedMid, userController.profile);
 //logout
  router.get("/logout",userController.logout);
 
