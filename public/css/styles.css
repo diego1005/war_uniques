@@ -57,6 +57,16 @@ header {
 
 .nav-user-content {
     display: none;
+    height: 6rem;
+    position: absolute;
+    right: 8rem;
+    background-color: rgba(150, 10, 10, 0.7);
+    padding: 0.7rem 0.5rem;
+    border-radius: 5px;
+}
+
+.nav-user-content p {
+    margin: 0.5rem 0;
 }
 
 .nav-user-contain:hover .nav-user-content {
