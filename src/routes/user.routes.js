@@ -22,7 +22,7 @@ router.get("/signin", userLoggedMid, userController.signin);
 //signin process
 router.post("/signin", userUpload.single("avatar"), validates.validateRegister, userController.processRegister);
 //perfil view
-router.get("/perfil", userLoggedMid, userController.perfil);
+router.get("/profile", userLoggedMid, userController.profile);
 //logout
  router.get("/logout",userController.logout);
 

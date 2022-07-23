@@ -28,7 +28,7 @@ const userController = {
                     req.session.userLogged = user;
                     //casilla recuerdame
                     res.cookie("remember", (req.body.remember != undefined) ? user.email : undefined, { maxAge: 1000*60*2 });
-                    res.redirect("/user/perfil");
+                    res.redirect("/user/profile");
                 } else { //contraseña incorrecta
                     let result = { password: { msg: "Contraseña incorrecta" } };
                     res.render("login", { result: result, old: req.body });
@@ -80,9 +80,9 @@ const userController = {
     },
 
     //vista perfil
-    perfil: (req, res) => {
+    profile: (req, res) => {
         
-        res.render('perfil',{
+        res.render('profile',{
             user: req.session.userLogged
         });
     },
