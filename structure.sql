@@ -13,7 +13,7 @@ GO
 
 
 CREATE TABLE users(
-    id_user INT  ,
+    id_user INT  PRIMARY KEY ,
     user_name VARCHAR(45),
     user_lastname VARCHAR(45),
     user_email VARCHAR(45),
@@ -35,7 +35,7 @@ CREATE TABLE sale(
 
 
 CREATE TABLE product(
-    id_product INT,
+    id_product INT  PRIMARY KEY,
     product_name VARCHAR(45),
     prduct_desccription VARCHAR(45),
     product_price DECIMAL(10),
@@ -46,10 +46,26 @@ CREATE TABLE product(
 )
 
 
+
 CREATE TABLE country(
-    id_country INT,
+    id_country INT  PRIMARY KEY,
     country_name VARCHAR(45),
     country_image VARCHAR(45)
     CONSTRAINT fk FOREIGN KEY (product)
     REFERENCES country
 )
+
+CREATE TABLE user_sale(
+    id_user_sale INT  PRIMARY KEY,
+     id_user INT,
+      id_sale INT,
+
+)
+
+CREATE TABLE sale_product(
+    id_sale_product INT PRIMARY KEY,
+    id_sale INT,
+    id_product INT,
+
+)
+
