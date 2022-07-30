@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const { validationResult } = require("express-validator");
 
-let productList = require("../database/productsList.json");
+let productList = require("../../databaseJSON/productsList.json");
 
 const f_modules = require("../../public/js/controllerJS/productFunctions");
 

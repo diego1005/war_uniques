@@ -1,9 +1,9 @@
 const fs = require("fs");
 const path = require("path");
 
-let filePath = path.join(__dirname, "../../../database/users.json");
-let imgPath = path.join(__dirname, "../../../public/images/user-image/");
-let userList = require("../../../database/users.json");
+let filePath = path.join(__dirname, "../../../databaseJSON/users.json");
+let imgPath = path.join(__dirname, "../../images/user-image");
+let userList = require("../../../databaseJSON/users.json");
 
 let f_modules = {
     findOne: (email) => {

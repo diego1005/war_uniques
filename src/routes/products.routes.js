@@ -3,7 +3,7 @@ const router = express.Router();
 const path = require("path");
 
 //controller
-const productsController = require("../../controller/productsController");
+const productsController = require("../controller/productsController");
 
 //middlewares
 //-multer
