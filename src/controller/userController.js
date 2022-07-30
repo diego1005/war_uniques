@@ -4,7 +4,7 @@ const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
 let userList = require("../database/users.json");
 
-const f_modules = require("../public/js/controllerJS/userFunctions");
+const f_modules = require("../../public/js/controllerJS/productFunctions");
 
 const userController = {
 

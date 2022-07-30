@@ -1,6 +1,11 @@
-const fs = require("fs");
-const path = require("path");
+// const fs = require("fs");
+// const path = require("path");
 
+require('dotenv').config()
+
+console.log(process.env.DB_USER);
+
+/*
 let productList = require("../Proyecto-Integrador/database/productsList.json");
 // let filePath = path.join(__dirname, "/database/productsList.json");
 // let productList = fs.readFileSync(filePath, "utf-8");
@@ -9,3 +14,5 @@ let productList = require("../Proyecto-Integrador/database/productsList.json");
 let product = productList.find(el => el.id == 4);
 
 console.log(product);
+
+*/
