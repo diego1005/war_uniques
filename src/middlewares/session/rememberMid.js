@@ -1,4 +1,4 @@
-const f_modules = require("../../../public/js/controllerJS/userFunctions");
+const f_modules = require("../../../structureJSON/controllerJSON/controllerJS/JSON-userFunctions");
 
 const rememberMid = (req, res, next) => {
 

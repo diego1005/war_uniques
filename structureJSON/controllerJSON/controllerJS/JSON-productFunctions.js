@@ -1,8 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 
-let filePath = path.join(__dirname, "../../../databaseJSON/productsList.json");
-let imgPath = path.join(__dirname, "../../images/products-image");
+let filePath = path.join(__dirname, "../../databaseJSON/productsList.json");
+let imgPath = path.join(__dirname, "../../../public/images/products-image");
 
 let f_modules = {
     showOne: (id, productList) => {

@@ -3,7 +3,7 @@ const router = express.Router();
 const path = require("path");
 
 //controller
-const productsController = require("../controller/productsController");
+const productController = require("../controller/productController");
 
 //middlewares
 //-multer
@@ -11,6 +11,17 @@ const { productUpload } = require("../middlewares/multer/multer");
 //-validates
 const validates = require("../middlewares/validations/productsValidations");
 
+//Read ----------------------------------------------------------------
+router.get("/", productController.findAll);
+router.get("/:id", productController.findByPk);
+router.post("/", productController.findOne);
+//---------------------------------------------------------------------
+//Create --------------------------------------------------------------
+router.get("/create", productController.formCreate);
+router.post("/create", productController.create);
+//---------------------------------------------------------------------
+
+/*
 //READ
 //Carga la vista detalle de producto
 router.get("/detail/:id", productsController.detail);
@@ -33,5 +44,6 @@ router.put("/edit/:id", productUpload.single("image"), validates.validateProduct
 //DELETE
 //Ruta que elimina el producto
 router.delete("/delete/:id", productsController.delete);
+*/
 
 module.exports = router;

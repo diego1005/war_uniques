@@ -24,14 +24,14 @@
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="/products/detail/<%= el.id %>"><img
-                                                    src="/images/products-image/<%= el.image %>" alt="product"></a>
+                                                    src="/images/products-image/<%= el.imageURL %>" alt="product"></a>
                                         </div>
                                         <div class="product-detail">
                                             <div class="product-name">
                                                 <p>
                                                     <%= el.name %>
                                                 </p>
-                                                <img src="/images/flags/<%= el.country %>" alt="flag">
+                                                <img src="<%= el.country.imageURL %>" alt="flag">
                                             </div>
                                             <p class="product-desc">
                                                 <%= el.description%>
@@ -55,14 +55,14 @@
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="/products/detail/<%= el.id %>"><img
-                                                    src="/images/products-image/<%= el.image %>" alt="product"></a>
+                                                    src="/images/products-image/<%= el.imageURL %>" alt="product"></a>
                                         </div>
                                         <div class="product-detail">
                                             <div class="product-name">
                                                 <p>
                                                     <%= el.name%>
                                                 </p>
-                                                <img src="/images/flags/<%= el.country%>" alt="flag">
+                                                <img src="<%= el.country.imageURL%>" alt="flag">
                                             </div>
                                             <p>
                                                 <%= el.description%>

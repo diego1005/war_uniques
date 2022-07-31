@@ -1,12 +1,14 @@
-const fs = require("fs");
-const path = require("path");
-
-const filePath = path.join(__dirname, "../database/productsList.json");
-let productsList = require("../database/productsList.json");
+const db = require("../database/models");
+const { Product } = require("../database/models");
 
 const indexController = {
-    home: (req, res) => {
-        res.render("home", {prod: productsList});
+    findAll: (req, res) => {
+        Product.findAll({
+            include: ["country"]
+        })
+        .then(result => {
+            return res.render("home", { prod: result});
+        })
     }
 }
 

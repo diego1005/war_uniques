@@ -3,7 +3,7 @@ const router = express.Router();
 const path = require("path");
 
 //controller
-const userController = require("../controller/userController");
+const userController = require("../../structureJSON/controllerJSON/JSON-userController");
 
 //middlewares
 //-userLogged
