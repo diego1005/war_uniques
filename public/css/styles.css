@@ -110,6 +110,12 @@ header {
     margin-right: 5px;
 }
 
+.search-panel form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
 .search-panel input {
     width: 80%;
     border: none;

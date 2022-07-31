@@ -28,15 +28,15 @@
                     </div>
                     <div class="image-section">
                         <div class="image-top">
-                            <img src="/images/products-image/<%= prod.image %>" alt="img-top">
+                            <img src="/images/products-image/<%= prod.imageURL %>" alt="img-top">
                         </div>
                         <div class="image-bottom">
                             <i class="fa-solid fa-angle-left"></i>
                             <div>
-                                <img src="/images/products-image/<%= prod.image %>" alt="img-slider">
-                                <img src="/images/products-image/<%= prod.image %>" alt="img-slider">
-                                <img src="/images/products-image/<%= prod.image %>" alt="img-slider">
-                                <img src="/images/products-image/<%= prod.image %>" alt="img-slider">
+                                <img src="/images/products-image/<%= prod.imageURL %>" alt="img-slider">
+                                <img src="/images/products-image/<%= prod.imageURL %>" alt="img-slider">
+                                <img src="/images/products-image/<%= prod.imageURL %>" alt="img-slider">
+                                <img src="/images/products-image/<%= prod.imageURL %>" alt="img-slider">
                             </div>
                             <i class="fa-solid fa-angle-right"></i>
                         </div>
@@ -45,9 +45,9 @@
                         <div class="price">
                             <h2 class="product-price">$ <%= prod.price %>
                             </h2>
-                            <img src="/images/flags/<%= prod.country %>" alt="country-flag">
+                            <img src="<%= prod.country.imageURL %>" alt="country-flag">
                         </div>
-                        <h3 id="fees">en <%= (fee==0) ? 1 : prod.credit %>x de $ <%= (fee==0) ? prod.price : fee %>
+                        <h3 id="fees">en <%= (prod.credit == "No") ? 1 : prod.credit %>x de $ <%= (prod.credit == "No") ? prod.price : (prod.price/prod.credit) %>
                         </h3>
                     </div>
                     <div class="detail detail-buttom">

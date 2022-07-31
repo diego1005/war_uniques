@@ -14,7 +14,7 @@ const validates = require("../middlewares/validations/productsValidations");
 //Read ----------------------------------------------------------------
 router.get("/", productController.findAll);
 router.get("/:id", productController.findByPk);
-router.post("/", productController.findOne);
+router.post("/search", productController.findOne);
 //---------------------------------------------------------------------
 //Create --------------------------------------------------------------
 router.get("/create", productController.formCreate);

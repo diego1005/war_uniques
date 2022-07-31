@@ -27,13 +27,14 @@ const productController = {
         Product.findOne({
             where: {
                 name: {
-                    [Op.like]: `%${req.body.name}%`
+                    [Op.like]: `%${req.body.search}%`
                 }
-            }
+            },
+            include: ["country"]
         })
             .then(result => {
                 result = (result != undefined) ? result : "No hay resultados";
-                return result;
+                return res.render("detail", { prod: result});
             })
             .catch(err => {
                 return res.send(err);
