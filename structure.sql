@@ -35,20 +35,22 @@ CREATE TABLE sale(
 
 
 CREATE TABLE product (
-    id_product TINYINT AUTO_INCREMENT PRIMARY KEY,
+    id TINYINT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(200) NOT NULL,
-    desccription TEXT NOT NULL,
-    price DECIMAL(5,2) NOT NULL,
+    description TEXT NOT NULL,
+    price DECIMAL(7,2) NOT NULL,
     shipping TINYINT NOT NULL,
     offer TINYINT NOT NULL,
     credit VARCHAR(3) NOT NULL,
     imageURL VARCHAR(200) NOT NULL,
     id_country TINYINT,
+    created_at TIMESTAMP,
+    updated_at TIMESTAMP,
     FOREIGN KEY (id_country) REFERENCES country(id)
-)
+);
 
 CREATE TABLE country (
-    id_country TINYINT AUTO_INCREMENT PRIMARY KEY,
+    id TINYINT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     imageURL VARCHAR(200) NOT NULL
 )

@@ -89,16 +89,43 @@ const productController = {
         //validacion de errores en el formulario de agregar producto
         const errors = validationResult(req);
         if (errors.isEmpty()) {
-            Product.update()
-            .then(result => {
-                return res.redirect("home");
+            Product.update({
+                name: req.body.name,
+                description: req.body.description,
+                price: req.body.price,
+                shipping: (req.body.shipping != undefined),
+                offer: (req.body.offer != undefined),
+                credit: (req.body.credit) ? req.body.credit : "No",
+                imageURL: req.file.filename
+            }, {
+                where: {
+                    id: req.params.id
+                }
             })
-            .catch(err => {
-                return res.send(err)
-            })
+                .then(result => {
+                    return res.redirect("home");
+                })
+                .catch(err => {
+                    return res.send(err)
+                })
         } else {
             res.render("edit", { errors: errors.mapped(), old: req.body });
         }
+    },
+    //--------------------------------------------------------------------
+    //Delete -------------------------------------------------------------
+    delete: (req, res) => {
+        Product.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(result => {
+            return res.redirect("home");
+        })
+        .catch(err => {
+            return res.send(err);
+        })
     }
     //--------------------------------------------------------------------
 }

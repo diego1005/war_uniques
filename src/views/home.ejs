@@ -19,8 +19,8 @@
                     <section class="main-top">
                         <h2 class="main-title">OFERTAS</h2>
                         <div class="offers-products">
-                            <% for (let el of prod) { %>
-                                <% if (el.offer) { %>
+                            <% for (let el of prodO) { %>
+                                <% //if (el.offer) { %>
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="/products/detail/<%= el.id %>"><img
@@ -41,7 +41,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <% } } %>
+                                    <% } %>
                         </div>
                             <div class="see-more">
                                 <a href="#">VER TODO</a>
@@ -50,8 +50,8 @@
                     <section class="main-bottom">
                         <h2 class="main-title">ENVIO GRATIS</h2>
                         <div class="popular-products">
-                            <% for (let el of prod) { %>
-                                <% if (el.shipping) { %>
+                            <% for (let el of prodS) { %>
+                                <% //if (el.shipping) { %>
                                     <div class="product">
                                         <div class="product-image">
                                             <a href="/products/detail/<%= el.id %>"><img
@@ -72,7 +72,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <% } } %>
+                                    <% } %>
                         </div>
                             <div class="see-more">
                                 <a href="#">VER TODO</a>

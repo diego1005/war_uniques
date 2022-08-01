@@ -10,18 +10,25 @@ const productController = require("../controller/productController");
 const { productUpload } = require("../middlewares/multer/multer");
 //-validates
 const validates = require("../middlewares/validations/productsValidations");
+//-userSellMid
+const userSellMid = require("../middlewares/session/userSellMid");
 
 //Read ----------------------------------------------------------------
-router.get("/detail/:id", productController.findByPk);
-router.post("/search", productController.findOne);
+router.get("/detail/:id", productController.findByPk); //vista detalle de producto
+router.post("/search", productController.findOne); //vista detalle de producto desde busqueda
 //---------------------------------------------------------------------
 //Create --------------------------------------------------------------
-router.get("/add", productController.formCreate);
+router.get("/add", userSellMid ,productController.formCreate); //vista formulario agregar producto
+//-agregar producto
 router.post("/create", productUpload.single("image"), validates.validateProduct, productController.create);
 //---------------------------------------------------------------------
 //Edit ----------------------------------------------------------------
-router.get("/edit/:id", productController.formEdit);
-router.post("/edit/:id", productController.edit);
+router.get("/edit/:id", productController.formEdit); //vista formualrio editar producto
+//-editar producto
+router.put("/edit/:id", productUpload.single("image"), validates.validateProduct, productController.edit);
+//---------------------------------------------------------------------
+//Delete --------------------------------------------------------------
+router.delete("/delete/:id", productController.delete); //borrar producto
 //---------------------------------------------------------------------
 
 /*
