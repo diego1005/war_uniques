@@ -1,6 +1,7 @@
 const db = require("../database/models");
 const { Product } = require("../database/models");
 const Op = db.Sequelize.Op;
+const { validationResult } = require("express-validator");
 
 const productController = {
     //Read ---------------------------------------------------------------
@@ -14,10 +15,13 @@ const productController = {
             })
     },
     findByPk: (req, res) => {
-        Product.findByPk(req.params.id)
+        Product.findByPk(req.params.id, {
+            include: ["country"]
+        })
             .then(result => {
-                result = (result != undefined) ? result : "No hay resultados";
-                return result;
+                if (result != undefined) {
+                    return res.render("detail", { prod: result });
+                }
             })
             .catch(err => {
                 return res.send(err)
@@ -34,7 +38,7 @@ const productController = {
         })
             .then(result => {
                 result = (result != undefined) ? result : "No hay resultados";
-                return res.render("detail", { prod: result});
+                return res.render("detail", { prod: result });
             })
             .catch(err => {
                 return res.send(err);
@@ -43,27 +47,59 @@ const productController = {
     //--------------------------------------------------------------------
     //Create -------------------------------------------------------------
     formCreate: (req, res) => {
-        res.render("createFormView");
+        return res.render("add");
     },
     create: (req, res) => {
-        Product.create({
-            name: "Soda Stereo"
-        })
-        .then(result => {
-            return res.send(result);
-        })
-        .catch(err => {
-            return res.send(err);
-        })
+        //validacion de errores en el formulario de agregar producto
+        const errors = validationResult(req);
+        if (errors.isEmpty()) {
+            Product.create({
+                name: req.body.name,
+                description: req.body.description,
+                price: req.body.price,
+                shipping: (req.body.shipping != undefined),
+                offer: (req.body.offer != undefined),
+                credit: (req.body.credit) ? req.body.credit : "No",
+                imageURL: req.file.filename
+            })
+                .then(result => {
+                    return res.redirect("home");
+                })
+                .catch(err => {
+                    return res.send(err);
+                })
+        } else {
+            res.render("add", { errors: errors.mapped(), old: req.body });
+        }
     },
+    //--------------------------------------------------------------------
     //Edit ---------------------------------------------------------------
     formEdit: (req, res) => {
-        res.render("editFormView");
+        Product.findByPk(req.params.id, {
+            include: ["country"]
+        })
+            .then(result => {
+                return res.render("edit", { old: result });
+            })
+            .catch(err => {
+                return res.send(err);
+            })
     },
     edit: (req, res) => {
-        Product.update()
+        //validacion de errores en el formulario de agregar producto
+        const errors = validationResult(req);
+        if (errors.isEmpty()) {
+            Product.update()
+            .then(result => {
+                return res.redirect("home");
+            })
+            .catch(err => {
+                return res.send(err)
+            })
+        } else {
+            res.render("edit", { errors: errors.mapped(), old: req.body });
+        }
     }
     //--------------------------------------------------------------------
 }
-
 module.exports = productController;

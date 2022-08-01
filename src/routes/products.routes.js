@@ -12,13 +12,16 @@ const { productUpload } = require("../middlewares/multer/multer");
 const validates = require("../middlewares/validations/productsValidations");
 
 //Read ----------------------------------------------------------------
-router.get("/", productController.findAll);
-router.get("/:id", productController.findByPk);
+router.get("/detail/:id", productController.findByPk);
 router.post("/search", productController.findOne);
 //---------------------------------------------------------------------
 //Create --------------------------------------------------------------
-router.get("/create", productController.formCreate);
-router.post("/create", productController.create);
+router.get("/add", productController.formCreate);
+router.post("/create", productUpload.single("image"), validates.validateProduct, productController.create);
+//---------------------------------------------------------------------
+//Edit ----------------------------------------------------------------
+router.get("/edit/:id", productController.formEdit);
+router.post("/edit/:id", productController.edit);
 //---------------------------------------------------------------------
 
 /*
