@@ -5,6 +5,8 @@
 #### Integrantes:
 - Aguilar Diego Mathias
 - Levy Astor
+- Chavez Cintia
+- Benitez Flavia
 
 #### Paginas referentes:
 - [Mercado Libre](https://www.mercadolibre.com.ar/)
