@@ -11,29 +11,6 @@ IF NOT EXISTS (
 CREATE DATABASE WarUniques
 GO
 
-
-CREATE TABLE users(
-    id_user INT PRIMARY KEY ,
-    user_name VARCHAR(45),
-    user_lastname VARCHAR(45),
-    user_email VARCHAR(45),
-    user_password VARCHAR(45),
-    user_image VARCHAR(45),
-    CONSTRAINT fk FOREIGN KEY (sale)
-    REFERENCES users
-)
-
-CREATE TABLE sale(
-    id AUTO_INCREMENT PRIMARY KEY,
-    sale_id_user INT,
-    sale_product_id_product INT,
-    quntity INT,
-    total DECIMAL(10),
-    CONSTRAINT fk FOREIGN KEY (id_user)
-    REFERENCES sale_id_user
-)
-
-
 CREATE TABLE product (
     id TINYINT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(200) NOT NULL,
@@ -53,22 +30,50 @@ CREATE TABLE country (
     id TINYINT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     imageURL VARCHAR(200) NOT NULL
-)
+);
 
-CREATE TABLE user_sale(
-    id_user_sale INT PRIMARY KEY,
-     id_user INT,
-      id_sale INT,
+CREATE TABLE users (
+    id TINYINT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(150) NOT NULL,
+    lastname VARCHAR(150) NOT NULL,
+    email VARCHAR(200) NOT NULL,
+    password VARCHAR(200) NOT NULL,
+    imageURL VARCHAR(200) NOT NULL,
+    id_sell TINYINT,
+    id_buy TINYINT,
+    FOREIGN KEY (id_sell) REFERENCES sell(id)
+    FOREIGN KEY (id_buy) REFERENCES buy(id)
+);
 
-)
+CREATE TABLE sell (
+    id TINYINT AUTO_INCREMENT PRIMARY KEY,
+    quntity INT NOT NULL,
+    total DECIMAL(7,2) NOT NULL,
+    id_product TINYINT,
+    FOREIGN KEY (id_product) REFERENCES product(id)
+);
 
-CREATE TABLE sale_product(
-    id_sale_product INT PRIMARY KEY,
-    id_sale INT,
-    id_product INT,
+CREATE TABLE buy (
+    id TINYINT AUTO_INCREMENT PRIMARY KEY,
+    quntity INT NOT NULL,
+    total DECIMAL(7,2) NOT NULL,
+    id_product TINYINT,
+    FOREIGN KEY (id_product) REFERENCES product(id)
+);
 
-)
+CREATE TABLE sell_product (
+    id TINYINT AUTO_INCREMENT PRIMARY KEY,
+    id_sell TINYINT,
+    id_product TINYINT,
+);
 
+CREATE TABLE buy_product (
+    id TINYINT AUTO_INCREMENT PRIMARY KEY,
+    id_buy TINYINT,
+    id_product TINYINT,
+);
+
+-- INSERTS
 insert into country (name, imageURL) values('england', '/images/flags/england.png');
 insert into country (name, imageURL) values('usa', '/images/flags/usa.png');
 insert into country (name, imageURL) values('russia', '/images/flags/russia.png');
