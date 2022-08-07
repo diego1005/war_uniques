@@ -3,7 +3,7 @@ const router = express.Router();
 const path = require("path");
 
 //controller
-const userController = require("../../structureJSON/controllerJSON/JSON-userController");
+const userController = require("../controller/userController");
 
 //middlewares
 //-userLogged
@@ -15,17 +15,23 @@ const { userUpload } = require("../middlewares/multer/multer");
 //-validations
 const validates = require("../middlewares/validations/userValidations");
 
-//login view
-router.get("/login", userLoggedMid, userController.login);
-//login process
-router.post("/login", validates.validateLogin, userController.processLogin);
-//signin view
-router.get("/signin", userLoggedMid, userController.signin);
-//signin process
-router.post("/signin", userUpload.single("avatar"), validates.validateRegister, userController.processRegister);
-//perfil view
-router.get("/profile", userUnloggedMid, userController.profile);
-//logout
- router.get("/logout",userController.logout);
+const userSellMid = require("../middlewares/session/userSellMid");
+
+//Read ----------------------------------------------------------------
+router.get("/detail/:id", userController.findByPk); //vista detalle de usuario
+router.post("/search", userController.findOne); //vista detalle de usuario desde busqueda
+//---------------------------------------------------------------------
+//Create --------------------------------------------------------------
+router.get("/signin", userSellMid ,userController.formCreate); //vista formulario agregar usuario
+//-agregar usuario
+router.post("/create", userUpload.single("image"), validates.validateRegister, userController.create);
+//---------------------------------------------------------------------
+//Edit ----------------------------------------------------------------
+// router.get("/edit/:id", userController.formEdit); //vista formualrio editar usuario
+//-editar usuario
+// router.put("/edit/:id", userUpload.single("image"), validates.validateLogin, userController.edit);
+//---------------------------------------------------------------------
+//Delete --------------------------------------------------------------
+router.delete("/delete/:id", userController.delete); //borrar usuario
 
 module.exports = router;
