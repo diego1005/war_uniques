@@ -15,8 +15,26 @@ const { userUpload } = require("../middlewares/multer/multer");
 //-validations
 const validates = require("../middlewares/validations/userValidations");
 
-const userSellMid = require("../middlewares/session/userSellMid");
+//Login ------------------------------------------------------------------
+//-vista de login
+router.get("/login", userLoggedMid, validates.validateLogin, userController.loginForm);
+//-proceso de login
+router.post("/login", userController.login);
+//------------------------------------------------------------------------
+//SignIn -----------------------------------------------------------------
+//-vista del signin
+router.get("/signin", userLoggedMid, userController.signinForm);
+//proceso de signin
+router.post("/signin", userUpload.single("avatar"), validates.validateRegister, userController.signin);
+//------------------------------------------------------------------------
+//Profile ----------------------------------------------------------------
+router.get("/profile", userLoggedMid, userController.profile);
+//------------------------------------------------------------------------
+//Delete Account ---------------------------------------------------------
+router.delete("/delete/:id", userController.delete);
+//------------------------------------------------------------------------
 
+/*
 //Read ----------------------------------------------------------------
 router.get("/detail/:id", userController.findByPk); //vista detalle de usuario
 router.post("/search", userController.findOne); //vista detalle de usuario desde busqueda
@@ -33,5 +51,5 @@ router.post("/create", userUpload.single("image"), validates.validateRegister, u
 //---------------------------------------------------------------------
 //Delete --------------------------------------------------------------
 router.delete("/delete/:id", userController.delete); //borrar usuario
-
+*/
 module.exports = router;

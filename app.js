@@ -30,8 +30,8 @@ app.use(session({
     saveUninitialized: true
 }));
 app.use(cookies());
-app.use(rememberMid);
 app.use(userNavMid);
+app.use(rememberMid);
 app.use(methodOverride("_method"));
 
 //routes____________________________________________________

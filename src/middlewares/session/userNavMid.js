@@ -1,7 +1,6 @@
 const userNavMid = (req, res, next) => {
-    let isLogged = (req.session.userLogged) ? req.session.userLogged : false;
-
-    res.locals.isLogged = isLogged;
+    res.locals.isLogged = (req.session.userLogged) ? req.session.userLogged : false;
+    console.log("aca", res.locals.isLogged);
 
     next();
 }
