@@ -26,13 +26,11 @@ const userController = {
                         let authPass = bcrypt.compareSync(req.body.password, user.password);
                         if (authPass) { //contraseña correcta
                             //guarda el usuario en session
-                            req.session.userLogged = {
-                                name: user.name,
-                                image: user.imageURL
-                            };
+                            delete user.dataValues.password;
+                            req.session.userLogged = user.dataValues;
                             //casilla recuerdame
-                            res.cookie("remember", (req.body.remember != undefined) ? req.session.userLogged : undefined, { maxAge: 1000 * 60 * 2 });
-                            return res.render("profile", { user: user });
+                            res.cookie("remember", (req.body.remember != undefined) ? user.dataValues : undefined, { maxAge: 1000 * 60 * 2 });
+                            return res.redirect("profile");
                         } else { //contraseña incorrecta
                             let result = { password: { msg: "Contraseña incorrecta" } };
                             return res.render("login", { result: result, old: req.body });
@@ -65,13 +63,11 @@ const userController = {
             })
                 .then(user => {
                     if (user != null) {
-                        console.log("user not null");
                         let result = { email: { msg: "Email ya registrado" } };
                         //aca la linea para borrar el archivo de imagen
                         res.render("signin", { result: result, old: req.body });
                     } else {
                         //creacion de nuevo usuario
-                        console.log("user null");
                         User.create({
                             name: req.body.name,
                             lastname: req.body.lastname,
@@ -80,18 +76,16 @@ const userController = {
                             imageURL: req.file.filename
                         })
                             .then(user => {
-                                console.log("success");
-                                req.session.userLogged = user.email;
-                                return res.render("profile", { user: user });
+                                delete user.dataValues.password;
+                                req.session.userLogged = user.dataValues;
+                                return res.redirect("profile");
                             })
                             .catch(err => {
-                                console.log("error");
                                 return res.send(err);
                             })
                     }
                 })
                 .catch(err => {
-                    console.log("error en findOne");
                     return res.send(err);
                 })
         } else {

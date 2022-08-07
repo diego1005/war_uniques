@@ -15,6 +15,9 @@ const { userUpload } = require("../middlewares/multer/multer");
 //-validations
 const validates = require("../middlewares/validations/userValidations");
 
+//Profile ----------------------------------------------------------------
+router.get("/profile", userLoggedMid, userController.profile);
+//------------------------------------------------------------------------
 //Login ------------------------------------------------------------------
 //-vista de login
 router.get("/login", userLoggedMid, validates.validateLogin, userController.loginForm);
@@ -26,9 +29,6 @@ router.post("/login", userController.login);
 router.get("/signin", userLoggedMid, userController.signinForm);
 //proceso de signin
 router.post("/signin", userUpload.single("avatar"), validates.validateRegister, userController.signin);
-//------------------------------------------------------------------------
-//Profile ----------------------------------------------------------------
-router.get("/profile", userLoggedMid, userController.profile);
 //------------------------------------------------------------------------
 //Delete Account ---------------------------------------------------------
 router.delete("/delete/:id", userController.delete);
