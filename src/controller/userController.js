@@ -26,11 +26,10 @@ const userController = {
                         let authPass = bcrypt.compareSync(req.body.password, user.password);
                         if (authPass) { //contraseña correcta
                             //guarda el usuario en session
-                            delete user.dataValues.password;
-                            req.session.userLogged = user.dataValues;
+                            req.session.userLogged = user.email;
                             //casilla recuerdame
-                            res.cookie("remember", (req.body.remember != undefined) ? user.dataValues : undefined, { maxAge: 1000 * 60 * 2 });
-                            return res.redirect("profile");
+                            res.cookie("remember", (req.body.remember != undefined) ? user.email : undefined, { maxAge: 1000 * 60 * 2 });
+                            return res.render("profile", { user: user });
                         } else { //contraseña incorrecta
                             let result = { password: { msg: "Contraseña incorrecta" } };
                             return res.render("login", { result: result, old: req.body });
@@ -76,9 +75,8 @@ const userController = {
                             imageURL: req.file.filename
                         })
                             .then(user => {
-                                delete user.dataValues.password;
-                                req.session.userLogged = user.dataValues;
-                                return res.redirect("profile");
+                                req.session.userLogged = user.email;
+                                return res.render("profile", { user: user });
                             })
                             .catch(err => {
                                 return res.send(err);
@@ -95,9 +93,7 @@ const userController = {
     },
     //vista perfil
     profile: (req, res) => {
-        res.render('profile', {
-            user: req.session.userLogged
-        });
+        res.render('profile', { user: req.session.userLogged });
     },
     //Delete
     delete: (req, res) => {
@@ -107,7 +103,21 @@ const userController = {
             }
         })
             .then(result => {
-                return res.redirect("home");
+                return res.redirect("/");
+            })
+            .catch(err => {
+                return res.send(err);
+            })
+    },
+    find: (email) => {
+        User.findOne({
+            attributes: ['name', 'lastname', 'email', 'imageURL'],
+            where: {
+                email: { [Op.like]: email }
+            }
+        })
+            .then(user => {
+                return user.dataValues
             })
             .catch(err => {
                 return res.send(err);

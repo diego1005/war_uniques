@@ -1,6 +1,12 @@
-const rememberMid = (req, res, next) => {
-    req.session.userLogged = (req.cookies.remember != undefined && req.session == undefined) ? res.cookies.remember : next();
+const userFn = require("../../controller/userController");
 
+const rememberMid = (req, res, next) => {
+    if (req.cookies.remember != undefined && req.session.userLogged == undefined) {
+        let userInCookies = userFn.find(req.cookies.remember);
+        req.session.userLogged = userInCookies;
+    }
+
+    next();
 }
 
 module.exports = rememberMid;

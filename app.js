@@ -25,9 +25,9 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }));
-app.use(userNavMid);
 app.use(cookies());
 app.use(rememberMid);
+app.use(userNavMid);
 app.use(methodOverride("_method"));
 
 //routes____________________________________________________

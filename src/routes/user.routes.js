@@ -16,7 +16,7 @@ const { userUpload } = require("../middlewares/multer/multer");
 const validates = require("../middlewares/validations/userValidations");
 
 //Profile ----------------------------------------------------------------
-router.get("/profile", userLoggedMid, userController.profile);
+router.get("/profile", userUnloggedMid, userController.profile);
 //------------------------------------------------------------------------
 //Login ------------------------------------------------------------------
 //-vista de login

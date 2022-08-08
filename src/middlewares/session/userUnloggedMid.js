@@ -1,7 +1,12 @@
+const userFn = require("../../controller/userController");
+
 const userUnloggedMid = (req, res, next) => {
-    const userLogged = req.session.userLogged;
-    (userLogged) ? res.render("profile", { user: userLogged }) : res.redirect("/");
-    next();
+    if (req.session.userLogged != undefined) {
+        let user = userFn.find(req.session.userLogged);
+        return res.render("profile", { user });
+    }else {
+        return res.redirect("/");
+    }
 }
 
 module.exports = userUnloggedMid;
