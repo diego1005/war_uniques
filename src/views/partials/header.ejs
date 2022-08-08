@@ -11,13 +11,13 @@
             </form>
         </div>
         <div class="nav-panel">
-            <button class="hamb-menu" onclick="displayMenu()"><i class="fa-solid fa-bars"></i></button>
+            <button class="hamb-menu"><i class="fa-solid fa-bars"></i></button>
             <nav class="hamb-nav">
                 <% if (locals?.isLogged) { %> 
                     <div class="nav-user-contain">
                         <div class="nav-user">
-                            <img class="nav-user-img" src="/images/user-image/<%= isLogged.image %> " alt="user-avatar">
-                            <button class="btn-nav-user">
+                            <img class="nav-user-img" src="/images/user-image/<%= isLogged.imageURL %> " alt="user-avatar">
+                            <button class="btn-nav-user" onclick="displayMenu()">
                                 Hola <%= isLogged.name %>
                                 <i class="fa fa-caret-down"></i>
                             </button>
@@ -37,4 +37,6 @@
             </nav>
         </div>
     </section>
+
 </header>
+<script src="/js/viewJS/main.js"></script>

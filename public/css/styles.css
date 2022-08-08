@@ -38,6 +38,10 @@ header {
     color: white;
 }
 
+.nav-user-contain {
+    position: relative;
+}
+
 .nav-user {
     display: flex;
 }
@@ -57,21 +61,17 @@ header {
 
 .nav-user-content {
     display: none;
-    height: 6rem;
+    height: 8rem;
     position: absolute;
-    right: 8rem;
+    right: 3.2rem;
+    top: 4rem;
     background-color: rgba(150, 10, 10, 0.7);
-    padding: 0.7rem 0.5rem;
+    padding: 0.7rem 0.8rem;
     border-radius: 5px;
 }
 
 .nav-user-content p {
     margin: 0.5rem 0;
-}
-
-.nav-user-contain:hover .nav-user-content {
-    display: block;
-    position: absolute;
 }
 
 .nav-guess {
@@ -449,6 +449,12 @@ header {
 
     .contactos img {
         width: 35%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .nav-user-content {
+        right: 6rem;
     }
 }
 

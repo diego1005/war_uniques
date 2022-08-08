@@ -30,6 +30,9 @@ router.get("/signin", userLoggedMid, userController.signinForm);
 //proceso de signin
 router.post("/signin", userUpload.single("avatar"), validates.validateRegister, userController.signin);
 //------------------------------------------------------------------------
+//Logout -----------------------------------------------------------------
+router.get("/logout", userController.logout);
+//------------------------------------------------------------------------
 //Delete Account ---------------------------------------------------------
 router.delete("/delete/:id", userController.delete);
 //------------------------------------------------------------------------
