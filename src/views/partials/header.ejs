@@ -13,30 +13,32 @@
         <div class="nav-panel">
             <button class="hamb-menu"><i class="fa-solid fa-bars"></i></button>
             <nav class="hamb-nav">
-                <% if (locals?.isLogged) { %> 
+                <% if (locals?.isLogged) { %>
                     <div class="nav-user-contain">
                         <div class="nav-user">
-                            <img class="nav-user-img" src="/images/user-image/<%= isLogged.imageURL %> " alt="user-avatar">
+                            <img class="nav-user-img" src="/images/user-image/<%= isLogged.imageURL %> "
+                                alt="user-avatar">
                             <button class="btn-nav-user" onclick="displayMenu()">
                                 Hola <%= isLogged.name %>
-                                <i class="fa fa-caret-down"></i>
+                                    <i class="fa fa-caret-down"></i>
                             </button>
                         </div>
                         <div class="nav-user-content">
-                            <p><a href="/user/profile">Mi cuenta</a></p>
-                            <p><a href="/products/add">Vender</a></p>
-                            <p><a href="/user/logout">Logout</a></p>
+                            <div>
+                                <p><a href="/user/profile">Mi cuenta</a></p>
+                                <p><a href="/products/add">Vender</a></p>
+                                <p><a href="/user/logout">Logout</a></p>
+                            </div>
                         </div>
                     </div>
-                    <% } else { %> 
-                <div class="nav-guess">
-                    <p><a href="/user/login">Login</a></p>
-                    <p><a href="/user/signin">Sign in</a></p>
-                </div>
-                <% } %> 
+                    <% } else { %>
+                        <div class="nav-guess">
+                            <p><a href="/user/login">Login</a></p>
+                            <p><a href="/user/signin">Sign in</a></p>
+                        </div>
+                        <% } %>
             </nav>
         </div>
     </section>
-
 </header>
 <script src="/js/viewJS/main.js"></script>

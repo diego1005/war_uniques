@@ -39,11 +39,14 @@ header {
 }
 
 .nav-user-contain {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .nav-user {
     display: flex;
+    justify-content: center;
 }
 
 .nav-user-img {
@@ -61,12 +64,13 @@ header {
 
 .nav-user-content {
     display: none;
-    height: 8rem;
+    height: 7.8rem;
+    text-align: center;
     position: absolute;
-    right: 3.2rem;
-    top: 4rem;
     background-color: rgba(150, 10, 10, 0.7);
-    padding: 0.7rem 0.8rem;
+    margin-top: 7%;
+    margin-left: 5%;
+    padding: 0.8rem;
     border-radius: 5px;
 }
 
@@ -246,7 +250,6 @@ header {
 
     .logo {
         width: 50%;
-        margin-bottom: auto;
     }
 
     .footer {
@@ -275,7 +278,6 @@ header {
 @media (min-width: 165px) {
     .logo {
         width: 40%;
-        margin-bottom: auto;
     }
 
     .nav-panel {
@@ -449,12 +451,6 @@ header {
 
     .contactos img {
         width: 35%;
-    }
-}
-
-@media (min-width: 1200px) {
-    .nav-user-content {
-        right: 6rem;
     }
 }
 
