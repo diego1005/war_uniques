@@ -28,25 +28,10 @@ header {
     padding: 2%;
 }
 
-.hamb-nav p {
-    margin: auto;
-    white-space: nowrap;
-}
-
-.hamb-nav a {
-    text-decoration: none;
-    color: white;
-}
-
-.nav-user-contain {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-
 .nav-user {
     display: flex;
     justify-content: center;
+    z-index: 1;
 }
 
 .nav-user-img {
@@ -64,14 +49,27 @@ header {
 
 .nav-user-content {
     display: none;
-    height: 7.8rem;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 22%;
+    height: 7rem;
     position: absolute;
-    background-color: rgba(150, 10, 10, 0.7);
-    margin-top: 7%;
-    margin-left: 5%;
+    right: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 0.8rem;
     border-radius: 5px;
+}
+
+.nav-user-content p {
+    font-size: 1.2rem;
+    margin: auto;
+    white-space: nowrap;
+}
+
+.nav-user-content a {
+    text-decoration: none;
+    color: white;
 }
 
 .nav-user-content p {
@@ -413,7 +411,7 @@ header {
     }
 
     .hamb-nav {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         flex-direction: row;
         justify-content: space-between;
     }
