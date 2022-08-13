@@ -35,8 +35,12 @@ router.get("/logout", userController.logout);
 //------------------------------------------------------------------------
 //Delete Account ---------------------------------------------------------
 router.delete("/delete/:id", userController.delete);
+//Edit ----------------------------------------------------------------
+ router.get("/edit_user/:id", userController.formEdit); //vista formualrio editar usuario
 //------------------------------------------------------------------------
-
+//-editar usuario
+ router.put("/edit_user/:id", userUpload.single("image"), validates.validateLogin, userController.edit_user);
+//---------------------------------------------------------------------
 /*
 //Read ----------------------------------------------------------------
 router.get("/detail/:id", userController.findByPk); //vista detalle de usuario
