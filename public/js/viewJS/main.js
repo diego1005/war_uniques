@@ -1,5 +1,9 @@
-let displayMenu = () => {
-    let tag = document.querySelector(".nav-user-content");
-    console.log(tag);
-    tag.style.display = (tag.style.display == "none") ? "flex" : "none";
+btn_nav = document.querySelector("#btn-nav-user");
+
+if (btn_nav != null) {
+    btn_nav.addEventListener("click", () => {
+        let tag = document.querySelector(".nav-user-content");
+        tag.style.display = (tag.style.display == "") ? "flex" : "";
+    });
 }
+
