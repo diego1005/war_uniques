@@ -28,6 +28,14 @@ const validates = {
     validateLogin : [
         check("user").notEmpty().withMessage("Campo obligatorio").bail().isEmail().withMessage("Email no válido"),
         check("password").notEmpty().withMessage("Campo obligatorio")
+    ],
+    //---------------------------------------------------------------------------------------
+
+    //configuracion validaciones de edicion de datos de usuario -----------------------------
+    validateEditUser: [
+        check("name").notEmpty().withMessage("Campo Obligatorio"),
+        check("lastname").notEmpty().withMessage("Campo Obligatorio"),
+        check("email").notEmpty().withMessage("Campo Obligatorio").bail().isEmail().withMessage("Email no válido")
     ]
     //---------------------------------------------------------------------------------------
 }

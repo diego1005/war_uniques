@@ -29,7 +29,9 @@ const userController = {
                             delete user.dataValues.password;
                             req.session.userLogged = user.dataValues;
                             //casilla recuerdame
-                            res.cookie("remember", (req.body.remember != undefined) ? user.dataValues : undefined, { maxAge: 1000 * 60 * 2 });
+                            if (req.body.remember != undefined) {
+                                res.cookie("remember", user.dataValues, { maxAge: 1000 * 60 * 2 });
+                            }
                             return res.redirect("/user/profile");
                         } else { //contraseña incorrecta
                             let result = { password: { msg: "Contraseña incorrecta" } };
@@ -116,8 +118,8 @@ const userController = {
                 return res.send(err);
             })
     },
-     //Edit ---------------------------------------------------------------
-     formEdit: (req, res) => {
+    //Edit ---------------------------------------------------------------
+    formEdit: (req, res) => {
         User.findByPk(req.params.id, {
         })
             .then(result => {
@@ -136,19 +138,32 @@ const userController = {
                 lastName: req.body.lastName,
                 email: req.body.email,
                 // password: req.body.password,
-                imageURL: req.file.filename
+                // imageURL: req.file.filename
             }, {
                 where: {
                     id: req.params.id
                 }
             })
                 .then(result => {
-                    return res.redirect("profile");
+                    User.findOne({
+                        attributes: ["name", "lastname", "email", "imageURL"],
+                        where: {
+                            id: req.params.id
+                        }
+                    })
+                    .then(user => {
+                        req.session.userLogged = user.dataValues;
+                        return res.redirect("/user/profile");
+                    })
+                    .catch(err => {
+                        res.send(err);
+                    })
                 })
                 .catch(err => {
                     return res.send(err)
                 })
         } else {
+            req.body.id = req.params.id;
             res.render("profile_edit", { errors: errors.mapped(), old: req.body });
         }
     },
