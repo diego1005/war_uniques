@@ -10,7 +10,7 @@
 <body>
     <main class="main-section">
 
-        <form class="form-block" action="/products/edit/<%= (locals?.prod) ? prod.id : old.id %>?_method=PUT"
+        <form class="form-block" action="/products/edit/<%= (locals?.old) ? old.id : '' %>?_method=PUT"
             method="POST" enctype="multipart/form-data">
             <!-- <input type="text" name="id" value="<%=// (locals?.prod) ? prod.id : old.id %>" hidden> -->
             <!-- Flag Section -->

@@ -88,7 +88,9 @@ const productController = {
     edit: (req, res) => {
         //validacion de errores en el formulario de agregar producto
         const errors = validationResult(req);
+        console.log(errors);
         if (errors.isEmpty()) {
+
             Product.update({
                 name: req.body.name,
                 description: req.body.description,
@@ -103,7 +105,7 @@ const productController = {
                 }
             })
                 .then(result => {
-                    return res.redirect("home");
+                    return res.redirect("/products/detail/+");
                 })
                 .catch(err => {
                     return res.send(err)
