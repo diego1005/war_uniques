@@ -149,7 +149,7 @@ const userController = {
                     return res.send(err)
                 })
         } else {
-            res.render("edit", { errors: errors.mapped(), old: req.body });
+            res.render("profile_edit", { errors: errors.mapped(), old: req.body });
         }
     },
     /*
