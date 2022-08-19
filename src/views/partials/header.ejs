@@ -18,7 +18,7 @@
                         <div class="nav-user">
                             <img class="nav-user-img" src="/images/user-image/<%= isLogged.imageURL %> "
                                 alt="user-avatar">
-                            <button class="btn-nav-user" onclick="displayMenu()">
+                            <button class="btn-nav-user" id="btn-nav-user">
                                 Hola <%= isLogged.name %>
                                     <i class="fa fa-caret-down"></i>
                             </button>
@@ -40,5 +40,5 @@
             <p><a href="/user/logout">Logout</a></p>
         </div>
     </div>
+    <script src="/js/viewJS/main.js"></script>
 </header>
-<script src="/js/viewJS/main.js"></script>

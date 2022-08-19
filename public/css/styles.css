@@ -67,7 +67,7 @@ header {
     white-space: nowrap;
 }
 
-.nav-user-content a {
+a {
     text-decoration: none;
     color: white;
 }

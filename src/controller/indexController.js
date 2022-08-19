@@ -8,14 +8,14 @@ const indexController = {
             where: {
                 offer: { [Op.like]: 1 }
             },
-            limit: 4,
+            limit: 10,
             include: ["country"]
         });
         const productShipping = Product.findAll({
             where: {
                 shipping: { [Op.like]: 1 }
             },
-            limit: 4,
+            limit: 10,
             include: ["country"]
         });
         Promise.all([productOffers, productShipping])

@@ -5,7 +5,6 @@
     <%- include("./partials/head") %>
         <link rel="stylesheet" href="/css/home.css">
         <link rel="stylesheet" href="/css/signin.css">
-
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills&display=swap" rel="stylesheet">
@@ -41,10 +40,41 @@
 
                             </div>
                             <!-- <div class="control">
+    <main class="main-section">
+    
+        <form class="form-block" action="/user/edit_user/<%=// (locals?.old) ? old.id : '' %>?_method=PUT"
+            method="POST" enctype="multipart/form-data">
+        <section class="card">
+
+            <div class="info_items">
+                <div class="info">              
+                    <div class="control">
+                        <label>Nombre</label>
+                        <input type="text" name="name" value="<%= //(locals?.old) ? old.name : '' %>">
+                        <p class="text-danger">
+                            <%= //(locals?.errors) ? errors.name.msg : '' %>
+                        </p>
+                    </div>
+                    <div class="control">
+                        <label>Apellido</label>
+                        <input type="text" name="lastname" value="<%= //(locals?.old) ? old.lastname : '' %>">
+                        <p class="text-danger">
+                            <%= //(locals?.errors) ? errors.lastname.msg : '' %>
+                        </p>
+                    </div>
+                    <div class="linea"></div>
+                    <div class="control">
+                        <label>Email</label>
+                        <input type="email" name="email" value="<%= //(locals?.old) ? old.email : '' %>">
+                        <p class="text-danger">
+                            <%= //(locals?.errors) ? errors.email.msg : '' %>
+                        </p>
+                    </div>
+                    <div class="control">
                         <label>Foto de Perfil</label>
                         <input type="file" name="avatar">
                         <p class="text-danger">
-                            <%= (locals?.errors && errors.avatar !=undefined) ? errors.avatar.msg : '' %>
+                            <%= //(locals?.errors && errors.avatar !=undefined) ? errors.avatar.msg : '' %>
                         </p>
                     </div> -->
                             <div class="register">

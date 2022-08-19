@@ -39,7 +39,7 @@ router.delete("/delete/:id", userController.delete);
  router.get("/edit_user/:id", userController.formEdit); //vista formualrio editar usuario
 //------------------------------------------------------------------------
 //-editar usuario
- router.put("/edit_user/:id", userUpload.single("image"), validates.validateLogin, userController.edit_user);
+ router.put("/edit_user/:id", userUpload.single("image"), validates.validateEditUser, userController.edit_user);
 //---------------------------------------------------------------------
 /*
 //Read ----------------------------------------------------------------

@@ -60,10 +60,11 @@ const productController = {
                 shipping: (req.body.shipping != undefined),
                 offer: (req.body.offer != undefined),
                 credit: (req.body.credit) ? req.body.credit : "No",
-                imageURL: req.file.filename
+                imageURL: req.file.filename,
+                id_country: req.body.country
             })
-                .then(result => {
-                    return res.redirect("home");
+                .then(product => {
+                    return res.redirect("/");
                 })
                 .catch(err => {
                     return res.send(err);
@@ -96,17 +97,18 @@ const productController = {
                 shipping: (req.body.shipping != undefined),
                 offer: (req.body.offer != undefined),
                 credit: (req.body.credit) ? req.body.credit : "No",
-                imageURL: req.file.filename
+                imageURL: req.file.filename,
+                id_country: parseInt(req.body.country)
             }, {
                 where: {
                     id: req.params.id
                 }
             })
-                .then(result => {
-                    return res.redirect("home");
+                .then(product => {
+                    return res.redirect("/");
                 })
                 .catch(err => {
-                    return res.send(err)
+                    return res.send(err);
                 })
         } else {
             res.render("edit", { errors: errors.mapped(), old: req.body });
@@ -120,12 +122,22 @@ const productController = {
                 id: req.params.id
             }
         })
-        .then(result => {
-            return res.redirect("home");
-        })
-        .catch(err => {
-            return res.send(err);
-        })
+            .then(result => {
+                return res.redirect("home");
+            })
+            .catch(err => {
+                return res.send(err);
+            })
+    },
+    findFlag: (idFlag) => {
+        let flags = [
+            "england.png",
+            "usa.png",
+            "russia.png",
+            "germany.png",
+            "japon.png"
+        ]
+        return flags[idFlag - 1]
     }
     //--------------------------------------------------------------------
 }

@@ -22,7 +22,7 @@ app.use(express.urlencoded({ extended: false}));
 app.use(express.json());  
 app.use(session({
     secret:"mensaje secreto",
-    resave: false,
+    resave: true,
     saveUninitialized: true
 }));
 app.use(cookies());

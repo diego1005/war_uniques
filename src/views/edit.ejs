@@ -10,7 +10,7 @@
 <body>
     <main class="main-section">
 
-        <form class="form-block" action="/products/edit/<%= (locals?.prod) ? prod.id : old.id %>?_method=PUT"
+        <form class="form-block" action="/products/edit/<%= (locals?.old) ? old.id : '' %>?_method=PUT"
             method="POST" enctype="multipart/form-data">
             <!-- <input type="text" name="id" value="<%=// (locals?.prod) ? prod.id : old.id %>" hidden> -->
             <!-- Flag Section -->
@@ -25,11 +25,11 @@
                         <div class="flag-box-opt">
                             <select name="country" onchange="isPick(this.selectedIndex)">
                                 <option value="select">--- Seleccionar ---</option>
-                                <option value="germany.png">Alemania</option>
-                                <option value="england.png">Inglaterra</option>
-                                <option value="japan.png">Japon</option>
-                                <option value="russia.png">Russia</option>
-                                <option value="usa.png">Estados Unidos</option>
+                                <option value="4">Alemania</option>
+                                <option value="1">Inglaterra</option>
+                                <option value="5">Japon</option>
+                                <option value="3">Russia</option>
+                                <option value="2">Estados Unidos</option>
                             </select>
                         </div>
                         <div class="flag-box-img">
