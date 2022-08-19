@@ -63,8 +63,16 @@ const productController = {
                 imageURL: req.file.filename,
                 id_country: req.body.country
             })
-                .then(product => {
-                    return res.redirect("/");
+                .then(result => {
+                    Product.findByPk(result.id, {
+                        include: ["country"]
+                    })
+                        .then(product => {
+                            return res.render("detail", { prod: product });
+                        })
+                        .catch(err => {
+                            return res.send(err);
+                        })
                 })
                 .catch(err => {
                     return res.send(err);
@@ -104,8 +112,16 @@ const productController = {
                     id: req.params.id
                 }
             })
-                .then(product => {
-                    return res.redirect("/");
+                .then(result => {
+                    Product.findByPk(req.params.id, {
+                        include: ["country"]
+                    })
+                        .then(product => {
+                            return res.render("detail", { prod: product });
+                        })
+                        .catch(err => {
+                            return res.send(err);
+                        })
                 })
                 .catch(err => {
                     return res.send(err);
@@ -128,16 +144,6 @@ const productController = {
             .catch(err => {
                 return res.send(err);
             })
-    },
-    findFlag: (idFlag) => {
-        let flags = [
-            "england.png",
-            "usa.png",
-            "russia.png",
-            "germany.png",
-            "japon.png"
-        ]
-        return flags[idFlag - 1]
     }
     //--------------------------------------------------------------------
 }
