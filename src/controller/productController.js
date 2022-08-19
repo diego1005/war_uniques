@@ -139,7 +139,7 @@ const productController = {
             }
         })
             .then(result => {
-                return res.redirect("home");
+                return res.redirect("/");
             })
             .catch(err => {
                 return res.send(err);
