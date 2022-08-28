@@ -7,21 +7,23 @@
 </head>
 
 <body>
+    
     <main class="main-area">
+       
         <%- include("./partials/float_logo.ejs") %>
             <div class="big-box">
                 <div class="small-box">
-                    <form class="formulario" action="/user/signin" method="POST" enctype="multipart/form-data">
+                    <form class="formulario" id="formulario" action="/user/signin" method="POST" enctype="multipart/form-data">
                         <div class="control">
                             <label>Nombre</label>
-                            <input type="text" name="name" value="<%= (locals?.old) ? old.name : '' %>">
-                            <p class="text-danger">
+                            <input type="text" name="name" class="validate[required]" data-errormessage-value-missing="El campo nombre es obligatorio" class="name" value="<%= (locals?.old) ? old.name : '' %>">
+                            <!-- <p class="text-danger">
                                 <%= (locals?.errors && errors.name !=undefined) ? errors.name.msg : '' %>
-                            </p>
+                            </p> -->
                         </div>
                         <div class="control">
                             <label>Apellido</label>
-                            <input type="text" name="lastname" value="<%= (locals?.old) ? old.lastname : '' %>">
+                            <input type="text" name="lastname" class="validate[required]" data-errormessage-value-missing="El campo apellido es obligatorio" value="<%= (locals?.old) ? old.lastname : '' %>">
                             <p class="text-danger">
                                 <%= (locals?.errors && errors.lastname !=undefined) ? errors.lastname.msg : '' %>
                             </p>
@@ -29,14 +31,14 @@
                         <div class="linea"></div>
                         <div class="control">
                             <label>Email</label>
-                            <input type="email" name="email" value="<%= (locals?.old) ? old.email : '' %>">
+                            <input type="email" name="email" class="validate[required,custom[email]]" data-errormessage-value-missing="El campo email es obligatorio" data-errormessage-custom-error="Formato: usuario@mail.com" value="<%= (locals?.old) ? old.email : '' %>">
                             <p class="text-danger">
                                 <%= (locals?.errors && errors.email !=undefined) ? errors.email.msg : '' %>
                             </p>
                         </div>
                         <div class="control">
                             <label>Contraseña</label>
-                            <input type="password" name="password">
+                            <input type="password" name="password" >
                             <p class="text-danger">
                                 <%= (locals?.errors && errors.password !=undefined) ? errors.password.msg : '' %>
                             </p>
@@ -59,6 +61,10 @@
                             <input type="submit" value="REGISTRARME">
                         </div>
                     </form>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Validation-Engine/2.6.4/jquery-1.8.2.min.js" integrity="sha512-TioVFI1HfPAFh7BGAsuCB76vIrmMroWB+yRNKnTan26OBCdpdH9DWYoTxZbjW8kCKH3QDItheAEVso5N7+w75g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Validation-Engine/2.6.4/jquery.validationEngine.min.js" integrity="sha512-MKqdT8JgKftxlK6oK4S+Hh44ivKyaPncl6qN9JZEGKJGQZJMiSoPzehLcbvd/1XMieEP1Q4A3wzzhTrvBUUcUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Validation-Engine/2.6.4/languages/jquery.validationEngine-es.min.js" integrity="sha512-GCKyaseskD91hTJv68w+ldDh2vU5iURF1/pIDyAY+Bv3MZhceURuVe3GZMgPXYUb+W41oTHz2CRrTOhkdvE6SQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                    <script src="/js/signin_validator.js"></script>
                 </div>
             </div>
     </main>
