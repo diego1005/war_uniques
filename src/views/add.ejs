@@ -55,7 +55,7 @@
                             <div></div>
                         </div>
                         <input class="entries" type="text" name="name" placeholder="Nombre del producto..."
-                        value="<%= (locals?.old) ? old.name : '' %>">
+                        value="<%= (locals?.old) ? old.name : '' %> "class="validate[required]" data-errormessage-value-missing="El campo nombre producto es obligatorio">
                         <p class="text-danger">
                             <%= (locals?.errors && errors.name != undefined) ? errors.name.msg : '' %>
                         </p> 
@@ -69,7 +69,7 @@
                         <h3>Coloca las caracteristicas del producto</h3>
                         <div></div>
                     </div>
-                    <textarea class="entries" name="description" cols="30" rows="10" placeholder="Descripcion..."><%= (locals?.old) ? old.description : '' %></textarea>
+                    <textarea class="entries" name="description" cols="30" rows="10" placeholder="Descripcion..."class="validate[required]" data-errormessage-value-missing="El campo descripcion es obligatorio"><%= (locals?.old) ? old.description : '' %></textarea>
                     <p class="text-danger">
                         <%= (locals?.errors && errors.description != undefined) ? errors.description.msg : '' %>
                     </p> 
@@ -85,7 +85,7 @@
                     <div class="block-price">
                         <p>$</p>
                         <input class="entries" type="text" name="price" placeholder="Precio..."
-                        value="<%= (locals?.old) ? old.price : '' %>">
+                        value="<%= (locals?.old) ? old.price : '' %>"class="validate[required]" data-errormessage-value-missing="El campo precio es obligatorio">
                         <p class="text-danger">
                             <%= (locals?.errors && errors.price != undefined) ? errors.price.msg : '' %>
                         </p> 
@@ -148,6 +148,10 @@
                 <button type="submit" class="btn-next" id="btnSubmit" hidden>AGREGAR</button>
             </div>
         </form>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Validation-Engine/2.6.4/jquery-1.8.2.min.js" integrity="sha512-TioVFI1HfPAFh7BGAsuCB76vIrmMroWB+yRNKnTan26OBCdpdH9DWYoTxZbjW8kCKH3QDItheAEVso5N7+w75g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Validation-Engine/2.6.4/jquery.validationEngine.min.js" integrity="sha512-MKqdT8JgKftxlK6oK4S+Hh44ivKyaPncl6qN9JZEGKJGQZJMiSoPzehLcbvd/1XMieEP1Q4A3wzzhTrvBUUcUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Validation-Engine/2.6.4/languages/jquery.validationEngine-es.min.js" integrity="sha512-GCKyaseskD91hTJv68w+ldDh2vU5iURF1/pIDyAY+Bv3MZhceURuVe3GZMgPXYUb+W41oTHz2CRrTOhkdvE6SQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                    <script src="/js/product_Validator.js"></script>
     </main>
 </body>
 
