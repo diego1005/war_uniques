@@ -13,7 +13,7 @@ const productsRouter = require("./src/routes/products.routes.js");
 const userRouter = require("./src/routes/user.routes.js");
 
 //settings___________________________________________________
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "src/views"));
 
