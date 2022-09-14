@@ -11,18 +11,18 @@
         <%- include("./partials/float_logo.ejs") %>
             <div class="big-box">
                 <div class="small-box">
-                    <form class="formulario" action="/user/login" method="POST">
+                    <form class="formulario" id="form" action="/user/login" method="POST">
                         <div class="control">
-                            <label for="Usuario"> Usuario </label>
-                            <input type="text" id="Usuario" value="<%= (locals?.old) ? old.user : '' %>">
-                            <p class="text-danger">
+                            <label for="usuario"> Usuario </label>
+                            <input type="text" id="usuario" name="user" value="<%= (locals?.old) ? old.user : '' %>">
+                            <p class="text-danger" id="error-user">
                                 <%= (locals?.errors && errors.user != undefined) ? errors.user.msg : (locals?.result && result.user != undefined) ? result.user.msg: '' %>
                             </p>
                         </div>
                         <div class="control">
                             <label for="Contraseña">Contraseña</label>
-                            <input type="password" id="password">
-                            <p class="text-danger">
+                            <input type="password" id="password" name="password">
+                            <p class="text-danger" id="error-pass">
                                 <%= (locals?.errors && errors.password != undefined) ? errors.password.msg : (locals?.result && result.password != undefined) ? result.password.msg : '' %>
                             </p>
                         </div>
@@ -36,11 +36,8 @@
                             </div>
                         </div>
                         <div class="login">
-                            <input type="submit" onclick="return enviarFormulario();" value="INICIAR SESION">
-                
+                            <input type="submit" value="INICIAR SESION" id="btn-submit">
                         </div>
-<div id="error"></div>
-
                     </form>
                 </div>
             </div>

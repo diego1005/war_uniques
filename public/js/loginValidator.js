@@ -1,24 +1,19 @@
-var Usuario = document.getElementById('Usuario');
-var password = document.getElementById('password');
-var error = document.getElementById('error');
-error.style.color ='black';
+const form = document.querySelector("#form");
+const usuario = document.querySelector('#usuario');
+const password = document.querySelector('#password');
+const error_user = document.querySelector('#error-user');
+const error_pass = document.querySelector('#error-pass');
+const btn_submit = document.querySelector("#btn-submit");
 
-
-function enviarFormulario(){
-   console.log("enviando el formulario");
-
-   var mensajesError=[];
-   if(Usuario.value === null || Usuario.value === '') {
-      mensajesError.push('Ingresa tu Usuario');
+btn_submit.addEventListener("click", (e) => {
+   e.preventDefault();
+   if(usuario.value == '') {
+      error_user.innerText = "Debes completar este campo"
    }
-   
-   if(password.value === null || password.value === ''){
-      mensajesError.push('Ingresa tu Contraseña');
+   if(password.value == '') {
+      error_pass.innerText = "Debes completar este campo"
    }
-   error.innerHTML=mensajesError.join(',');
-   return false;
-    
-}
-
-
-
+   if(usuario.value != '' || password.value != ''){ 
+      form.submit();
+   }
+})
