@@ -1,21 +1,25 @@
-import "./Assets/css/app.css";
-import ContentWrapper from "./Views/ContentWrapper/ContentWrapper";
-import Sidebar from "./Components/Sidebar/Sidebar";
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
   return (
-    <div id="wrapper">
-
-            {/* <!-- Sidebar -->  */}
-            <Sidebar />
-            {/* <!-- End of Sidebar --> */}
-
-            {/* <!-- Content Wrapper --> */}
-            <ContentWrapper />
-            {/* <!-- End of Content Wrapper --> */}
-
-      </div>
-    );
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Hola Flavia !
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
 }
 
 export default App;
