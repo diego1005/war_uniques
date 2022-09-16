@@ -1,5 +1,27 @@
 .navbar {
-    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
     border: 1px solid black;
     text-align: center;
+}
+
+.nav-logo {
+    width: 5rem;
+}
+
+.nav-left {
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+}
+
+.fa-house {
+    color: black;
+    opacity: 0.5;
+}
+
+.left-title {
+    color: rgb(100,100,100);
+    font-weight: bold;
 }
