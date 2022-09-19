@@ -11,6 +11,7 @@ const userNavMid = require("./src/middlewares/session/userNavMid");
 const indexRouter = require("./src/routes/index.routes");
 const productsRouter = require("./src/routes/products.routes.js");
 const userRouter = require("./src/routes/user.routes.js");
+const apiRouter = require("./src/routes/api.routes.js");
 
 //settings___________________________________________________
 const port = process.env.PORT || 3001;
@@ -34,6 +35,7 @@ app.use(methodOverride("_method"));
 app.use("/", indexRouter);
 app.use("/products", productsRouter);
 app.use("/user", userRouter);
+app.use("/api", apiRouter);
 
 
 //static____________________________________________________
