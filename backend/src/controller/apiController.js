@@ -3,8 +3,8 @@ const { Product, User } = require("../database/models");
 const Op = db.Sequelize.Op;
 
 const apiController = {
-    list: (req, res, ent) => {
-        res.send(ent);
+    list: (req, res) => {
+        res.send("hola");
     }
 }
 
