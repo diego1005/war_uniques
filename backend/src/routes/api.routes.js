@@ -1,11 +1,13 @@
 const express = require("express");
 const router = express.Router();
 
-const apiController = require("../controller/apiController");
+const productsAPIController = require("../controller/api/productsAPIController");
+const usersAPIController = require("../controller/api/usersAPIController");
 
-//PRODUCTS
+//router.get('/users',usersAPIController.loadUsers);
+
 //Read -------------------------------------------------------------------
-router.get("/products", apiController.list);
+
 
 //Otras funciones
 /*
