@@ -1,7 +1,6 @@
 .sidebar {
-    position: absolute;
-    left: 0;
-    width: 25%;
+    position: fixed;
+    width: 20%;
     height: 95%;
     margin: 1rem;
     text-align: center;

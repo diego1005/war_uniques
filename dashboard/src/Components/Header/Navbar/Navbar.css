@@ -2,7 +2,6 @@
     display: flex;
     justify-content: space-between;
     width: 90%;
-    border: 1px solid black;
     text-align: center;
 }
 
@@ -13,6 +12,7 @@
 .nav-left {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     width: 30%;
 }
 
@@ -24,4 +24,11 @@
 .left-title {
     color: rgb(100,100,100);
     font-weight: bold;
+}
+
+.nav-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 35%;
 }
