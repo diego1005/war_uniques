@@ -3,7 +3,9 @@ import "./InfoCard.css";
 
 function InfoCard() {
   return (
-    <div>InfoCard</div>
+    <div className='info-card'>
+      InfoCard
+      </div>
   )
 }
 
