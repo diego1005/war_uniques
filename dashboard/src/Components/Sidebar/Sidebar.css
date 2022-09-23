@@ -7,3 +7,9 @@
     border: 1px solid black;
     border-radius: 20px;
 }
+
+.logo {
+    width: 90%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
