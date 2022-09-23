@@ -3,7 +3,8 @@ import "./Navbar.css"
 import { Link } from "react-router-dom"
 import SearchBar from "./SearchBar/SearchBar";
 import NavIcon from "./NavIcon/NavIcon";
-import Logo from '../../../Assets/img/war_uniques-logo-min.png'
+// import Logo from '../../../Assets/img/war_uniques-logo-min.png'
+import Logo from '../../../Assets/img/war_blanco.png'
 
 function Navbar() {
   return (
