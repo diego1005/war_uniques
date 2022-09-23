@@ -4,10 +4,10 @@ import Logo from '../../Assets/img/WAR_UNIQUES-minimal.jpg'
 
 function Sidebar() {
   return (
-    <div>
-      <div className='sidebar'>Hola soy el sidebar</div>
-      <img className='logo' src={Logo} alt="Logo"/>
+    <div className='sidebar'>Hola soy el sidebar
+    <img className='logo' src={Logo} alt="Logo"/>
     </div>
+
   )
 }
 
