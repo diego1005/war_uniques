@@ -4,30 +4,26 @@ const router = express.Router();
 const productsAPIController = require("../controller/api/productsAPIController");
 const usersAPIController = require("../controller/api/usersAPIController");
 
-//router.get('/users',usersAPIController.loadUsers);
-
+//PRODUCTS
 //Read -------------------------------------------------------------------
-
-
-//Otras funciones
-/*
-router.get("/products/:id", apiController.listOne);
+router.get('/products',productsAPIController.list);
+router.get("/products/:id", productsAPIController.listOne);
 //Create -------------------------------------------------------------------
-router.post("/products/add", apiController.create);
+router.post("/products/add", productsAPIController.create);
 //Edit -------------------------------------------------------------------
-router.put("/products/edit/:id", apiController.edit);
+router.put("/products/edit/:id", productsAPIController.edit);
 //Delete -------------------------------------------------------------------
-router.delete("/products/delete/:id", apiController.delete);
+router.delete("/products/delete/:id", productsAPIController.delete);
 
 //USERS
 //Read -------------------------------------------------------------------
-router.get("/users", apiController.list);
-router.get("/users/:id", apiController.listOne);
+router.get("/users", usersAPIController.list);
+router.get("/users/:id", usersAPIController.listOne);
 //Create -------------------------------------------------------------------
-router.post("/users/add", apiController.create);
+router.post("/users/add", usersAPIController.create);
 //Edit -------------------------------------------------------------------
-router.put("/users/edit/:id", apiController.edit);
+router.put("/users/edit/:id", usersAPIController.edit);
 //Delete -------------------------------------------------------------------
-router.delete("/users/delete/:id", apiController.delete);
-*/
+router.delete("/users/delete/:id", usersAPIController.delete);
+
 module.exports = router;
