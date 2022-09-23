@@ -1,6 +1,66 @@
 .info-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     width: 20%;
-    height: 10rem;
+    height: 8rem;
     background-color: white;
     border-radius: 10px;
+    box-shadow: 3px 5px 5px 0px rgb(70, 70, 70);
+}
+
+.top-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.icon-card {
+    position: relative;
+    bottom: 2rem;
+    left: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px 0px rgb(100, 100, 100);
+}
+
+.f-icon {
+    background-color: rgba(30, 30, 30, 0.9);
+}
+
+.s-icon {
+    background-color: rgba(100, 70, 100, 0.9);
+}
+
+.t-icon {
+    background-color: rgba(40, 150, 100, 0.9);
+}
+
+.fh-icon {
+    background-color: rgba(80, 80, 200, 0.9);
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.data-card {
+    padding: 0.7rem;
+}
+
+.data-title {
+    font-size: 1.2rem;
+    color: darkgrey
+}
+
+.data-info {
+    font-size: 1.3rem;
+    font-weight: bold;
 }

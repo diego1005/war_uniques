@@ -10,6 +10,11 @@
 .search-in {
     width: 100%;
     font-size: 1rem;
+    background-color: transparent;
     padding: 12px;
     border: none;
+}
+
+.search-in::placeholder {
+    color: darkgrey;
 }

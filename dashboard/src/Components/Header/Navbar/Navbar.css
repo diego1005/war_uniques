@@ -5,8 +5,10 @@
     text-align: center;
 }
 
-.nav-logo {
-    width: 5rem;
+.logo {
+    width: 10rem;
+    margin-top: 0.8rem;
+    opacity: 0.7;
 }
 
 .nav-left {
