@@ -12,7 +12,7 @@ function Table() {
           </p>
         </div>
         <div className="table-top-right">
-          <i class="fa-solid fa-ellipsis-vertical"></i>
+          <i className="fa-solid fa-ellipsis-vertical"></i>
         </div>
       </div>
       <div className="table-content">
@@ -26,7 +26,7 @@ function Table() {
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr> {/*Row component*/}
               <td className='tablebody'>11</td>
               <td className='tablebody'>22</td>
               <td className='tablebody'>33</td>
