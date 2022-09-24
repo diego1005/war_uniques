@@ -1,0 +1,25 @@
+.table-container {
+    width: 45%;
+    background-color: rgb(120,144,120);
+    border-radius: 10px;
+}
+
+.table-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.table-top-right {
+    width: 10%;
+    font-size: 1.3rem;
+}
+
+.table {
+    width: 100%;
+}
+
+.tablehead, .tablebody {
+    padding: 0.5rem;
+}

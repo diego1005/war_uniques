@@ -4,7 +4,10 @@ import "./Sidebar.css"
 function Sidebar() {
   return (
     <div className='sidebar'>
-      <h2 className='sidebar-title'>DASHBOARD</h2>
+      <div className="sidebar-title">
+        <h2>DASHBOARD</h2>
+        <hr />
+      </div>
     </div>
 
   )

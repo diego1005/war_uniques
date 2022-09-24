@@ -5,7 +5,9 @@ import imagen from "../../../Assets/img/imagen_pueba.webp";
 function MainSection() {
   return (
     <div className='main-section'>
-      <h2 className='main-section-title'>Last Product</h2>
+      <div className='main-section-title'>
+        <h2>Last Product</h2>
+      </div>
       <div className="contain">
         <div className="main-section-image">
           <img src={imagen} alt="imagen de prueba" className="main-image" />

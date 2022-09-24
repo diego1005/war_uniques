@@ -4,21 +4,25 @@
 }
 
 .main-section-title {
+    font-size: 1.3rem;
     text-align: start;
+    padding-left: 3rem;
 }
 
 .contain {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin: auto;
+    margin-top: 3rem;
 }
 
 .main-section-image {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    max-width: 400px;
     width: 45%;
     height: 400px;
 }
@@ -32,7 +36,7 @@
     width: 45%;
     height: 400px;
     background-color: rgb(120,144,120);
-    padding: 0.5rem;
+    padding: 1rem;
     border-radius: 10px;
     overflow: scroll;
 }

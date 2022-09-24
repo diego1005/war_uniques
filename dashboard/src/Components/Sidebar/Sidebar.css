@@ -10,6 +10,12 @@
     border-radius: 20px;
 }
 
-.sidebar-title {
+.sidebar-title h2 {
     color: white;
+    padding: 3rem 2rem 1rem;
+}
+
+.sidebar-title hr {
+    width: 80%;
+    margin: auto;
 }

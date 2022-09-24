@@ -3,7 +3,7 @@ import "./Aside.css"
 
 function Aside() {
   return (
-    <div>
+    <div className='aside-content'>
         Soy el menu lateral
     </div>
   )
