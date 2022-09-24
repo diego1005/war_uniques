@@ -1,5 +1,41 @@
 .footer {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    padding: 0 1rem;
+}
+
+.footleft {
+    font-size: 1.1rem;
+}
+
+.anchor-foot {
+    text-decoration: none;
+    color: black;
+}
+
+.footright {
+    width: 45%;
+}
+
+.footlist {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    list-style: none;
+}
+
+.footlist a {
+    text-decoration: none;
+    color: black;
+    opacity: 0.9;
+}
+
+/*
+.footer {
+    display: flex;
     align-items: center;
     width: 100%;
     height: 100px;
@@ -49,3 +85,4 @@
     justify-content: center;
     width: 5%;
 }
+*/

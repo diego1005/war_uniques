@@ -1,13 +1,26 @@
 .main-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 90%;
     margin: auto;
 }
 
+.main-section-title {
+    text-align: start;
+}
+
+.contain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
 .main-section-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 45%;
+    height: 400px;
 }
 
 .main-image {
@@ -17,9 +30,11 @@
 
 .main-section-description {
     width: 45%;
-    background-color: rgba(250, 250, 250, 0.5);
+    height: 400px;
+    background-color: rgb(120,144,120);
     padding: 0.5rem;
     border-radius: 10px;
+    overflow: scroll;
 }
 
 .main-title, .main-desc {
