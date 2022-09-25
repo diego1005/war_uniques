@@ -1,6 +1,7 @@
 .header {
     display: flex;
     justify-content: center;
+    border-bottom: solid grey 2px ;
     width: 100%;
     height: 7rem;
 }

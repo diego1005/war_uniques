@@ -6,7 +6,7 @@ function MainSection() {
   return (
     <div className='main-section'>
       <div className='main-section-title'>
-        <h2>Last Product</h2>
+        <h2>LAST PRODUCT</h2>
       </div>
       <div className="contain">
         <div className="main-section-image">
