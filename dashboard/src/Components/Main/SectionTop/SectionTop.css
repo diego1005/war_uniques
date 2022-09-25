@@ -4,3 +4,9 @@
     align-items: center;
     height: 13rem;
 }
+
+.flag {
+    width: 120%;
+    margin-top: 10%;
+    box-shadow: 3px 5px 5px 0px grey;
+}

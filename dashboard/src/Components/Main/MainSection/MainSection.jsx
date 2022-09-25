@@ -1,6 +1,6 @@
 import React from 'react'
 import "./MainSection.css"
-import imagen from "../../../Assets/img/imagen_pueba.webp";
+import imagen from "../../../Assets/img/1658326582058_descarga-removebg-preview.webp"
 
 function MainSection() {
   return (
