@@ -7,8 +7,8 @@ function InfoCard(props) {
       <div className="top-card">
         {props.icon}
         <div className="data-card">
-          <p className="data-title">Data title</p>
-          <p className="data-info">Data info</p>
+          
+          <p className="data-info">Total de Productos</p>
         </div>
       </div>
       <div className="middle-card"></div>
