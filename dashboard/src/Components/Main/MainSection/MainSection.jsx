@@ -13,8 +13,10 @@ function MainSection() {
           <img src={imagen} alt="imagen de prueba" className="main-image" />
         </div>
         <div className="main-section-description">
-          <h1 className='main-title'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, voluptatibus?</h1>
-          <p className='main-desc'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error sint, consequuntur ex et est quaerat cupiditate reiciendis dolorum laboriosam, facere sunt labore officiis modi. Vel sunt dolor facere commodi impedit, expedita eveniet nostrum facilis neque ipsa laudantium atque id. Cupiditate aliquam labore eveniet, esse veniam atque est! Ipsa exercitationem veniam maiores atque provident impedit quasi eveniet quibusdam, nemo vero incidunt voluptates placeat tempora enim quo, quis, molestiae rem veritatis ad saepe labore. Obcaecati magni unde incidunt minus, blanditiis aperiam quo rerum illo porro delectus debitis excepturi nihil hic repellat temporibus explicabo aspernatur deserunt quidem nesciunt quod nobis sunt ut dolores! Voluptatibus molestias adipisci repellat tempore mollitia repudiandae eligendi, officiis expedita ipsam, nisi placeat quam laudantium illo consectetur. Illum, odio explicabo? Cupiditate exercitationem neque animi autem impedit sapiente ea adipisci.</p>
+          <h1 className='main-title'>Casco de la segunda guerra mundial</h1>
+          <p className='main-desc'>El casco M1 es un casco de combate que fue usado por las Fuerzas Armadas de los Estados Unidos desde la Segunda Guerra Mundial hasta 
+          que fue reemplazado por el casco PASGT a principios de 1985. Durante más de cuarenta años, el M1 fue el equipo estándar de las Fuerzas Armadas de Estados Unidos, y su diseño inspiró a otras fuerzas armadas alrededor del mundo.
+El casco M1 es extremadamente popular entre los coleccionistas de militaria y cascos de la Segunda Guerra Mundial, y son más valiosos que los modelos posteriores.</p>
         </div>
       </div>
     </div>
