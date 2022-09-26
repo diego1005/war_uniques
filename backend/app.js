@@ -4,6 +4,7 @@ const app = express();
 const session = require("express-session");
 const cookies = require("cookie-parser");
 const methodOverride = require("method-override");
+const cors = require("cors");
 
 const rememberMid = require("./src/middlewares/session/rememberMid");
 const userNavMid = require("./src/middlewares/session/userNavMid");
@@ -30,6 +31,7 @@ app.use(cookies());
 app.use(rememberMid);
 app.use(userNavMid);
 app.use(methodOverride("_method"));
+app.use(cors());
 
 //routes____________________________________________________
 app.use("/", indexRouter);

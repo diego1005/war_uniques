@@ -5,15 +5,18 @@ function InfoCard(props) {
   return (
     <div className='info-card'>
       <div className="top-card">
-        {props.icon}
+        <div className="icon-card">
+          <img className='flag' src={`images/flags/${props.country}.png`} alt={`${props.flag}_flag`} />
+        </div>
         <div className="data-card">
-          
-          <p className="data-info">Total de Productos</p>
+          <p className="data-title">Total de Productos</p>
         </div>
       </div>
       <div className="middle-card"></div>
       <div className="bottom-card">
-
+        <p>
+          {props.total}
+        </p>
       </div>
     </div>
   )

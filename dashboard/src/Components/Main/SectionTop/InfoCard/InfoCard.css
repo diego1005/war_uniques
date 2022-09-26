@@ -27,25 +27,10 @@
     width: 5rem;
 }
 
-.f-icon {
-    background-color: rgba(30, 30, 30, 0.9);
-}
-
-.s-icon {
-    background-color: rgba(100, 70, 100, 0.9);
-}
-
-.t-icon {
-    background-color: rgba(40, 150, 100, 0.9);
-}
-
-.fh-icon {
-    background-color: rgba(80, 80, 200, 0.9);
-}
-
-.icon {
-    font-size: 1.5rem;
-    color: white;
+.flag {
+    width: 100%;
+    height: 2rem;
+    box-shadow: 3px 5px 5px 0px grey;
 }
 
 .data-card {
@@ -54,10 +39,6 @@
 
 .data-title {
     font-size: 1.2rem;
-    color: darkgrey
-}
-
-.data-info {
-    font-size: 1.3rem;
+    color: darkgrey;
     font-weight: bold;
 }
