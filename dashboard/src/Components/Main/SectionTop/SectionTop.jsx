@@ -12,7 +12,7 @@ function SectionTop() {
     const getTotal = (idx) => {
       fetch(url + (idx + 1))
         .then(response => response.json())
-        .then(data => )
+        .then(data => console.log(data))
         .catch(err => console.error(err));
     }
 
