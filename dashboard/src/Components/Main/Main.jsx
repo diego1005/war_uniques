@@ -5,6 +5,7 @@ import MainSection from "./MainSection/MainSection";
 import SecondarySection from "./SecondarySection/SecondarySection";
 
 function Main() {
+
   return (
     <div className='main'>
       <SectionTop></SectionTop>

@@ -6,7 +6,7 @@
 }
 
 .flag {
-    width: 120%;
-    margin-top: 10%;
+    width: 100%;
+    height: 2rem;
     box-shadow: 3px 5px 5px 0px grey;
 }
