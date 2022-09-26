@@ -44,6 +44,14 @@
     overflow: scroll;
 }
 
+.main-title {
+    border-bottom: solid black 1px;
+}
+
+.main-desc {
+    margin-top: 5%;
+}
+
 .main-title, .main-desc {
     text-align: start;
 }

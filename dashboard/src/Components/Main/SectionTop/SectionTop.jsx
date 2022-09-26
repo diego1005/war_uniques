@@ -23,7 +23,7 @@ function SectionTop() {
     <div className='section-top'>
       {
         countries.map((el, idx) => (
-          <InfoCard key={"flag" + idx} country={idx + 1} total={flag} flag={el}></InfoCard>
+          <InfoCard key={"flag" + idx} country={idx + 1} total={idx.flag} flag={el}></InfoCard>
         ))
       }
     </div >
