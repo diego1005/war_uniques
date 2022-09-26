@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./InfoCard.css";
 
 function InfoCard(props) {
+
   return (
     <div className='info-card'>
       <div className="top-card">
