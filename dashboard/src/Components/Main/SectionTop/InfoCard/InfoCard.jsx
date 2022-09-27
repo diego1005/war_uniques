@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import "./InfoCard.css";
 
 function InfoCard(props) {
@@ -7,7 +7,7 @@ function InfoCard(props) {
     <div className='info-card'>
       <div className="top-card">
         <div className="icon-card">
-          <img className='flag' src={`images/flags/${props.country}.png`} alt={`${props.flag}_flag`} />
+          <img className='flag' src={`images/flags/${props.country}.png`} alt="flag" />
         </div>
         <div className="data-card">
           <p className="data-title">Total de Productos</p>
@@ -16,7 +16,7 @@ function InfoCard(props) {
       <div className="middle-card"></div>
       <div className="bottom-card">
         <p>
-          {props.total}
+          {props.cantidad}
         </p>
       </div>
     </div>
