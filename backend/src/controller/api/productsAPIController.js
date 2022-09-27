@@ -13,10 +13,10 @@ const productsAPIController = {
             })
     },
     totalForFlag: (req, res) => {
-        Product.count({
-            where: {
-                id_country: req.params.flag
-            }
+        Product.findAll({
+            attributes: ["id_country", [sequelize.fn("COUNT", sequelize.col("id_country")), "total"]],
+            group: "id_country",
+            order: ["id_country"]
         })
             .then(result => {
                 console.log(result);
