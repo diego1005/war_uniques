@@ -1,5 +1,5 @@
 const db = require("../../database/models");
-const { Product } = require("../../database/models");
+const { Product, sequelize } = require("../../database/models");
 const Op = db.Sequelize.Op;
 
 const productsAPIController = {
@@ -10,6 +10,20 @@ const productsAPIController = {
             })
             .catch(err => {
                 return res.error(err)
+            })
+    },
+    totalForFlag: (req, res) => {
+        Product.count({
+            where: {
+                id_country: req.params.flag
+            }
+        })
+            .then(result => {
+                console.log(result);
+                return res.json(result);
+            })
+            .catch(err => {
+                return res.error(err);
             })
     },
     listOne: (req, res) => {

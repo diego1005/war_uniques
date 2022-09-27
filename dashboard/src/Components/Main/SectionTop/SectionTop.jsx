@@ -1,31 +1,31 @@
 import React from 'react'
+import { useState, useEffect } from 'react';
 import "./SectionTop.css"
 import InfoCard from "./InfoCard/InfoCard";
 
 function SectionTop() {
+
+  const [total, setTotal] = useState([]);
+
+  useEffect(() => {
+    console.log('%cSe monto el componente', 'color: green');
+      fetch("http://localhost:3001/api/products/flags")
+        .then(response => response.json())
+        .then(data => setTotal(data) )
+        .catch(err => console.error(err));
+  }, []);
+
   return (
     <div className='section-top'>
-      <InfoCard icon={
-        <div className="icon-card f-icon">
-          <i className='fa-brands fa-product-hunt icon'></i>
-        </div>
-      }></InfoCard>
-      <InfoCard icon={
-        <div className="icon-card s-icon">
-          <i className="fa-solid fa-chart-simple icon"></i>
-        </div>
-      }></InfoCard>
-      <InfoCard icon={
-        <div className="icon-card t-icon">
-          <i className="fa-solid fa-chart-pie icon"></i>
-        </div>
-      }></InfoCard>
-      <InfoCard icon={
-        <div className="icon-card fh-icon">
-          <i className="fa-solid fa-users icon fh-icon"></i>
-        </div>
-      }></InfoCard>
-    </div>
+      {total.length === 0 && <p>Loading...</p> }
+      {
+        total.map((el, idx) => {
+          return (
+            <InfoCard key={"flag" + idx} country={idx + 1} cantidad={el.total}></InfoCard>
+          )
+        })
+      }
+    </div >
   )
 }
 

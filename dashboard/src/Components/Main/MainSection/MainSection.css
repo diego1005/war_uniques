@@ -4,6 +4,9 @@
 }
 
 .main-section-title {
+    font-family: 'Stick No Bills', sans-serif;
+    color: whitesmoke;
+    border-bottom: solid white 1px;
     font-size: 1.3rem;
     text-align: start;
     padding-left: 3rem;
@@ -39,6 +42,14 @@
     padding: 1rem;
     border-radius: 10px;
     overflow: scroll;
+}
+
+.main-title {
+    border-bottom: solid black 1px;
+}
+
+.main-desc {
+    margin-top: 5%;
 }
 
 .main-title, .main-desc {
