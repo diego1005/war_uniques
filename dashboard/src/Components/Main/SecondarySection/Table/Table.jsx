@@ -26,7 +26,7 @@ function Table() {
             </tr>
           </thead>
           <tbody>
-            <tr> {/*Row component*/}
+            <tr>{/*Row component*/}
               <td className='tablebody'>11</td>
               <td className='tablebody'>22</td>
               <td className='tablebody'>33</td>
