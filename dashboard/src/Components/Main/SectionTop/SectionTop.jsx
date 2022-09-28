@@ -15,8 +15,6 @@ function SectionTop() {
         .catch(err => console.error(err));
   }, []);
 
-  console.log(total);
-
   return (
     <div className='section-top'>
       {total.length === 0 && <p>Loading...</p> }
