@@ -7,6 +7,10 @@ function Table() {
   const [rowData, setRowData] = useState([]);
 
   useEffect(() => {
+    fetch("http://localhost:3001/api/products")
+      .then(response => response.json())
+      .then(data => {setRowData(data)})
+      .catch(error => console.error(error))
 
   }, [])
 
