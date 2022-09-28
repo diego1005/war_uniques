@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import "./Table.css"
+import RowTable from "./RowTable/RowTable"
 
 function Table() {
+
+  const [rowData, setRowData] = useState([]);
+
+  useEffect(() => {
+
+  }, [])
+
+
   return (
     <div className="table-container">
       <div className="table-top">
@@ -19,18 +28,23 @@ function Table() {
         <table className='table'>
           <thead>
             <tr>
-              <th className='tablehead'>1</th>
-              <th className='tablehead'>2</th>
-              <th className='tablehead'>3</th>
-              <th className='tablehead'>4</th>
+              <th className='tablehead'></th>
+              <th className='tablehead'>Nombre</th>
+              <th className='tablehead'>Descripcion</th>
+              <th className='tablehead'>Precio</th>
+              <th className='tablehead'>País</th>
             </tr>
           </thead>
           <tbody>
-            <tr>{/*Row component*/}
-              <td className='tablebody'>11</td>
-              <td className='tablebody'>22</td>
-              <td className='tablebody'>33</td>
-              <td className='tablebody'>44</td>
+            <tr>
+              {rowData.lenght === true && <p>Sin datos</p>}
+              {
+                rowData.map(element => {
+                  return (
+                    <RowTable></RowTable>
+                  )
+                })
+              }
             </tr>
           </tbody>
         </table>

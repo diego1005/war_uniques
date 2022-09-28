@@ -3,7 +3,7 @@ import "./MainSection.css"
 
 function MainSection() {
 
-  const [lastProduct, setLastProduct] = useState();
+  const [lastProduct, setLastProduct] = useState({});
 
   useEffect(() => {
     console.log('%cSe monto el componente', 'color: green');
@@ -11,12 +11,9 @@ function MainSection() {
       .then(response => response.json())
       .then(data => setLastProduct(data.data[0]))
       .catch(err => console.error(err));
-  }, [])
+  }, []);
 
   const urlImg = "http://localhost:3001/images/products-image/"
-  const lastProductImage = lastProduct.imageURL;
-  const lastProductName = lastProduct.name;
-  const lastProductDesc = lastProduct.description;
 
   return (
     <div className='main-section'>
@@ -25,11 +22,11 @@ function MainSection() {
       </div>
       <div className="contain">
         <div className="main-section-image">
-          <img src={urlImg + lastProductImage} alt="imagen de prueba" className="main-image" />
+          <img src={urlImg + lastProduct.imageURL} alt="imagen de prueba" className="main-image" />
         </div>
         <div className="main-section-description">
-          <h1 className='main-title'>{lastProductName}</h1>
-          <p className='main-desc'>{lastProductDesc}</p>
+          <h1 className='main-title'>{lastProduct.name}</h1>
+          <p className='main-desc'>{lastProduct.esc}</p>
         </div>
       </div>
     </div>
