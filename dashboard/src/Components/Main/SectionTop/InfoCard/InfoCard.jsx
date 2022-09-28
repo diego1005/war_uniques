@@ -10,14 +10,14 @@ function InfoCard(props) {
           <img className='flag' src={`images/flags/${props.country}.png`} alt="flag" />
         </div>
         <div className="data-card">
-          <p className="data-title">Total de Productos</p>
+          <p className="data-title">Total</p>
+          <p className='data-info'>
+            {props.cantidad}
+          </p>
         </div>
       </div>
-      <div className="middle-card"></div>
+      <div className="middle-card"><hr /></div>
       <div className="bottom-card">
-        <p>
-          {props.cantidad}
-        </p>
       </div>
     </div>
   )
