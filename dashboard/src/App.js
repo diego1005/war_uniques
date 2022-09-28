@@ -9,7 +9,6 @@ function App() {
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/test" exact={true} element={<Test />} />
       </Routes>
     </div>
   );

@@ -17,9 +17,23 @@
     width: 100%;
 }
 
+.middle-card {
+    width: 80%;
+    height: 0.3rem;
+}
+
+.middle-card hr {
+    height: 0.1rem;
+    color: darkgray;
+}
+
+.bottom-card {
+    height: 1.5rem;
+}
+
 .icon-card {
     position: relative;
-    bottom: 2rem;
+    bottom: 1.8rem;
     left: 1rem;
     display: flex;
     justify-content: center;
@@ -29,7 +43,7 @@
 
 .flag {
     width: 100%;
-    height: 2rem;
+    height: 2.8rem;
     box-shadow: 3px 5px 5px 0px grey;
 }
 
@@ -41,4 +55,12 @@
     font-size: 1.2rem;
     color: darkgrey;
     font-weight: bold;
+}
+
+.data-info {
+    font-family: Comic;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: darkslategrey;
+    opacity: 0.8;
 }

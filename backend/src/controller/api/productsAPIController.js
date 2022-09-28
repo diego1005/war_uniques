@@ -19,12 +19,26 @@ const productsAPIController = {
             order: ["id_country"]
         })
             .then(result => {
-                console.log(result);
                 return res.json(result);
             })
             .catch(err => {
-                return res.error(err);
+                return res.json(err);
             })
+    },
+    listTheLast: (req, res) => {
+        Product.findAll({
+            order: [["id", "DESC"]],
+            limit: 1
+        })
+        .then(result => {
+            return res.status(200).json({
+                data: result,
+                status: 200
+            });
+        })
+        .catch(err => {
+            return res.status(500).json(err);
+        })
     },
     listOne: (req, res) => {
         Product.findByPk(req.params.id, {
