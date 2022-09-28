@@ -1,5 +1,5 @@
 .table-container {
-    width: 45%;
+    width: 50%;
     background-color: rgb(120,144,120);
     border-radius: 10px;
 }
@@ -22,4 +22,9 @@
 
 .tablehead, .tablebody {
     padding: 0.5rem;
+}
+
+.contenedor {
+    border-bottom: solid black 1px;
+    border-top: solid black 1px;
 }

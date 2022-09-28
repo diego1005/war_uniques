@@ -3,7 +3,7 @@ import "./Table.css"
 import RowTable from "./RowTable/RowTable"
 
 function Table() {
-
+  
   const [rowData, setRowData] = useState([]);
 
   useEffect(() => {
@@ -13,7 +13,6 @@ function Table() {
       .catch(error => console.error(error))
 
   }, [])
-
 
   return (
     <div className="table-container">
@@ -30,26 +29,24 @@ function Table() {
       </div>
       <div className="table-content">
         <table className='table'>
-          <thead>
-            <tr>
-              <th className='tablehead'></th>
-              <th className='tablehead'>Nombre</th>
-              <th className='tablehead'>Descripcion</th>
-              <th className='tablehead'>Precio</th>
-              <th className='tablehead'>País</th>
-            </tr>
-          </thead>
           <tbody>
-            <tr>
-              {rowData.lenght === true && <p>Sin datos</p>}
+            <div>
+              {rowData.lenght === 0 && <p>Sin datos</p>}
               {
-                rowData.map(element => {
-                  return (
-                    <RowTable></RowTable>
+                rowData.map((producto, i) => {
+                  return(
+                    <div className='contenedor'>
+                      <RowTable
+                        nombre = {producto.name}
+                        descripcion = {producto.description}
+                        precio = {producto.price}
+                        pais = {producto.id_country}
+                      />
+                    </div>
                   )
                 })
               }
-            </tr>
+            </div>
           </tbody>
         </table>
       </div>
