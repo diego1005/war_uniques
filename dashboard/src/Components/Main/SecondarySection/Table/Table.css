@@ -1,5 +1,5 @@
 .table-container {
-    width: 45%;
+    width: 70%;
     background-color: rgb(120,144,120);
     border-radius: 10px;
 }
@@ -18,8 +18,18 @@
 
 .table {
     width: 100%;
+    border-spacing: 0 0.5rem;
+}
+
+.table-titles {
+    background-color: rgb(100,124,100);
 }
 
 .tablehead, .tablebody {
     padding: 0.5rem;
+}
+
+.table-content {
+    height: 16.5rem;
+    overflow: auto;
 }

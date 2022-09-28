@@ -13,7 +13,7 @@ function MainSection() {
       .catch(err => console.error(err));
   }, []);
 
-  const urlImg = "http://localhost:3001/images/products-image/"
+  const urlapi = "http://localhost:3001/images/products-image/"
 
   return (
     <div className='main-section'>
@@ -22,7 +22,7 @@ function MainSection() {
       </div>
       <div className="contain">
         <div className="main-section-image">
-          <img src={lastProduct.imageURL === undefined ? "" : urlImg + lastProduct.imageURL} alt="imagen de prueba" className="main-image" />
+          <img src={lastProduct.imageURL === undefined ? "" : urlapi + lastProduct.imageURL} alt="imagen de prueba" className="main-image" />
         </div>
         <div className="main-section-description">
           <h1 className='main-title'>{lastProduct.name}</h1>
