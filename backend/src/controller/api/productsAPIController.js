@@ -7,6 +7,7 @@ const productsAPIController = {
         Product.findAll()
             .then(result => {
                 return res.status(200).json({
+                    count: result.length,
                     data: result,
                     status: 200
                 });
