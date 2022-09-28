@@ -6,10 +6,13 @@ const productsAPIController = {
     list: (req, res) => {
         Product.findAll()
             .then(result => {
-                return res.json(result);
+                return res.status(200).json({
+                    data: result,
+                    status: 200
+                });
             })
             .catch(err => {
-                return res.error(err)
+                return res.json(err)
             })
     },
     totalForFlag: (req, res) => {
