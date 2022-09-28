@@ -6,8 +6,6 @@ import Aside from "./Aside/Aside";
 function SecondarySection() {
   return (
     <div className='second-section'>
-      <Table></Table>
-      <Aside></Aside>
     </div >
   )
 }

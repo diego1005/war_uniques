@@ -3,7 +3,7 @@ import "./Table.css"
 import RowTable from "./RowTable/RowTable"
 
 function Table() {
-
+  
   const [rowData, setRowData] = useState([]);
 
   useEffect(() => {
