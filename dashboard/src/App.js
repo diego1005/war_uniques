@@ -3,7 +3,6 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css"
 import Home from "./Pages/Home/Home";
 import Table from "./Components/Main/SecondarySection/Table/Table";
-import Test from "./Pages/Test/Test";
 
 function App() {
   return (

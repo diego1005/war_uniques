@@ -11,6 +11,17 @@
     padding: 1rem;
 }
 
+.fa-check {
+    font-size: 1.5rem;
+    color: green;
+}
+
+.cant-prod {
+    font-size: 1.3rem;
+    color: blue;
+    font-weight: bold;
+}
+
 .table-top-right {
     width: 10%;
     font-size: 1.3rem;

@@ -3,14 +3,18 @@ import "./Table.css"
 import RowTable from "./RowTable/RowTable"
 
 function Table() {
-  
+
   const [rowData, setRowData] = useState([]);
+  const [cantProd, setCantProd] = useState([]);
 
   useEffect(() => {
     console.log('%cSe monto el componente', 'color: green');
     fetch("http://localhost:3001/api/products")
       .then(response => response.json())
-      .then(data => setRowData(data.data))
+      .then(data => {
+        setRowData(data.data);
+        setCantProd(data.count)
+      })
       .catch(err => console.error(err));
   }, [])
 
@@ -20,7 +24,8 @@ function Table() {
         <div className="table-top-left">
           <h2>Products</h2>
           <p>
-            <i className="fa-solid fa-check"></i> X new products
+            <i className="fa-solid fa-check"></i>
+            <span className='cant-prod'> {cantProd} products</span>
           </p>
         </div>
         <div className="table-top-right">
