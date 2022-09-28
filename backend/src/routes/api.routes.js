@@ -7,8 +7,8 @@ const usersAPIController = require("../controller/api/usersAPIController");
 //PRODUCTS
 //Read -------------------------------------------------------------------
 router.get('/products',productsAPIController.list);
+router.get("/products/flags", productsAPIController.totalForFlag);
 router.get("/products/:id", productsAPIController.listOne);
-router.get("/products/flags/:flag", productsAPIController.totalForFlag);
 //Create -------------------------------------------------------------------
 router.post("/products/add", productsAPIController.create);
 //Edit -------------------------------------------------------------------
