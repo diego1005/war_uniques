@@ -21,6 +21,11 @@ function Sidebar() {
       <li className="nav-item">
         <i className="fa-solid fa-gun"></i>
       </li>
+       {/* <!-- Nav Item - Tables --> */}
+       <li className="nav-item">
+       <i className="fas fa-fw fa-table"></i>
+                 
+            </li>
     </div>
   );
 }
