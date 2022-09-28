@@ -22,11 +22,11 @@ function MainSection() {
       </div>
       <div className="contain">
         <div className="main-section-image">
-          <img src={urlImg + lastProduct.imageURL} alt="imagen de prueba" className="main-image" />
+          <img src={lastProduct.imageURL === undefined ? "" : urlImg + lastProduct.imageURL} alt="imagen de prueba" className="main-image" />
         </div>
         <div className="main-section-description">
           <h1 className='main-title'>{lastProduct.name}</h1>
-          <p className='main-desc'>{lastProduct.esc}</p>
+          <p className='main-desc'>{lastProduct.description}</p>
         </div>
       </div>
     </div>
