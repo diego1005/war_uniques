@@ -1,0 +1,34 @@
+.bigdady {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.usuarios {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    padding: 10px;
+    margin: 5px;
+    text-align: start;
+    border-radius: 5px;
+    background-color: rgba(86,88,86,255);
+}
+
+.avatar{
+    width: 20%;
+    margin-left: 80%;
+    margin-top: 5%;
+    border: solid black 1px;
+}
+
+.usuarios p {
+    margin-left: 5px;
+    color: black;
+}
+
+.usuarios div {
+    display: flex;
+}

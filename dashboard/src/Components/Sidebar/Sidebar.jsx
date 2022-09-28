@@ -1,10 +1,12 @@
-import React from 'react'
-// import { Link } from "react-router-dom"
-import "./Sidebar.css"
+import React, { useEffect, useState } from "react";
+import { Route } from "react-router-dom";
+import { Link } from "react-router-dom";
+import "./Sidebar.css";
+import UsersTable from "./UsersTable/UsersTable";
 
 function Sidebar() {
   return (
-    <div className='sidebar'>
+    <div className="sidebar">
       <div className="sidebar-title">
         <h2>DASHBOARD</h2>
         <hr />
@@ -13,19 +15,14 @@ function Sidebar() {
       {/* <!-- Nav Item - users--> */}
       <li className="nav-item">
         <i className="fa-solid fa-user-secret"></i>
-        {/* <Link className="link" to="/usuarios"><h3>Usuarios</h3></Link> */}
+        <UsersTable/>
       </li>
       {/* <!-- Nav Item - products--> */}
       <li className="nav-item">
         <i className="fa-solid fa-gun"></i>
-        {/* <Link className="link" to="/productos"><h3>Productos</h3></Link> */}
       </li>
-
     </div>
-
-
-
-  )
+  );
 }
 
-export default Sidebar
+export default Sidebar;
