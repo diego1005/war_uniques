@@ -15,7 +15,7 @@
 .contain {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     margin: auto;
     margin-top: 3rem;
 }
@@ -27,7 +27,6 @@
     align-items: flex-start;
     max-width: 400px;
     width: 45%;
-    height: 400px;
 }
 
 .main-image {
@@ -36,12 +35,14 @@
 }
 
 .main-section-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     width: 45%;
-    height: 400px;
-    background-color: rgb(120,144,120);
+    background-color: rgba(120, 144, 120, 0.1);
     padding: 1rem;
     border-radius: 10px;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .main-title {

@@ -1,8 +1,23 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import "./MainSection.css"
-import imagen from "../../../Assets/img/1658326582058_descarga-removebg-preview.webp"
 
 function MainSection() {
+
+  const [lastProduct, setLastProduct] = useState();
+
+  useEffect(() => {
+    console.log('%cSe monto el componente', 'color: green');
+    fetch("http://localhost:3001/api/products/last")
+      .then(response => response.json())
+      .then(data => setLastProduct(data.data[0]))
+      .catch(err => console.error(err));
+  }, [])
+
+  const urlImg = "http://localhost:3001/images/products-image/"
+  const lastProductImage = lastProduct.imageURL;
+  const lastProductName = lastProduct.name;
+  const lastProductDesc = lastProduct.description;
+
   return (
     <div className='main-section'>
       <div className='main-section-title'>
@@ -10,11 +25,11 @@ function MainSection() {
       </div>
       <div className="contain">
         <div className="main-section-image">
-          <img src={imagen} alt="imagen de prueba" className="main-image" />
+          <img src={urlImg + lastProductImage} alt="imagen de prueba" className="main-image" />
         </div>
         <div className="main-section-description">
-          <h1 className='main-title'>Stahlhelm</h1>
-          <p className='main-desc'>El Stahlhelm fue un casco de combate de acero introducido por el Ejército Imperial Alemán en 1916 durante la Primera Guerra Mundial para reemplazar al tradicional Pickelhaube de cuero endurecido, que no ofrecía una protección adecuada en la guerra de trincheras.</p>
+          <h1 className='main-title'>{lastProductName}</h1>
+          <p className='main-desc'>{lastProductDesc}</p>
         </div>
       </div>
     </div>
