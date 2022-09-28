@@ -41,7 +41,14 @@ function Table() {
               <th className='tablehead'>Descripcion</th>
               <th className='tablehead'>Precio</th>
               <th className='tablehead'>País</th>
-              <th className='tablehead'>eg</th>
+              <button onClick="agregar()">
+                Agregar
+                </button>
+                <button onClick="quitar()">
+                Quitar
+                </button>
+
+
             </tr>
           </thead>
           <tbody className='row-table'>
