@@ -18,14 +18,20 @@
 }
 
 .avatar{
-    width: 20%;
     margin-left: 80%;
     margin-top: 5%;
-    border: solid black 1px;
+    width: 20%;
+    border-radius: 5px;
+    border: solid black 4px;
+}
+
+.avatar img {
+    width: 100%;
 }
 
 .usuarios p {
-    margin-left: 5px;
+    font-size: 1rem;
+    margin-left: 7px;
     color: black;
 }
 
