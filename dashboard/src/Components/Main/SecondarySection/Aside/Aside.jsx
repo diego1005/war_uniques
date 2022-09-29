@@ -23,8 +23,16 @@ function Aside() {
         <div className="line">
       <p>
       <li className="nav-item">
-        <i className="fa-solid fa-gun"></i></li>
+        <i className="fa-solid fa-cart-shopping"></i> </li>
       <h6>Ultimo producto agregado</h6>
+        </p>
+      </div>
+      
+      <div className="line">
+      <p>
+      <li className="nav-item">
+        <i className="fa-solid fa-inbox"></i></li>
+      <h6>Ultimas novedades</h6>
         </p>
       </div>
       </div>
