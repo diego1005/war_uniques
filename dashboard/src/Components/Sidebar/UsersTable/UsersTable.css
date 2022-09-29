@@ -6,6 +6,25 @@
     margin-top: 5px;
     margin-bottom: 10px;
 }
+
+.contador {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    padding: 10px;
+    margin: 5px;
+    text-align: start;
+    border-radius: 5px;
+    background-color: rgba(86,88,86,255);
+}
+
+.contador p {
+    font-size: 1.2rem;
+    font-family: 'Stick No Bills', sans-serif;
+    text-align: center;
+    color: white;
+}
+
 .usuarios {
     display: flex;
     flex-direction: column;
@@ -19,21 +38,30 @@
 
 .avatar{
     margin-left: 80%;
-    margin-top: 5%;
     width: 20%;
     border-radius: 5px;
-    border: solid black 4px;
+    border: solid gray 4px;
 }
 
 .avatar img {
-    width: 100%;
+    height: 55px;
+    width: 100%;;
 }
 
 .usuarios p {
     font-size: 1rem;
-    margin-left: 7px;
+    margin-left: 2px;
     color: black;
 }
+
+.usuarios .campo {
+    font-family: 'Stick No Bills', sans-serif;
+    color: white
+}
+
+.usuarios .content {
+    margin-left: 5px;
+}   
 
 .usuarios div {
     display: flex;

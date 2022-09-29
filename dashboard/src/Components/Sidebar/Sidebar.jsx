@@ -1,6 +1,3 @@
-import React, { useEffect, useState } from "react";
-import { Route } from "react-router-dom";
-import { Link } from "react-router-dom";
 import "./Sidebar.css";
 import UsersTable from "./UsersTable/UsersTable";
 
@@ -13,10 +10,9 @@ function Sidebar() {
       </div>
 
       {/* <!-- Nav Item - users--> */}
-      <li className="nav-item">
-        <i className="fa-solid fa-user-secret"></i>
+      <div className="nav-item">
         <UsersTable/>
-      </li>
+      </div>
       {/* <!-- Nav Item - products--> */}
       <li className="nav-item">
         <i className="fa-solid fa-gun"></i>

@@ -16,13 +16,16 @@ function UsersTable(props) {
 
   return (
     <div className="bigdady">
+      <div className="contador">
+        <p>CANTIDAD DE USUARIOS: {users.length}</p>
+      </div>
       {users.length === 0 && <p>Cargando...</p>}
       {users.map((user, i) => {
         return (
           <div key={i} className = "usuarios">
-            <div><h4>NOMBRE: </h4><p>{user.name} {user.lastname}</p></div>
-            <div><h4>ID: </h4><p>{user.id}</p></div>
-            <div><h4>EMAIL:</h4><p>{user.email}</p></div>
+            <div><p className="campo">NOMBRE: </p><p className="content">{user.name} {user.lastname}</p></div>
+            <div><p className="campo">ID: </p><p className="content">{user.id}</p></div>
+            <div><p className="campo">EMAIL:</p><p className="content">{user.email}</p></div>
             <div className="avatar"><img src={urlApiImgUser + user.imageURL} alt="avatar"/></div>
           </div>
         );
