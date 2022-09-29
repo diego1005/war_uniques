@@ -4,6 +4,7 @@ import Header from "../../Components/Header/Header";
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import Main from "../../Components/Main/Main";
 import Table from "../../Components/Main/SecondarySection/Table/Table"
+import UsersTable from '../../Components/Main/SecondarySection/UsersTable/UsersTable';
 import Footer from "../../Components/Footer/Footer";
 
 function Home(props) {
@@ -24,7 +25,7 @@ function Home(props) {
                 props.content === "users" &&
                 <div className="container">
                     <Header />
-                    <Table />
+                    <UsersTable />
                     <Footer />
                 </div>
             }

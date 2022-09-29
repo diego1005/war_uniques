@@ -24,7 +24,10 @@ function RowTable(props) {
             <td className='row-content'>
                 <img className='row-flag' src={urlFlags + props.rowContent.id_country + ".png"} alt="flag" />
             </td>
-            <td className='row-content'></td>
+            <td className='row-content'>
+            <p className='row-opt-edit'><i class="fa-solid fa-pencil"></i></p>
+            <p className='row-opt-trash'><i class="fa-solid fa-trash"></i></p>
+            </td>
         </tr>
     )
 }

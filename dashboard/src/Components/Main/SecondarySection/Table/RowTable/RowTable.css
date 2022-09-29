@@ -5,7 +5,7 @@
 
 .row-content {
     padding: 1rem 1rem;
-    background-color: rgb(150,174,150);
+    background-color: rgb(150, 174, 150);
 }
 
 .row-img {
@@ -26,4 +26,17 @@
 
 .row-flag {
     width: 2rem;
+}
+
+.row-opt-edit, .row-opt-trash {
+    text-align: center;
+    padding: 0.5rem 0.2rem;
+}
+
+.row-opt-edit {
+    color: blue;
+}
+
+.row-opt-trash {
+    color: red;
 }

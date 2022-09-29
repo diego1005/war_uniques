@@ -6,10 +6,14 @@ const userAPIController = {
     list: (req, res) => {
         User.findAll()
             .then(result => {
-                return res.json(result);
+                return res.status(200).json({
+                    count: result.length,
+                    data: result,
+                    status: 200
+                });
             })
             .catch(err => {
-                return res.error(err)
+                return res.json(err)
             })
     },
     listOne: (req, res) => {

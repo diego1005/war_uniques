@@ -44,3 +44,16 @@
     height: 16.5rem;
     overflow: auto;
 }
+
+.row-opt-edit, .row-opt-trash {
+    text-align: center;
+    padding: 0.5rem 0.2rem;
+}
+
+.row-opt-edit {
+    color: blue;
+}
+
+.row-opt-trash {
+    color: red;
+}

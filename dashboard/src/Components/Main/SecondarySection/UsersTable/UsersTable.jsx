@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import "./Table.css"
-import RowTable from "./RowTable/RowTable"
+import "./UsersTable.css"
+import RowUsersTable from "./RowUsersTable/RowUsersTable"
 
 function UsersTable() {
 
@@ -38,17 +38,9 @@ function UsersTable() {
             <tr className='table-titles'>
               <th className='tablehead'></th>
               <th className='tablehead'>Nombre</th>
-              <th className='tablehead'>Descripcion</th>
-              <th className='tablehead'>Precio</th>
-              <th className='tablehead'>País</th>
-              <button onClick="agregar()">
-                Agregar
-                </button>
-                <button onClick="quitar()">
-                Quitar
-                </button>
-
-
+              <th className='tablehead'>Apellido</th>
+              <th className='tablehead'>Email</th>
+              <th className='tablehead'>Opciones</th>
             </tr>
           </thead>
           <tbody className='row-table'>
@@ -56,7 +48,7 @@ function UsersTable() {
             {
               rowData.map((el, idx) => {
                 return (
-                  <RowTable key={"row" + idx} rowContent={el}></RowTable>
+                  <RowUsersTable key={"row" + idx} rowContent={el}></RowUsersTable>
                 )
               })
             }
