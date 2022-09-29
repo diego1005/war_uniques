@@ -22,7 +22,7 @@ function Table() {
     <div className="table-container">
       <div className="table-top">
         <div className="table-top-left">
-          <h2>Products</h2>
+          <h2>PRODUCTS</h2>
           <p>
             <i className="fa-solid fa-check"></i>
             <span className='cant-prod'> {cantProd} products</span>

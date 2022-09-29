@@ -1,9 +1,9 @@
-import React from 'react'
-import "./Aside.css"
+import React from "react";
+import "./Aside.css";
 
 function Aside() {
   return (
-    <div className='aside-container'>
+    <div className="aside-container">
       <div className="aside-top">
         <h2>Overview</h2>
         <p>
@@ -12,32 +12,44 @@ function Aside() {
       </div>
       <div className="aside-content">
         {/* Line component */}
-      <div className="line">
-      <p>
-      <li className="nav-item">
-        <i className="fa-solid fa-user-secret"></i></li>
-      <h6>Ultimo usuario agregado</h6>
-        </p>
+        <div className="line">
+          <p>
+            <li className="nav-item">
+            <div className="iContent"><i class="fa-solid fa-user"></i></div>
+              <h6>Ultimo usuario agregado</h6>
+            </li>
+          </p>
         </div>
 
         <div className="line">
-      <p>
-      <li className="nav-item">
-        <i className="fa-solid fa-cart-shopping"></i> </li>
-      <h6>Ultimo producto agregado</h6>
-        </p>
-      </div>
-      
-      <div className="line">
-      <p>
-      <li className="nav-item">
-        <i className="fa-solid fa-inbox"></i></li>
-      <h6>Ultimas novedades</h6>
-        </p>
-      </div>
+          <p>
+            <li className="nav-item">
+            <div className="iContent"><i className="fa-solid fa-cart-shopping"></i></div>
+              <h6>Ultimo producto agregado</h6>
+            </li>
+          </p>
+        </div>
+
+        <div className="line">
+          <p>
+            <li className="nav-item">
+              <div className="iContent"><i class="fa-solid fa-newspaper"></i></div>
+              <h6>Ultimas novedades</h6>
+            </li>
+          </p>
+        </div>
+
+        <div className="line">
+          <p>
+            <li className="nav-item">
+              <div className="iContent"><i class="fa-solid fa-cash-register"></i></div>
+              <h6>Ultimas ventas</h6>
+            </li>
+          </p>
+        </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Aside
+export default Aside;

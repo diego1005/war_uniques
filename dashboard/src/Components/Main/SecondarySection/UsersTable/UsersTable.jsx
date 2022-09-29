@@ -22,7 +22,7 @@ function UsersTable() {
     <div className="table-container">
       <div className="table-top">
         <div className="table-top-left">
-          <h2>Users</h2>
+          <h2>USERS</h2>
           <p>
             <i className="fa-solid fa-check"></i>
             <span className='cant-prod'> {cantUsers} users</span>

@@ -13,7 +13,7 @@ function Sidebar() {
             <i className="fa-regular fa-square-caret-up"></i>
             <p><i className="fa-regular fa-square-caret-down"></i></p>
           </h2>
-          <h2>Material Dashboard</h2>
+          <h2>MATERIAL DASHBOARD</h2>
         </div>
         <hr />
       </div>
@@ -26,14 +26,14 @@ function Sidebar() {
       <ul className="sidebar-list">
         <li>
           <Link to="/products">
-            <i className="fa-solid fa-gun"></i>
-            <spam className="sidebar-opt"> Products</spam>
+            <i class="fa-solid fa-warehouse"></i>
+            <spam className="sidebar-opt"> PRODUCTS</spam>
           </Link>
         </li>
         <li>
           <Link to="/users">
             <i className="fa-solid fa-users"></i>
-            <spam className="sidebar-opt"> Users</spam>
+            <spam className="sidebar-opt"> USERS</spam>
           </Link>
         </li>
       </ul>
