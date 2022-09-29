@@ -12,18 +12,21 @@ function Aside() {
       </div>
       <div className="aside-content">
         {/* Line component */}
-        <div className="line">
-          <h2>title 1</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi officiis facere totam natus aut alias fugit. Vitae minus voluptate quo.</p>
+      <div className="line">
+      <p>
+      <li className="nav-item">
+        <i className="fa-solid fa-user-secret"></i></li>
+      <h6>Ultimo usuario agregado</h6>
+        </p>
         </div>
+
         <div className="line">
-          <h2>title 1</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi officiis facere totam natus aut alias fugit. Vitae minus voluptate quo.</p>
-        </div>
-        <div className="line">
-          <h2>title 1</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi officiis facere totam natus aut alias fugit. Vitae minus voluptate quo.</p>
-        </div>
+      <p>
+      <li className="nav-item">
+        <i className="fa-solid fa-gun"></i></li>
+      <h6>Ultimo producto agregado</h6>
+        </p>
+      </div>
       </div>
     </div>
   )
